@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Семь раз отмерь, один раз оптимизируй</title>
+    <link rel="stylesheet" href="./themes/ribbon/styles/styles.css" />
+    <link rel="stylesheet" href="./bundled/main.css" />
+    <meta name="description" content="Презентация по TailwindCSS" />
+    <link rel="icon" href="./themes/tw/images/logo.png" type="image/svg+xml" />
+  </head>
+  <body class="shower list scrollbar bg-green">
+    <header class="caption">
+      <h1>Семь раз отмерь, один раз оптимизируй</h1>
+      <p class="mt-2">
+        <i>Денис Русаков</i>
+      </p>
+    </header>
+
+    <section class="slide clear p-0">
+      <div class="flex h-full flex-col items-center justify-end">
+        <img class="!my-10" src="./themes/tw/images/logo.png" width="250" height="250" alt="Перо" />
+        <div class="text-center">
+          <h2 class="!my-[20px] text-5xl">Семь раз отмерь, один раз оптимизируй</h2>
+          <p class="text-md italic leading-6">
+            <i class="text-gray">Денис Русаков</i>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide group">
+      <h2>Какой план?</h2>
+      <img
+        class="next float-right translate-x-[70px] translate-y-[200px] group-has-[#first-item.active]:hidden"
+        src="./themes/tw/images/memes/plan.jpg"
+        width="300"
+        alt="183"
+        aria-hidden="true"
+      />
+      <ol>
+        <li class="next" id="first-item">Теория</li>
+        <li class="next">
+          Практика
+          <span class="next">(набор советов)</span>
+        </li>
+        <li class="next">Выводы</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <p>Движок JavaScript — специализированная программа, обрабатывающая JavaScript, в частности, в браузерах.</p>
+    </section>
+
+    <section class="slide">
+      <ul>
+        <li>SpiderMonkey</li>
+        <li>Chakra</li>
+        <li>Nitro</li>
+        <li>V8</li>
+      </ul>
+    </section>
+
+    <section class="slide clear">
+      <h2 class="shout">Что такое <i>V8</i> ?</h2>
+    </section>
+
+    <section class="slide relative">
+      <img class="cover" src="./themes/tw/images/codeium-v8.png" width="700" height="350" alt="Codeium V8" />
+      <img
+        class="next translate-x-[600px] translate-y-[340px]"
+        src="./themes/tw/images/memes/Ilon.jpg"
+        width="300"
+        height="150"
+        alt="Мем Ilon"
+      />
+      <a class="copyright" href="https://codeium.com/live/general" target="_blank" rel="noopener noreferrer">codeium</a>
+    </section>
+
+    <section>
+      <p>Избегайте разных форм</p>
+    </section>
+
+    <section>
+      <p>Избегайте методов массивов/объектов</p>
+    </section>
+
+    <section>
+      <p>Избегайте косвенности</p>
+    </section>
+
+    <section>
+      <p>Избегайте промахов кэша</p>
+    </section>
+
+    <section>
+      <p>Избегайте крупных предметов</p>
+    </section>
+
+    <section>
+      <p>Используйте оценку</p>
+    </section>
+
+    <section>
+      <p>Используйте струны осторожно</p>
+    </section>
+
+    <section>
+      <p>Используйте специализацию</p>
+    </section>
+
+    <section>
+      <p>Структуры данных</p>
+    </section>
+
+    <section>
+      <p>Начните с самого верха</p>
+    </section>
+
+    <section>
+      <p>Профилирование и инструменты</p>
+    </section>
+
+    <section class="slide">
+      <figure class="cover">
+        <blockquote>
+          <p>
+            V8 — это высокопроизводительный движок JS и WebAssembly от Google с открытым исходным кодом, написанный на
+            C++. Он используется в Chrome и Node.js. Он реализует ECMAScript и WebAssembly и работает в системах
+            Windows, macOS и Linux, использующих процессоры x64, IA-32 или ARM. V8 можно встроить в любое приложение
+            C++.
+          </p>
+        </blockquote>
+        <figcaption>Документация</figcaption>
+      </figure>
+      <a class="copyright" href="https://v8.dev/" target="_blank" rel="noopener noreferrer">v8</a>
+    </section>
+
+    <section class="slide">
+      <a class="copyright" href="https://v8.dev/" target="_blank" rel="noopener noreferrer"
+        >https://v8.dev/blog/10-years</a
+      >
+    </section>
+
+    <section class="slide">
+      <h2>Сравнения строк</h2>
+    </section>
+
+    <section class="slide">
+      <img class="cover" src="./themes/tw/pictures/theory/enum/1.svg" width="1000" height="500" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="my-[20px]">Строки</h2>
+      <img class="cover" src="./themes/tw/pictures/theory/enum/2.svg" width="1000" height="500" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="!my-[20px]">Числа</h2>
+      <img class="cover" src="./themes/tw/pictures/theory/enum/3.svg" width="1000" height="500" alt="" />
+    </section>
+
+    <section class="slide">
+      <h2 class="!my-[20px]">Результаты</h2>
+      <div class="speed">
+        <div></div>
+        <div></div>
+      </div>
+      <style>
+        .speed {
+          display: flex;
+          flex-direction: column;
+          gap: 15px 0;
+
+          div {
+            background-color: #b3441e;
+            border-radius: 15px;
+            height: 50px;
+            padding-left: 15px;
+            color: #18404a;
+            font-weight: bold;
+            box-shadow: 2px 2px 2px #222;
+          }
+
+          div:first-child {
+            width: 50%;
+
+            &::before {
+              content: 'Числа';
+            }
+          }
+
+          div:last-child {
+            width: 100%;
+
+            &::before {
+              content: 'Строки';
+            }
+          }
+        }
+      </style>
+
+      <p class="next">Вывод: Избегайте сравнение строк</p>
+    </section>
+
+    <section class="slide">
+      <h2>Выводы</h2>
+      <ol>
+        <li class="next"></li>
+      </ol>
+    </section>
+
+    <section class="slide bg clear">
+      <h2 class="shout">Всем спасибо!</h2>
+    </section>
+
+    <section class="slide bg clear relative">
+      <h2 class="shout z-50">Вопросы</h2>
+      <div class="absolute left-0 top-0 m-auto h-[var(--fly-container-h)] w-[var(--fly-container-w)]">
+        <div class="shapes"></div>
+
+        <style>
+          .shapes {
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            transform: translate(-50%, -50%);
+            width: 74.8px;
+            height: 74.8px;
+            display: flex;
+          }
+
+          .shapes:before,
+          .shapes:after {
+            content: '';
+            flex: 1;
+            background: #f25603;
+            animation: shapes-xlm69v 2s infinite;
+            border-radius: 112px 0 0 112px;
+            transform-origin: top right;
+            transform: translateY(calc(var(--s, 1) * 0%)) rotate(0);
+          }
+
+          .shapes:after {
+            transform-origin: bottom left;
+            border-radius: 0 112px 112px 0;
+            --s: -1;
+          }
+
+          @keyframes shapes-xlm69v {
+            33% {
+              transform: translate(0, calc(var(--s, 1) * 50%)) rotate(0);
+            }
+
+            66% {
+              transform: translate(0, calc(var(--s, 1) * 50%)) rotate(-90deg);
+            }
+
+            90%,
+            100% {
+              transform: translate(calc(var(--s, 1) * -100%), calc(var(--s, 1) * 50%)) rotate(-90deg);
+            }
+          }
+        </style>
+      </div>
+    </section>
+
+    <div class="progress before:bg-orange"></div>
+
+    <script src="./shower.min.js"></script>
+  </body>
+</html>

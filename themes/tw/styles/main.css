@@ -1,0 +1,150 @@
+@tailwind base;
+
+@layer base {
+  @font-face {
+    font-family: 'Arsenal';
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+    src: url('../themes/tw/fonts/Arsenal/Bold.ttf') format('truetype');
+  }
+
+  .shower {
+    --slide-ratio: calc(16 / 9);
+
+    &.list {
+      /* @apply bg-pink-dark; */
+
+      .slide {
+        @apply rounded-sm;
+      }
+    }
+
+    &.full {
+      @apply bg-green;
+    }
+
+    h1 {
+      @apply font-arsenal text-white;
+    }
+  }
+
+  .slide {
+    @apply bg-green p-[24px_90px_0] shadow-[0_20px_50px_rgb(0_0_0_/_0%)];
+
+    &::after {
+      @apply text-green left-auto right-0 mt-[1em] h-auto w-[calc(50px_*_2.4)] p-[0_0.5em_0_2.5em];
+
+      font-weight: bold;
+      background-image: linear-gradient(90deg, transparent 0 0, theme(colors.orange) 100px 0);
+    }
+
+    h2,
+    h3,
+    p,
+    figure p,
+    figcaption,
+    p.note,
+    li,
+    li::before {
+      @apply text-white;
+    }
+
+    h2 {
+      @apply font-arsenal text-[42px];
+    }
+
+    & > h2 {
+      @apply font-arsenal text-[72px];
+    }
+
+    h2.shout {
+      @apply text-7xl;
+    }
+
+    a {
+      @apply text-orange;
+    }
+
+    ol,
+    ul {
+      @apply leading-[1.8];
+
+      li {
+        @apply text-[34px];
+      }
+    }
+
+    table {
+      @apply mb-0;
+
+      th,
+      td {
+        @apply text-white;
+      }
+
+      th[scope='column'] {
+        @apply text-center;
+      }
+
+      th {
+        @apply text-[18px];
+      }
+
+      td {
+        @apply text-[20px];
+      }
+    }
+  }
+
+  table img {
+    @apply mx-auto;
+  }
+
+  .scrollbar {
+    &::-webkit-scrollbar {
+      @apply w-[18px];
+    }
+
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-thumb {
+      @apply rounded-sm;
+    }
+
+    &::-webkit-scrollbar-track {
+      @apply bg-green;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      @apply bg-orange;
+    }
+  }
+
+  .slide ol {
+    counter-reset: slide;
+  }
+
+  .slide ol > li:first-of-type::before {
+    counter-set: slide;
+  }
+
+  .slide ol > li::before {
+    counter-increment: slide;
+    content: counter(slide) '.';
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    .scrollbar {
+      scrollbar-color: theme(colors.orange) theme(colors.green);
+    }
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg {
+    @apply bg-[url('../themes/tw/images/bg.png')] bg-cover bg-center bg-no-repeat;
+  }
+}
