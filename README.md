@@ -1,4 +1,4 @@
-<img align="left" src="./themes/tw/images/logo.png" width="120" height="120" alt="Логотип">
+<img align="left" src="./themes/tw/images/logo.png" width="140" height="140" alt="Логотип">
 
 # Презентация:<br>«Семь раз отмерь, один раз оптимизируй»
 
