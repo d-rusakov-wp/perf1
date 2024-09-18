@@ -6,9 +6,10 @@ module.exports = {
     colors: {
       white: '#fff',
       black: '#222',
-      red: '#ff0000',
+      gray: '#708090',
       orange: '#b3441e',
       green: '#18404a',
+      red: '#ff0000',
     },
     fontFamily: {
       arsenal: 'Arsenal, sans-serif',
@@ -16,3 +17,5 @@ module.exports = {
     extend: {},
   },
 } satisfies Config;
+
+// Что, черт возьми, мне с этим делать
