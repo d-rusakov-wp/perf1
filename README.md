@@ -1,6 +1,6 @@
-<img align="left" src="./themes/tw/images/logo.png" width="110" height="110" alt="Логотип">
+<img align="left" src="./themes/tw/images/logo.png" width="150" height="150" alt="Логотип">
 
-# «Семь раз отмерь, один&nbsp;раз&nbsp;оптимизируй»
+# Презентация:<br>«Семь раз отмерь,<br>один раз оптимизируй»
 
 <br>
 
