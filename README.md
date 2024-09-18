@@ -1,4 +1,4 @@
-<img align="left" src="./themes/tw/images/logo.png" width="150" height="150" alt="Логотип">
+<img align="left" src="./themes/tw/images/logo.png" width="100" height="100" alt="Логотип">
 
 <br>
 
