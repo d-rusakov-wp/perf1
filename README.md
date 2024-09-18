@@ -1,7 +1,5 @@
 <img align="left" src="./themes/tw/images/logo.png" width="100" height="100" alt="Логотип">
 
-<br>
-
 # Презентация:<br>«Семь раз отмерь, один раз оптимизируй»
 
 <br>
