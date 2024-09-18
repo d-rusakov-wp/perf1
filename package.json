@@ -4,14 +4,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "tw-watch": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css --watch",
-    "tw-build": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css --minify",
-    "watch": "shower serve & npm run tw-watch",
-    "build": "npm run tw-build",
-    "pdf": "shower pdf"
+    "tw": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css",
+    "watch": "shower serve & npm run tw --watch",
+    "build": "npm run tw --minify"
   },
   "files": [
-    "pictures/**",
     "index.html",
     "README.md"
   ],
