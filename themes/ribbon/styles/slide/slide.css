@@ -32,19 +32,19 @@
 /* Slide */
 
 .slide {
-    position: relative;
-    z-index: 0;
-    overflow: hidden;
-    box-sizing: border-box;
-    padding: 75px var(--slide-side) 0;
-    width: var(--slide-width);
-    height: var(--slide-height);
-    background-color: white;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 75px var(--slide-side) 0;
+  width: var(--slide-width);
+  height: var(--slide-height);
+  background-color: white;
 }
 
 /* Number */
 
-.slide::after {
+/* .slide::after {
     position: absolute;
     top: 0;
     left: 875px;
@@ -58,4 +58,4 @@
     counter-increment: slide;
     content: counter(slide);
     text-align: center;
-}
+} */

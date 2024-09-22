@@ -6,8 +6,8 @@
   "scripts": {
     "tw:watch": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css --watch",
     "tw:build": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css --minify",
-    "watch": "shower serve & tw:watch",
-    "build": "tw:build"
+    "watch": "shower serve & npm run tw:watch",
+    "build": "npm run tw:build"
   },
   "files": [
     "index.html",
