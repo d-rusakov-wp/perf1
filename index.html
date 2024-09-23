@@ -236,6 +236,38 @@
     </section>
 
     <section class="slide">
+      <pre>
+        const t0 = performance.now();
+for (let i = 0; i < array.length; i++) 
+{
+  // какой-то код
+}
+const t1 = performance.now();
+console.log(t1 - t0, 'milliseconds');
+
+  В Chrome после выполнения этого кода можно получить примерно такой результат:
+
+0.6350000001020817 "milliseconds"
+
+В Firefox — такой:
+
+1 milliseconds
+
+Метод console.time()
+
+  Запускайте функции по много раз
+
+Тестируйте производительность в разных браузерах
+
+https://doka.guide/js/performance/
+
+https://purpleschool.ru/knowledge-base/article/performance
+
+кейс cell-trade
+      </pre>
+    </section>
+
+    <section class="slide">
       <h2 class="shout">
         Чтобы не прилетали баги
         <picture>
