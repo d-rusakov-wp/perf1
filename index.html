@@ -113,6 +113,55 @@
       <h2 class="cover text-left"><span class="text-gray">Глава 1.</span><br />Теория</h2>
     </section>
 
+    <section class="slide">
+      <h2>React Developer Tools</h2>
+      <a href="https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en">https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en</a>
+    </section>
+
+    <section class="slide">
+      <pre>
+const markerNameA = "example-marker-a"
+const markerNameB = "example-marker-b"
+
+// Run some nested timeouts, and create a PerformanceMark for each.
+performance.mark(markerNameA);
+setTimeout(function() {
+  performance.mark(markerNameB);
+  setTimeout(function() {
+
+    // Create a variety of measurements.
+    performance.measure("measure a to b", markerNameA, markerNameB);
+    performance.measure("measure a to now", markerNameA);
+    performance.measure("measure from navigation start to b", undefined, markerNameB);
+    performance.measure("measure from the start of navigation to now");
+
+    // Pull out all of the measurements.
+    console.log(performance.getEntriesByType("measure"));
+
+    // Finally, clean up the entries.
+    performance.clearMarks();
+    performance.clearMeasures();
+  }, 1000);
+}, 1000);
+
+        console.time("answer time");
+alert("Click to continue");
+console.timeLog("answer time");
+alert("Do a bunch of other stuff...");
+console.timeEnd("answer time");
+
+        https://www.telerik.com/blogs/measuring-performance-javascript-performance-api
+
+        https://developer.mozilla.org/en-US/docs/Web/API/Performance/measure
+
+        https://docs.sentry.io/platforms/javascript/tracing/instrumentation/performance-metrics/
+
+https://support.speedcurve.com/docs/javascript-performance
+
+https://betterstack.com/community/guides/scaling-nodejs/performance-apis/
+      </pre>
+    </section>
+
     <!-- <section class="slide">
       <img class="cover rounded-md" src="./themes/tw/pictures/aviasales.jpg" alt="" width="400" height="400" />
     </section> -->
