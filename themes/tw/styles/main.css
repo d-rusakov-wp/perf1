@@ -147,7 +147,6 @@
 
   .slide blockquote::before {
     @apply text-gray;
-    color: red !important;
   }
 
   @supports not selector(::-webkit-scrollbar) {

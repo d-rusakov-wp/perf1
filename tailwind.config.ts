@@ -14,7 +14,14 @@ module.exports = {
     fontFamily: {
       arsenal: 'Arsenal, sans-serif',
     },
-    extend: {},
+    extend: {
+      animation: {
+
+      },
+      keyframes: {
+
+      }
+    },
   },
 } satisfies Config;
 
