@@ -149,6 +149,19 @@
     @apply text-gray;
   }
 
+  a.copyright {
+    padding: 3px 10px;
+    border-radius: 5px;
+    background-color: theme(colors.orange);
+    background-image: none;
+    color: #fff;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
   @supports not selector(::-webkit-scrollbar) {
     .scrollbar {
       scrollbar-color: theme(colors.orange) theme(colors.green);

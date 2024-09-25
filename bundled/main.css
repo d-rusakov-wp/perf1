@@ -721,6 +721,18 @@ table img {
   color: rgb(112 128 144 / var(--tw-text-opacity));
 }
 
+a.copyright {
+  padding: 3px 10px;
+  border-radius: 5px;
+  background-color: #b3441e;
+  background-image: none;
+  color: #fff;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
 @supports not selector(::-webkit-scrollbar) {
   .scrollbar {
     scrollbar-color: #b3441e #18404a;
