@@ -41,9 +41,14 @@
     }
   }
 
+  .place {
+    /* width: 50%; */
+  }
+
   .slide {
     @apply bg-green p-[24px_90px_0] shadow-[0_20px_50px_rgb(0_0_0_/_0%)];
 
+    /* padding: 24px 40px 0; */
     border-radius: 2px !important;
 
     h2,
