@@ -1488,6 +1488,65 @@ Ignition — это компонент, который помогает инте
         </p>
       </footer>
     </section> -->
+
+    <section class="slide">
+    
+    <pre>
+<code>
+По умолчанию TypeScript автоматически включает каждый @typesпакет, который он находит в вашей node_modulesпапке, независимо от того, импортируете ли вы его. Это сделано для того, чтобы определенные вещи "просто работали" при использовании Node.js, Jasmine, Mocha, Chai и т. д., поскольку эти инструменты/пакеты не импортируются — они просто загружаются в глобальную среду.
+
+Иногда эта логика может замедлить время построения программы как в сценариях компиляции, так и в сценариях редактирования, и это может даже вызвать проблемы с несколькими глобальными пакетами с конфликтующими объявлениями, вызывая такие ошибки, как
+
+Duplicate identifier 'IteratorResult'.
+Duplicate identifier 'it'.
+Duplicate identifier 'define'.
+Duplicate identifier 'require'.
+В случаях, когда глобальный пакет не требуется, исправление так же просто, как указание пустого поля для параметра"types" в tsconfig.json/jsconfig.json
+
+// src/tsconfig.json
+{
+   "compilerOptions": {
+       // ...
+
+       // Don't automatically include anything.
+       // Only include `@types` packages that we need to import.
+       "types" : []
+   },
+   "files": ["foo.ts"]
+}
+Если вам все еще нужны несколько глобальных пакетов, добавьте их в typesполе.
+
+// tests/tsconfig.json
+{
+   "compilerOptions": {
+       // ...
+
+       // Only include `@types/node` and `@types/mocha`.
+       "types" : ["node", "mocha"]
+   },
+   "files": ["foo.test.ts"]
+}
+</code>
+</pre>
+</section>
+
+
+    <section class="slide">
+      <pre>
+        <code>
+Добавление аннотаций типов, особенно возвращаемых типов, может сэкономить компилятору много работы. Отчасти это связано с тем, что именованные типы, как правило, более компактны, чем анонимные типы (которые компилятор может вывести), что сокращает время, затрачиваемое на чтение и запись файлов объявлений (например, для инкрементных сборок). Вывод типов очень удобен, поэтому нет необходимости делать это повсеместно — однако, это может быть полезно, если вы определили медленный раздел своего кода.
+
+- import { otherFunc } from "other";
++ import { otherFunc, OtherType } from "other";
+
+- export function func() {
++ export function func(): OtherType {
+      return otherFunc();
+  }
+</code>
+      </pre>
+    </section>
+
     <section class="slide">
       <h2>Когда?</h2>
       <ul>
