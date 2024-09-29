@@ -114,6 +114,10 @@
     @apply mx-auto;
   }
 
+  section img {
+    @apply rounded-sm;
+  }
+
   .scrollbar {
     &::-webkit-scrollbar {
       @apply w-[18px];
