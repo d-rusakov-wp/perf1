@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "yarn": "please-use-npm",
     "tw:watch": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css --watch",
     "tw:build": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css --minify",
     "dev": "shower serve & npm run tw:watch",
@@ -35,6 +36,6 @@
     "not dead"
   ],
   "engines": {
-    "node": "20"
+    "node": "20.x"
   }
 }
