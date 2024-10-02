@@ -107,7 +107,7 @@
 }
 
 /*
-! tailwindcss v3.4.12 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.13 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -748,6 +748,57 @@ a.copyright {
   }
 }
 
+pre {
+  margin-bottom: 0 !important;
+  border-radius: 4px;
+  background-color: #222;
+}
+
+pre code {
+  font-size: 18px;
+}
+
+@keyframes dots-left {
+  100% {
+    left: calc(100% - 10px);
+  }
+}
+
+@keyframes dots-top {
+  100% {
+    top: -0.1px;
+  }
+}
+
+.dots {
+  color: #fff;
+  --linear-gradient: '';
+  /* linear-gradient(currentColor 0 0); */
+  width: 52px;
+  height: 46px;
+  background:
+            var(--linear-gradient) 0 100%,
+            var(--linear-gradient) 50% 100%,
+            var(--linear-gradient) 100% 100%;
+  background-size: 10px calc(100% - 6px);
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.dots::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: currentColor;
+  left: 0;
+  top: 0;
+  animation:
+            dots-left 1.5s linear infinite alternate,
+            dots-top 0.75s cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+
 .static {
   position: static;
 }
@@ -978,6 +1029,10 @@ a.copyright {
 
 .opacity-90 {
   opacity: 0.9;
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition-colors {
