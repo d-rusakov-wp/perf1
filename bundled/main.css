@@ -644,6 +644,10 @@ video {
     font-size: 4.5rem;
     line-height: 1;
   }
+  b {
+    --tw-text-opacity: 1;
+    color: rgb(179 68 30 / var(--tw-text-opacity));
+  }
   a {
     --tw-text-opacity: 1;
     color: rgb(179 68 30 / var(--tw-text-opacity));
@@ -685,7 +689,7 @@ table img {
 }
 
 section img {
-  border-radius: 0.125rem;
+  border-radius: 4px;
 }
 
 .scrollbar {
@@ -712,18 +716,18 @@ section img {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.slide ol {
-  counter-reset: slide;
-}
+/* .slide ol {
+    counter-reset: slide;
+  }
 
-.slide ol > li:first-of-type::before {
-  counter-set: slide;
-}
+  .slide ol > li:first-of-type::before {
+    counter-set: slide;
+  }
 
-.slide ol > li::before {
-  counter-increment: slide;
-  content: counter(slide) '.';
-}
+  .slide ol > li::before {
+    counter-increment: slide;
+    content: counter(slide) '.';
+  } */
 
 .slide blockquote::before {
   --tw-text-opacity: 1;
@@ -772,14 +776,13 @@ pre code {
 
 .dots {
   color: #fff;
-  --linear-gradient: '';
-  /* linear-gradient(currentColor 0 0); */
+  /* linear-gradient(currentColor, 0, 0); */
   width: 52px;
   height: 46px;
   background:
-            var(--linear-gradient) 0 100%,
-            var(--linear-gradient) 50% 100%,
-            var(--linear-gradient) 100% 100%;
+      var(--linear-gradient) 0 100%,
+      var(--linear-gradient) 50% 100%,
+      var(--linear-gradient) 100% 100%;
   background-size: 10px calc(100% - 6px);
   background-repeat: no-repeat;
   position: relative;
@@ -795,8 +798,14 @@ pre code {
   left: 0;
   top: 0;
   animation:
-            dots-left 1.5s linear infinite alternate,
-            dots-top 0.75s cubic-bezier(0, 200, 0.8, 200) infinite;
+      dots-left 1.5s linear infinite alternate,
+      dots-top 0.75s cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+
+code {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: 1.5 !important;
 }
 
 .static {
@@ -839,6 +848,10 @@ pre code {
   margin: 0px;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .\!my-10 {
   margin-top: 2.5rem !important;
   margin-bottom: 2.5rem !important;
@@ -852,6 +865,11 @@ pre code {
 .-mx-8 {
   margin-left: -2rem;
   margin-right: -2rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .mb-4 {
@@ -910,8 +928,28 @@ pre code {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-x-\[100px\] {
+  --tw-translate-x: 100px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-\[200px\] {
+  --tw-translate-x: 200px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-\[400px\] {
+  --tw-translate-x: 400px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-x-\[450px\] {
   --tw-translate-x: 450px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-\[500px\] {
+  --tw-translate-x: 500px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -922,6 +960,11 @@ pre code {
 
 .translate-x-\[70px\] {
   --tw-translate-x: 70px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[100px\] {
+  --tw-translate-y: 100px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -937,6 +980,16 @@ pre code {
 
 .translate-y-\[340px\] {
   --tw-translate-y: 340px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[400px\] {
+  --tw-translate-y: 400px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-\[-30deg\] {
+  --tw-rotate: -30deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -969,8 +1022,8 @@ pre code {
   gap: 2rem;
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
+.rounded-\[4px\] {
+  border-radius: 4px;
 }
 
 .rounded-sm {
@@ -987,8 +1040,18 @@ pre code {
   background-color: rgb(179 68 30 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .p-0 {
   padding: 0px;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .px-4 {
@@ -1017,6 +1080,11 @@ pre code {
   line-height: 1.5rem;
 }
 
+.\!text-black {
+  --tw-text-opacity: 1 !important;
+  color: rgb(34 34 34 / var(--tw-text-opacity)) !important;
+}
+
 .text-gray {
   --tw-text-opacity: 1;
   color: rgb(112 128 144 / var(--tw-text-opacity));
@@ -1025,6 +1093,16 @@ pre code {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.\!text-orange {
+  --tw-text-opacity: 1 !important;
+  color: rgb(179 68 30 / var(--tw-text-opacity)) !important;
+}
+
+.text-orange {
+  --tw-text-opacity: 1;
+  color: rgb(179 68 30 / var(--tw-text-opacity));
 }
 
 .opacity-90 {
