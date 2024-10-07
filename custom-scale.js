@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
             justify-content: space-between;
             width: 100%;
             height: 40px;
-            background-color: #b3441e;
-            border-radius: 15px 5px 15px 5px;
+            background-color: #fff;
+            border-radius: 4px;
             color: #fff;
             font-weight: bold;
             margin-bottom: 15px;
-            border: 2px solid #fff;
+            border: 4px solid #fff;
 
             &::before {
               transform: translateX(calc(-100% - 15px));
@@ -34,18 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             &::after {
-              border-radius: 15px 5px 15px 5px;
               position: absolute;
               left: 0;
               height: 100%;
               background: repeating-linear-gradient(
-                -45deg,
-                #18404a,
-                #18404a 10px,
-                #fff 10px,
-                #fff 20px
+                90deg,
+                #b3441e,
+                #b3441e 20px,
+                #fff 20px,
+                #fff 24px
               );
-              background-color: red;
               content: '';
               width: ${this.getAttribute('percentage')}%;
             }

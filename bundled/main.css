@@ -644,9 +644,16 @@ video {
     font-size: 4.5rem;
     line-height: 1;
   }
+  .place {
+  }
+  table tr {
+    --color-line: #708090;
+  }
   b {
-    --tw-text-opacity: 1;
-    color: rgb(179 68 30 / var(--tw-text-opacity));
+    color: #fff;
+    background: #b3441e;
+    padding: 0 7px;
+    border-radius: 4px;
   }
   a {
     --tw-text-opacity: 1;
@@ -688,7 +695,11 @@ table img {
   margin-right: auto;
 }
 
-section img {
+pre.place {
+  width: 90%;
+}
+
+section img:not(.cover) {
   border-radius: 4px;
 }
 
@@ -869,6 +880,10 @@ code {
   margin-top: 0.5rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .mt-8 {
   margin-top: 2rem;
 }
@@ -895,6 +910,14 @@ code {
 
 .w-\[55\%\] {
   width: 55%;
+}
+
+.w-\[90\%\] {
+  width: 90%;
+}
+
+.w-\[0\%\] {
+  width: 0%;
 }
 
 .-translate-x-1\/2 {

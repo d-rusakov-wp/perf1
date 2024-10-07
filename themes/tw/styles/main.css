@@ -75,8 +75,18 @@
       @apply m-0 text-7xl;
     }
 
+    .place {
+    }
+
+    table tr {
+      --color-line: theme(colors.gray);
+    }
+
     b {
-      @apply text-orange;
+      color: #fff;
+      background: #b3441e;
+      padding: 0 7px;
+      border-radius: 4px;
     }
 
     a {
@@ -118,7 +128,11 @@
     @apply mx-auto;
   }
 
-  section img {
+  pre.place {
+    @apply w-[90%];
+  }
+
+  section img:not(.cover) {
     @apply rounded-[4px];
   }
 
