@@ -16,11 +16,18 @@ module.exports = {
     },
     extend: {
       animation: {
-
+        jump: 'jump-left 1.5s linear infinite alternate, jump-top 0.75s cubic-bezier(0, 200, 0.8, 200) infinite',
       },
       keyframes: {
-
-      }
+        'jump-left': {
+          from: { left: '0' },
+          to: { left: 'calc(100% - 10px)' },
+        },
+        'jump-top': {
+          from: { top: '0' },
+          to: { top: '-0.1px' },
+        },
+      },
     },
   },
 } satisfies Config;

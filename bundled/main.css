@@ -762,21 +762,9 @@ pre code {
   font-size: 18px;
 }
 
-@keyframes dots-left {
-  100% {
-    left: calc(100% - 10px);
-  }
-}
-
-@keyframes dots-top {
-  100% {
-    top: -0.1px;
-  }
-}
-
 .dots {
+  --linear-gradient: linear-gradient(currentColor 0 0);
   color: #fff;
-  /* linear-gradient(currentColor, 0, 0); */
   width: 52px;
   height: 46px;
   background:
@@ -797,9 +785,6 @@ pre code {
   background: currentColor;
   left: 0;
   top: 0;
-  animation:
-      dots-left 1.5s linear infinite alternate,
-      dots-top 0.75s cubic-bezier(0, 200, 0.8, 200) infinite;
 }
 
 code {
@@ -894,6 +879,10 @@ code {
 
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
 }
 
 .h-full {
@@ -1095,16 +1084,6 @@ code {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.\!text-orange {
-  --tw-text-opacity: 1 !important;
-  color: rgb(179 68 30 / var(--tw-text-opacity)) !important;
-}
-
-.text-orange {
-  --tw-text-opacity: 1;
-  color: rgb(179 68 30 / var(--tw-text-opacity));
-}
-
 .opacity-90 {
   opacity: 0.9;
 }
@@ -1117,6 +1096,35 @@ code {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+@keyframes jump-left {
+  from {
+    content: var(--tw-content);
+    left: 0;
+  }
+
+  to {
+    content: var(--tw-content);
+    left: calc(100% - 10px);
+  }
+}
+
+@keyframes jump-top {
+  from {
+    content: var(--tw-content);
+    top: 0;
+  }
+
+  to {
+    content: var(--tw-content);
+    top: -0.1px;
+  }
+}
+
+.before\:animate-jump::before {
+  content: var(--tw-content);
+  animation: jump-left 1.5s linear infinite alternate, jump-top 0.75s cubic-bezier(0, 200, 0.8, 200) infinite;
 }
 
 .before\:bg-orange::before {

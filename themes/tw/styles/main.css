@@ -191,22 +191,10 @@
     font-size: 18px;
   }
 
-  @keyframes dots-left {
-    100% {
-      left: calc(100% - 10px);
-    }
-  }
-
-  @keyframes dots-top {
-    100% {
-      top: -0.1px;
-    }
-  }
-
   .dots {
-    color: #fff;
-    /* linear-gradient(currentColor, 0, 0); */
+    --linear-gradient: linear-gradient(currentColor 0 0);
 
+    color: #fff;
     width: 52px;
     height: 46px;
     background:
@@ -227,9 +215,6 @@
     background: currentColor;
     left: 0;
     top: 0;
-    animation:
-      dots-left 1.5s linear infinite alternate,
-      dots-top 0.75s cubic-bezier(0, 200, 0.8, 200) infinite;
   }
 
   code {
