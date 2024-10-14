@@ -3,6 +3,7 @@ module.exports = {
   singleQuote: true,
   bracketSpacing: true,
   bracketSameLine: false,
+  singleAttributePerLine: false,
   printWidth: 120,
   arrowParens: "avoid",
   trailingComma: "es5",
