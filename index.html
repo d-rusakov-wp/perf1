@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="description" content="Презентация по TailwindCSS" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    
+
     <title>Семь раз отмерь, один раз оптимизируй</title>
 
     <link rel="icon" href="./themes/tw/images/logo.png" type="image/svg+xml" />
@@ -2224,6 +2224,57 @@
       <img class="cover" src="./themes/tw/images/qr-code.svg" alt="Qr code" width="400" height="400" />
     </section>
 
+    <section class="slide">
+      <div class="highlight-blocks">
+        <div class="highlight"></div>
+        <div class="highlight"></div>
+        <div class="highlight"></div>
+        <div class="highlight"></div>
+        <div class="highlight"></div>
+      </div>
+      <style>
+        :root {
+          --color-walbi-15: #3affa326;
+          --color-walbi-45: #3affa373;
+          --walbi-glow: 0px 0px 36px 8px var(--color--walbi-15), 0px 0px 7px 1px var(--color--walbi-45);
+          --swiper-wrapper-transition-timing-function: cubic-bezier(0.5, 0.05, 0.05, 0.99);
+          --ease-main: cubic-bezier(0.5, 0.05, 0.05, 0.99);
+        }
+
+        @keyframes highlight {
+          0%,
+          100% {
+            opacity: 0;
+          }
+
+          50% {
+            opacity: 1;
+          }
+        }
+
+        .highlight-blocks {
+          z-index: 1;
+          grid-column-gap: 3px;
+          grid-row-gap: 3px;
+          flex-flow: row;
+          margin-top: -0.1rem;
+          display: flex;
+          position: relative;
+        }
+
+        .highlight-blocks.is--small {
+          transform: scale(0.85);
+        }
+
+        .highlight {
+          background-color: var(--color--walbi);
+          width: 0.3125em;
+          height: 0.875em;
+          animation: 1s infinite highlight;
+        }
+      </style>
+    </section>
+
     <section class="slide relative">
       <div class="shout flex flex-col items-center">
         <div class="dots before:animate-jump"></div>
@@ -2253,6 +2304,36 @@
           obj[getProp(obj[0], name)]
 
           механизмы оптимизации выполнения js
+          https://romgrk.com/posts/optimizing-javascript#8-use-strings-carefully
+          https://webpractik.github.io/tw/#132
+          https://www.nngroup.com/articles/peak-end-rule/
+          https://randoma11y.com/?ref=curations.tech
+          https://slimify.app/
+          https://jsoncrack.com/
+          https://gistlib.com/typescript/how-check-type-is-string-in-typescript
+          https://www.divblockers.com/
+          https://www.calligrapher.ai/
+          https://browserbench.org/Speedometer3.0/
+          https://handyarrows.com/
+          https://css.land/specificity/
+          https://apps.theodo.com/article/seek-and-destroy-dead-code-for-good-a-strategy-using-ts-prune
+          https://github.com/shower/shower/blob/main/README.md
+          https://shenzilong.cn/record/How%20I%20Created%20a%203.78MB%20Docker%20Image%20for%20a%20JavaScript%20Service
+          https://habr.com/ru/articles/849368/
+          https://www.youtube.com/watch?app=desktop&v=UGGOrsQiOW0
+          https://nolanlawson.com/2024/09/18/improving-rendering-performance-with-css-content-visibility/
+          https://maxschmitt.me/posts/tiny-plausible-tracking-script
+          https://www.trysmudford.com/blog/i-spent-a-day-making-the-website-go-2ms-faster/
+          https://codepen.io/argyleink/pen/vYoYmMa
+          https://habr.com/ru/articles/848100/
+          https://web.dev/blog/at-property-performance
+          https://developer.mozilla.org/ru/docs/Web/Performance/Fundamentals
+          https://developer.mozilla.org/en-US/blog/fix-javascript-performance/
+          https://github.com/lawnsea/jssummit-front-end-optimization
+          https://github.com/supeng123/frontEnd-optimization/tree/master/design-patterns
+          https://www.npmjs.com/package/autocannon
+          https://codepen.io/molily/pen/gOJVQgB
+          https://github.com/CSS-Next/css-next/issues/105
         </pre>
         <picture>
           <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6ec/512.webp" type="image/webp" />
@@ -2388,6 +2469,10 @@
     </section>
         <section class="slide">
       <img class="cover" src="./themes/tw/images/theory/separation.jpg" alt="Разделение" width="1921" height="1080" />
+      https://arc.net/
+      https://www.npmjs.com/package/depcheck
+      https://www.npmjs.com/package/@cerner/duplicate-package-checker-webpack-plugin
+      https://www.npmjs.com/package/dependency-cruiser
     </section>
 
     <section class="slide">
