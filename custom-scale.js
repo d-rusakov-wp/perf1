@@ -5,16 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
         super();
       }
 
-      connectedCallback() {
-        const shadow = this.attachShadow({ mode: 'open' });
-
-        const scale = document.createElement('div');
-        const style = document.createElement('style');
-
-        scale.setAttribute('class', 'scale');
-
-        style.textContent = `
-          .scale {
+      renderCSS() {
+        return `          .scale {
             position: relative;
             display: flex;
             justify-content: space-between;
@@ -47,8 +39,18 @@ document.addEventListener('DOMContentLoaded', () => {
               content: '';
               width: ${this.getAttribute('percentage')}%;
             }
-          }
-        `;
+          }`;
+      }
+
+      connectedCallback() {
+        const shadow = this.attachShadow({ mode: 'open' });
+
+        const scale = document.createElement('div');
+        const style = document.createElement('style');
+
+        scale.setAttribute('class', 'scale');
+
+        style.textContent = this.renderCSS();
 
         shadow.appendChild(style);
         shadow.appendChild(scale);
