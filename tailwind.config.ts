@@ -28,6 +28,11 @@ module.exports = {
           to: { top: '-0.1px' },
         },
       },
+      screens: {
+        standalone: {
+        raw: "(display-mode: standalone)"
+        },
+      }
     },
   },
 } satisfies Config;

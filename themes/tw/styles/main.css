@@ -1,6 +1,10 @@
 @tailwind base;
 
 @layer base {
+  body {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   @font-face {
     font-family: 'Arsenal';
     font-weight: 700;

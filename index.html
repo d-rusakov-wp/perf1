@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
     <meta name="description" content="Презентация по TailwindCSS" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <title>Семь раз отмерь, один раз оптимизируй</title>
 
@@ -53,7 +54,7 @@
         <p>Отзывчивость важна просто потому, что пользователи теряются и злятся, когда их игнорируют. Ваше приложение игнорирует пользователя каждую секунду, когда оно не отвечает на пользовательский ввод.</p></div></section><section aria-labelledby="частота_кадров"><h3 id="частота_кадров"><a href="#частота_кадров">Частота кадров</a></h3><div class="section-content"><p>Частота кадров - это частота, с которой система перерисовывает пиксели, отображаемые пользователю. Это знакомая концепция: каждый предпочитает, скажем, игры, которые работают в режиме 60 кадров в секунду играм, которые работают с частотой 10 кадров в секунду. Даже если они не смогут объяснить причины этого.</p>
         <p>Частота кадров важна примерно так же, как "качество обслуживания". Дисплеи устройств спроектированы так, чтобы обманывать глаза пользователей, доставляя фотоны света так, чтобы изображение было похожим на реальное. Например, бумага, покрытая напечатанными буквами, отражает фотоны определённым образом. Манипулируя рендерингом, приложения-читалки пытаются отправить фотоны похожим образом, обманывая глаза.</p>
         <p>Ваш мозг знает, что движение - это не отрывчатый или дискретный процесс, а плавный и последовательный. Дисплей устройств с высокой частотой кадров сделаны просто для того, чтобы сделать эту иллюзию более реальной. (Интересно, что стробоскопы переворачивают эту концепцию, заставляя наш мозг создавать иллюзию дискретной реальности).</p>
-        <div class="notecard note" id="sect1">
+        <div class="notecard note">
           <p><strong>Примечание:</strong> Люди обычно не могут почувствовать разницу между частотами кадров выше 60Hz. По этой причин большая часть современных электронных дисплеев спроектированы для обновления картинки с такой частотой. Однако, для некоторых живых существ такая частота кадров будет казаться замедленной. Например, для колибри.</p>
         </div></div></section><section aria-labelledby="использование_памяти"><h3 id="использование_памяти"><a href="#использование_памяти">Использование памяти</a></h3><div class="section-content"><p>Использование памяти - это отдельная ключевая метрика. В отличии от отзывчивости и частоты кадров, пользователи не могут напрямую почувствовать использование памяти, но её использование влияет на "состояние пользователя". Идеальная система будет поддерживать 100% состояния всех приложений всё время: все приложения будут запускаться одновременно, а каждое приложение будет возвращаться к состоянию, которое было в последний раз, когда пользователь с ним взаимодействовал (состояние приложения хранится в компьютерной памяти - поэтому это сравнение его с user state довольно точное).</p>
         <p>Отсюда следует одно неочевидное заключение: <strong>хорошо спроектированная система не заботится об увеличении свободной памяти.</strong> <strong>Память - это ресурс,</strong> а свободная память - неиспользуемый ресурс. Наоборот, хорошо спроектированная система использует достаточно много памяти, чтобы обеспечить такое состояние, когда пользователь не чувствует изменений в производительности.</p>
@@ -1095,6 +1096,17 @@ console.log(perfEntries[0].duration);
     </section>
 
     <section class="slide">
+      <h2>Качество ПО</h2>
+      <ul>
+        <li>Корректность (в ПО нет дефектов)</li>
+        <li>Эффективность (как система использует системыне ресурсы)</li>
+        <li>Надежность (системы выполняет необходимые функции)</li>
+        <li>Корректность ()</li>
+        <li>Гибкость</li>
+      </ul>
+    </section>
+
+    <section class="slide">
       <h2>Результат выполнения</h2>
       <div>
         <custom-scale name="Функциональный подход" percentage="36"></custom-scale>
@@ -1734,7 +1746,53 @@ console.log(perfEntries[0].duration);
       <footer>
         <p>Предпочитайте интерфейсы пересечениям</p>
         <p>Отношения типов между интерфейсами кешируется, в&nbsp;отличие от&nbsp;типов пересения.</p>
+        <p>Высота дерева особенно важна, когда мы имеем дело с определенными типами деревьев, такими как двоичные деревья поиска (BST) . Вот почему существует так много различных структур данных, которые реализуют самобалансирующиеся BST (https://en.wikipedia.org/wiki/Self-balancing_binary_search_tree) — так, чтобы мы могли поддерживать высоту дерева на минимальном уровне по мере его роста и выполнять такие операции, как поиск, как можно быстрее.</p>
       </footer>
+    </section>
+
+    <section class="slide">
+        <pre>
+      <code>
+          if (true) [
+	console.log(1)
+]
+else [
+	console.log(2)
+]
+      </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Statoscope</h2>
+      https://treo.sh/
+      <a>https://github.com/statoscope/statoscope</a>
+      <pre>
+        <code>
+          Объединение через push
+for (let j = 0; j < ARRAY_SIZE_SMALL; j++) {
+const result = [];
+for (let i = 0; i < arr1.length; i++) {
+result.push(arr1[i]);
+}
+for (let i = 0; i < arr2.length; i++) {
+result.push(arr2[i]);
+}
+}
+Объединение через индексы
+for (let j = 0; j < ARRAY_SIZE_SMALL; j++) {
+const result = Array(ARRAY_SIZE_SMALL * 2);
+for (let i = 0; i < arr1.length; i++) {
+result[i] = arr1[i];
+}
+for (let i = 0; i < arr2.length; i++) {
+result[i + ARRAY_SIZE_SMALL] = arr2[i];
+}
+}
+     https://github.com/sharkdp/hyperfine
+
+        </code>
+      </pre>
     </section>
 
     <section class="slide">
@@ -2256,6 +2314,25 @@ console.log(perfEntries[0].duration);
     <section class="slide">
       <h2>Всё познается в&nbsp;сравнении</h2>
       <img class="cover" src="./themes/tw/images/memes/statham.jpg" alt="Ограничения" width="640" height="760" />
+    </section>
+
+    <section class="slide">
+      <video></video>
+      <style>
+        video::cue {
+          font-size: 1rem;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <ul>
+        <li>node --inspect-brk</li>
+        <li>chrome://inspect</li>
+        <li><a href="https://perf.link">perf.link</a></li>
+        <li>https://npmgraph.js.org/</li>
+        <li>eslint-plugin-depend</li>
+      </ul>
     </section>
 
     <section class="slide">
@@ -2801,7 +2878,51 @@ console.log(t1 - t0, 'milliseconds');
     </section>
 
     <section class="slide">
-      <h2 class="shout">JNT (Just Noticeable Difference)</h2>
+      <div class="section-content"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+        Когда дело доходит до производительности веб-сайта, вы можете подумать о таких методах, как сжатие, оптимизация ресурсов или даже кэширование HTTP. Они действительно важны, и существует множество существующих ресурсов, охватывающих способы их исправления или внедрения. Однако некоторые менее обсуждаемые узкие места производительности могут серьезно повлиять на скорость веб-сайта. В этой статье мы обсудим три проблемы, которые часто возникают из-за неэффективных шаблонов JavaScript:
+      </font></font></p>
+        <ul>
+          <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Длительные задачи:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> операции JavaScript, которые монополизируют основной поток, что приводит к неотзывчивости пользовательских интерфейсов.</font></font></li>
+          <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Большие размеры пакетов:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> код JavaScript слишком велик для быстрой загрузки, анализа и выполнения.</font></font></li>
+          <li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Проблемы гидратации:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> процесс присоединения функциональности JavaScript к HTML, отображаемому сервером.</font></font></li>
+        </ul>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Хотя эти проблемы не новы, современные веб-практики и веб-фреймворки могут усугубить эти проблемы, снова выставив их в центр внимания.</font></font></p>
+        <div class="notecard note" id="sect1">
+          <p>
+            <strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Примечание:</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Эти проблемы могут также возникать из других источников, таких как CSS. Например, </font></font><a href="/en-US/docs/Glossary/Long_task"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">долгая задача</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> может быть вызвана сложным селектором CSS, которому требуется много времени для сопоставления элементов. Однако в этой статье основное внимание уделяется JavaScript.
+          </font></font></p>
+        </div>
+        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ниже приведена более подробная информация о каждом узком месте, а также общие комментарии по решению таких проблем производительности.</font></font></p></div>
+    </section>
+
+    <section class="slide">
+       <h2 class="shout">JNT (Just Noticeable Difference)</h2>
+      <h2>Хороший алгоритм решения проблемы</h2>
+      <ol>
+        <li>воспроизвести проблему;</li>
+        <li class="next">локализовать ошибку;</li>
+        <li class="next">исправить ошибку;</li>
+        <li class="next">протестировать;</li>
+        <li class="next">избежать повторения в будущем;</li>
+        <li class="next">отдать тестировщику.</li>
+      </ol>
+      <h2>Алгоритм решения проблемы</h2>
+      <ol>
+        <li class="next">подобрать решение;</li>
+        <li class="next">закоммитить;</li>
+        <li class="next">отдать тестировщику.</li>
+      </ol>
+      де-факто
+    </section>
+
+    <section class="slide">
+      <h2>
+        <mark class="next">Motivation</mark>
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h2 class="shout">Grafana</h2>
     </section>
 
     <section>
@@ -2812,6 +2933,7 @@ console.log(t1 - t0, 'milliseconds');
 
  <section class="slide">
     <pre>
+      https://developer.mozilla.org/en-US/docs/Web/API/Performance/measure
 const markerNameA = "example-marker-a"
 const markerNameB = "example-marker-b"
 
