@@ -1,12 +1,14 @@
-- name: size-limit-action
-  uses: andresz1/size-limit-action@v1.8.0
-  with:
-    github_token: 
-    build_script: # optional
-    clean_script: # optional
-    skip_step: # optional
-    directory: # optional
-    windows_verbatim_arguments: # optional, default is true
-    script: # optional, default is npx size-limit --json
-    package_manager: # optional
-          
+name: size-limit-action
+
+uses: andresz1/size-limit-action@v1.8.0
+
+with:
+  github_token:
+  build_script: # optional
+  clean_script: # optional
+  skip_step: # optional
+  directory: # optional
+  windows_verbatim_arguments: # optional, default is true
+  script: # optional, default is npx size-limit --json
+  package_manager: # optional
+

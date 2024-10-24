@@ -11,6 +11,12 @@
 
     <link rel="icon" href="./themes/tw/images/logo.png" type="image/svg+xml" />
 
+    <style>
+      .shower {
+        --slide-ratio: calc(16 / 9);
+      }
+    </style>
+
     <link rel="stylesheet" href="./themes/ribbon/styles/styles.css" />
     <link rel="stylesheet" href="./bundled/main.css" />
     <link rel="stylesheet" href="./libs/highlight/hybrid.min.css" />
@@ -905,10 +911,10 @@
             </figure>
             <figure>
                 <img src="./pictures/fid.svg" alt="Диаграма метрики First Input Delay. Значение меньше 100мс - хорошо, от 100мс до 300мс - нужны улучшения, более 300мс - плохо.">
-            </figure> 
+            </figure>
             <figure>
                 <img src="./pictures/cls.svg" alt="Диаграма метрики Cumulative Layout Shift. Значение меньше 0.1 - хорошо, от 0.1 до 0.25 - нужны улучшения, более 0.25 - плохо.">
-            </figure> 
+            </figure>
         </div>
         <a href="https://habr.com/ru/company/rambler_and_co/blog/544904/" class="copyright" target="_blank">Core Web Vitals: как Google решил оценивать сайты</a>
     </section>
@@ -980,17 +986,17 @@
                 <p>Лабораторные</p>
                 <ul class="next">
                     <li>Имитируются в лабораторных условиях</li>
-                    <li>Зависят от среды проверки</li>  
-                    <li>Результаты от проверки к проверке могут отличаться</li> 
-                </ul> 
+                    <li>Зависят от среды проверки</li>
+                    <li>Результаты от проверки к проверке могут отличаться</li>
+                </ul>
             </div>
             <div>
                 <p>Полевые (<abbr title="Real User Monitoring">RUM</abbr>)</p>
                 <ul class="next">
                     <li>Собираются с реальных пользователей</li>
-                    <li>Отличаются для разных пользователей</li>  
-                    <li>Необходимо достаточное количество для анализа</li> 
-                </ul> 
+                    <li>Отличаются для разных пользователей</li>
+                    <li>Необходимо достаточное количество для анализа</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -1117,16 +1123,16 @@
                 <li class="next">Минимизируем инлайн (base64, скрипты и стили)*</li>
                 <li class="next">Не храним много данных</li>
                 <li class="next">Используем современный CSS</li>
-            </ul> 
+            </ul>
         </div>
     </section>
 
     <section class="slide">
-        <h2>Cсылки</h2>   
+        <h2>Cсылки</h2>
         <ul>
             <li><a href="https://web.dev/dom-size/" target="_blank">Избегайте чрезмерного размера DOM</a></li>
             <li><a href="https://css-tricks.com/crafting-reusable-html-templates/" target="_blank" hreflang="en">Crafting Reusable HTML Templates</a></li>
-        </ul> 
+        </ul>
     </section>
 
     <section class="slide">
@@ -1141,13 +1147,13 @@
     </section>
 
     <section class="slide">
-        <h2>Cсылки</h2>   
+        <h2>Cсылки</h2>
         <ul>
             <li><a href="https://web.dev/priority-hints/" target="_blank" hreflang="en">Optimizing resource loading with Priority Hints</a></li>
             <li><a href="https://www.w3.org/TR/resource-hints/" target="_blank" hreflang="en">W3C Resource Hints</a></li>
             <li><a href="https://www.smashingmagazine.com/2019/04/optimization-performance-resource-hints/" target="_blank" hreflang="en">Optimizing Performance With Resource Hints</a></li>
             <li><a href="https://habr.com/ru/post/445264/" target="_blank" hreflang="en">Preload, prefetch и другие теги</a></li>
-        </ul> 
+        </ul>
     </section>
 
     <section class="slide">
@@ -1469,7 +1475,7 @@
             <code>&Tab;&lt;source srcset="image.<mark>jp2</mark>" type="image/jp2"&gt;</code>
             <code>&Tab;&lt;img src="image.jpg" alt="Some description..."&gt;</code>
             <code>&lt;picture/&gt;</code>
-        </pre> 
+        </pre>
     </section>
 
     <section class="slide">
@@ -1522,7 +1528,7 @@
         <h2>Размеры изображений</h2>
         <pre class="next"><code>&lt;img src="pic.webp" <mark>width="400" height="400"</mark> alt=""&gt;</code></pre>
         <pre class="next">
-            <code>img {</code> 
+            <code>img {</code>
             <code>&Tab;max-width: 100%;</code>
             <code>&Tab;height: auto;</code>
             <code>&Tab;aspect-ratio: 1 / 1;</code>
@@ -1578,7 +1584,7 @@
 
     <section class="slide">
         <h2>CDN сервисы для графики</h2>
-        <p class="next">Преобразование графики налету при помощи CDN</p> 
+        <p class="next">Преобразование графики налету при помощи CDN</p>
         <ul class="next">
             <li><a href="https://github.com/thumbor/thumbor" target="_blank">Tumbor</a></li>
             <li><a href="https://imgproxy.net/" target="_blank">imageproxy</a></li>
@@ -1670,7 +1676,7 @@
                     setTimeout(() => { foutTarget.classList.add('show'); }, 0);
 
                     foutProgress.value = 0;
-                    const foutInterval = setInterval(() => { 
+                    const foutInterval = setInterval(() => {
                         if (foutProgress.value !== 150) {
                             foutProgress.value = foutProgress.value + 1;
                         } else {
@@ -1687,7 +1693,7 @@
                     setTimeout(() => { foitTarget.classList.add('show'); }, 0);
 
                     foitProgress.value = 0;
-                    const foitInterval = setInterval(() => { 
+                    const foitInterval = setInterval(() => {
                         if (foitProgress.value !== 150) {
                             foitProgress.value = foitProgress.value + 1;
                         } else {
@@ -1701,13 +1707,13 @@
             <figure>
                 <p class="fout">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, consequuntur ut delectus cupiditate ipsa repellat.</p>
                 <progress class="fout-progress" min="0" max="150" value="0"></progress><br>
-                <button class="show-fout">start</button>   
+                <button class="show-fout">start</button>
                 <figcaption>Демонстрация <abbr title="Flash of unstyled text" lang="en">FOUT</abbr></figcaption>
             </figure>
             <figure>
-                <p class="foit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, consequuntur ut delectus cupiditate ipsa repellat.</p>   
+                <p class="foit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, consequuntur ut delectus cupiditate ipsa repellat.</p>
                 <progress class="foit-progress" min="0" max="150" value="0"></progress><br>
-                <button class="show-foit">start</button>    
+                <button class="show-foit">start</button>
                 <figcaption>Демонстрация <abbr title="Flash of invisible text" lang="en">FOIT</abbr></figcaption>
             </figure>
         </div>

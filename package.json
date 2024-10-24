@@ -3,7 +3,8 @@
   "description": "Презентация: «Семь раз отмерь, один раз оптимизируй»",
   "version": "1.0.0",
   "private": true,
-  "homepage": "/",
+  "license": "MIT",
+  "homepage": "https://github.com/d-rusakov-wp/perf",
   "scripts": {
     "yarn": "please-use-npm",
     "tw:watch": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css --watch",
@@ -39,5 +40,18 @@
   ],
   "engines": {
     "node": "22.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/d-rusakov-wp/perf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/d-rusakov-wp/perf"
+  },
+  "author": {
+    "name": "Денис Русаков"
   }
 }
