@@ -1,0 +1,22 @@
+- name: size-limit-action
+  # You may pin to the exact commit or the version.
+  # uses: andresz1/size-limit-action@94bc357df29c36c8f8d50ea497c3e225c3c95d1d
+  uses: andresz1/size-limit-action@v1.8.0
+  with:
+    # a github access token
+    github_token: 
+    # a custom npm script to build
+    build_script: # optional
+    # a npm script to clean up build directory
+    clean_script: # optional
+    # which step to skip, either "install" or "build"
+    skip_step: # optional
+    # a custom subdirectory
+    directory: # optional
+    # exec `size-limit` with the option `windowsVerbatimArguments`
+    windows_verbatim_arguments: # optional, default is true
+    # The script used to generate size-limit results
+    script: # optional, default is npx size-limit --json
+    # The package manager used to run the build and install commands. If not provided, the manager will be auto detected. Example values: `yarn`, `npm`, `pnpm`, `bun`.
+    package_manager: # optional
+          
