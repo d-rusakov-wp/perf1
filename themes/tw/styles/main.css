@@ -242,10 +242,18 @@
   }
 
 @layer scroll {
+  @property --scrollbar-thumb-color {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: rgba(0, 0, 0, 0);
+  } 
+
   body.platform-windows {
-    * {
+    [data-scrollbar-thumb] {
       /* This prevent scrollbar from shifting the page content */
       scrollbar-gutter: stable;
+
+      transition: --scrollbar-thumb-color 1s;
 
       &::-webkit-scrollbar {
         width: 8px;
@@ -253,7 +261,7 @@
       }
 
       &::-webkit-scrollbar-thumb {
-        background: rgba(0, 0, 0, 0.8);
+        background: var(--scrollbar-thumb-color);
         border-radius: 8px;
       }
 
@@ -264,8 +272,17 @@
       &::-webkit-scrollbar-button {
         display: none;
       }
+
+      &[data-scrollbar-thumb="true"]:hover {
+        --scrollbar-thumb-color: rgba(0, 0, 0, 0.8);
+      }
     }
   }
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  scrollbar-color: rgba(0, 0, 0, 0.8) transparent;
+  scrollbar-width: thin;
 }
 }
 
