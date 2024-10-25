@@ -13,6 +13,7 @@ module.exports = {
     },
     fontFamily: {
       arsenal: 'Arsenal, sans-serif',
+      cuprum: 'Cuprum, sans-serif',
     },
     extend: {
       fontFamily: {

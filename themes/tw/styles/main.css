@@ -66,12 +66,15 @@
       @apply text-white;
     }
 
-    /* h2 {
-      @apply font-arsenal text-[42px];
-    } */
+    h2 {
+      @apply font-arsenal text-[52px];
+    }
+
+    i {
+      @apply font-arsenal;
+    }
 
     & > h2 {
-      @apply font-arsenal text-[72px];
     }
 
     .shout h2,
@@ -241,50 +244,51 @@
     line-height: 1.5 !important;
   }
 
-@layer scroll {
-  @property --scrollbar-thumb-color {
-    syntax: "<color>";
-    inherits: true;
-    initial-value: rgba(0, 0, 0, 0);
-  } 
+  @layer scroll {
+    @property --scrollbar-thumb-color {
+      syntax: '<color>';
+      inherits: true;
+      initial-value: rgba(0, 0, 0, 0);
+    }
 
-  body.platform-windows {
-    [data-scrollbar-thumb] {
-      /* This prevent scrollbar from shifting the page content */
-      scrollbar-gutter: stable;
+    body.platform-windows {
+      [data-scrollbar-thumb] {
+        /* This prevent scrollbar from shifting the page content */
+        scrollbar-gutter: stable;
 
-      transition: --scrollbar-thumb-color 1s;
+        transition: --scrollbar-thumb-color 1s;
 
-      &::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-      }
+        &::-webkit-scrollbar {
+          width: 8px;
+          height: 8px;
+        }
 
-      &::-webkit-scrollbar-thumb {
-        background: var(--scrollbar-thumb-color);
-        border-radius: 8px;
-      }
+        &::-webkit-scrollbar-thumb {
+          background: var(--scrollbar-thumb-color);
+          border-radius: 8px;
+        }
 
-      &::-webkit-scrollbar-track {
-        background: transparent;
-      }
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
 
-      &::-webkit-scrollbar-button {
-        display: none;
-      }
+        &::-webkit-scrollbar-button {
+          display: none;
+        }
 
-      &[data-scrollbar-thumb="true"]:hover {
-        --scrollbar-thumb-color: rgba(0, 0, 0, 0.8);
+        &[data-scrollbar-thumb='true']:hover {
+          --scrollbar-thumb-color: rgba(0, 0, 0, 0.8);
+        }
       }
     }
   }
-}
 
-@supports not selector(::-webkit-scrollbar) {
-  scrollbar-color: rgba(0, 0, 0, 0.8) transparent;
-  scrollbar-width: thin;
-}
+  @supports not selector(::-webkit-scrollbar) {
+    scrollbar-color: rgba(0, 0, 0, 0.8) transparent;
+    scrollbar-width: thin;
+  }
 }
 
 @tailwind components;
 @tailwind utilities;
+@tailwind variants;

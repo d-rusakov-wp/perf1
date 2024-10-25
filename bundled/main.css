@@ -630,14 +630,16 @@ body {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
-  /* h2 {
-      @apply font-arsenal text-[42px];
-    } */
-  & > h2 {
+  h2 {
+    font-family: Arsenal, sans-serif;
+  }
+  h2 {
+    font-size: 52px;
+  }
+  i {
     font-family: Arsenal, sans-serif;
   }
   & > h2 {
-    font-size: 72px;
   }
   .shout h2,
     h2.shout {
@@ -806,6 +808,47 @@ code {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   line-height: 1.5 !important;
+}
+
+@layer scroll {
+  @property --scrollbar-thumb-color {
+    syntax: '<color>';
+
+    inherits: true;
+
+    initial-value: rgba(0, 0, 0, 0);
+  }
+
+  body.platform-windows {
+    [data-scrollbar-thumb] {
+      /* This prevent scrollbar from shifting the page content */
+      scrollbar-gutter: stable;
+      transition: --scrollbar-thumb-color 1s;
+      &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumb-color);
+        border-radius: 8px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+      &[data-scrollbar-thumb='true']:hover {
+        --scrollbar-thumb-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+  }
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  scrollbar-color: rgba(0, 0, 0, 0.8) transparent;
+
+  scrollbar-width: thin;
 }
 
 .container {
@@ -1132,6 +1175,18 @@ code {
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+
+.text-\[82px\] {
+  font-size: 82px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
 }
 
 .italic {
