@@ -840,6 +840,50 @@
 
     <section class="slide">
       <h2>Замена gif на видео</h2>
+<div class="parent" style="--sibling-count: 5">
+  <div class="child" style="--sibling-index: 0"></div>
+  <div class="child" style="--sibling-index: 1"></div>
+  <div class="child" style="--sibling-index: 2"></div>
+  <div class="child" style="--sibling-index: 3"></div>
+  <div class="child" style="--sibling-index: 4"></div>
+  <div class="child" style="--sibling-index: 5"></div>
+</div>
+
+<style>
+  .child {
+  -webkit-animation: fade-in 2s ease-in-out alternate infinite both;
+          animation: fade-in 2s ease-in-out alternate infinite both;
+  -webkit-animation-delay: calc( 2s * ( var(--sibling-index) / var(--sibling-count) ) );
+          animation-delay: calc( 2s * ( var(--sibling-index) / var(--sibling-count) ) );
+}
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.parent {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child {
+  display: block;
+  width: 1em;
+  height: 1em;
+  background: black;
+  margin: 1px;
+}
+</style>
       <div class="columns two next">
         <figure>
           <video
