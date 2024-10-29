@@ -4,7 +4,7 @@
 
 &nbsp;
 
-[![Size limit status](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?event=push)](https://github.com/d-rusakov-wp/perf/actions/workflows/size-limit.yml)
+![Deploy status](https://github.com/d-rusakov-wp/perf/actions/workflows/deploy.yml/badge.svg?branch=main&event=push)
 
 ## 🐱‍💻 Команды
 
