@@ -554,6 +554,65 @@ video {
   display: none;
 }
 
+*,
+  *::before,
+  *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+  picture,
+  video,
+  canvas,
+  svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+  button,
+  textarea,
+  select {
+  font: inherit;
+}
+
+p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+  text-wrap: balance;
+}
+
+#root,
+  #__next {
+  isolation: isolate;
+}
+
 body {
   -webkit-tap-highlight-color: transparent;
 }
@@ -851,48 +910,6 @@ code {
   scrollbar-width: thin;
 }
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
-.visible {
-  visibility: visible;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
 .static {
   position: static;
 }
@@ -975,10 +992,6 @@ code {
 
 .mt-\[70px\] {
   margin-top: 70px;
-}
-
-.block {
-  display: block;
 }
 
 .flex {
@@ -1135,6 +1148,10 @@ code {
   border-radius: 0.125rem;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .bg-green {
   --tw-bg-opacity: 1;
   background-color: rgb(24 64 74 / var(--tw-bg-opacity));
@@ -1236,6 +1253,141 @@ code {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+mark {
+  background-color: #b3441e !important;
+  color: #fff;
+}
+
+.loader {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 62px;
+  line-height: 1.5;
+  color: transparent;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-text-stroke: 2px #fff;
+  background:
+      radial-gradient(1.13em at 50% 1.6em, #fff 99%, transparent 101%) calc(50% - 1.6em) 0/3.2em 100% text,
+      radial-gradient(1.13em at 50% -0.8em, transparent 99%, #fff 101%) 50% 0.8em/3.2em 100% repeat-x text;
+  animation: l9 2s linear infinite;
+}
+
+.loader:before {
+  content: 'Загрузка...';
+}
+
+@keyframes l9 {
+  to {
+    background-position:
+        calc(50% + 1.6em) 0,
+        calc(50% + 3.2em) 0.8em;
+  }
+}
+
+.brutalist-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 169px;
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  border: 3px solid #fff;
+  outline: 3px solid #000;
+  box-shadow: 6px 6px 0 #00a4ef;
+  transition: all 0.1s ease-out;
+  padding: 0 15px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.brutalist-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  z-index: 1;
+  transition: none;
+  /* Initially hide the pseudo-element */
+  opacity: 0;
+}
+
+@keyframes slide {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+.brutalist-button:hover::before {
+  /* Show the pseudo-element on hover */
+  opacity: 1;
+  animation: slide 2s infinite;
+}
+
+.brutalist-button:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0 #000;
+  background-color: #000;
+  color: #fff;
+}
+
+@keyframes slide {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+.brutalist-button:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0 #00a4ef;
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+}
+
+.button-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  transition: transform 0.2s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.brutalist-button:hover .button-text {
+  transform: skew(-5deg);
+}
+
+.brutalist-button:active .button-text {
+  transform: skew(5deg);
+}
+
+.button-text span:first-child {
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.button-text span:last-child {
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 @keyframes jump-left {
