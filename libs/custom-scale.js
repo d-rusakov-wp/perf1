@@ -54,11 +54,10 @@
         shadow.appendChild(style);
         shadow.appendChild(scale);
       }
-    }
 
-    init() {
-      customElements.define('custom-scale', this);
-    }
+      init() {
+        customElements.define('custom-scale', this);
+      }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
