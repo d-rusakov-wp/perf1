@@ -19,5 +19,3 @@
 | `npm run tw:build`        | Собрать билд для стилей tailwindcss |
 
 ### Powered by [Shower](https://github.com/shower/shower)
-
-Licensed under [MIT License](LICENSE.md).
