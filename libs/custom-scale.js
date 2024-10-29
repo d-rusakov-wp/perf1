@@ -1,12 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
-  function initScale() {
     class Scale extends HTMLElement {
       constructor() {
         super();
       }
 
       renderCSS() {
-        return `          .scale {
+        return `
+          .scale {
             position: relative;
             display: flex;
             justify-content: space-between;
@@ -57,8 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    customElements.define('custom-scale', Scale);
-  }
+    init() {
+      customElements.define('custom-scale', this);
+    }
+}
 
-  initScale();
+document.addEventListener('DOMContentLoaded', () => {
+  Scale.init();
 });
