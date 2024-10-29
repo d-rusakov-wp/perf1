@@ -13,7 +13,6 @@ module.exports = {
     },
     fontFamily: {
       arsenal: 'Arsenal, sans-serif',
-      cuprum: 'Cuprum, sans-serif',
     },
     extend: {
       fontFamily: {
@@ -58,5 +57,3 @@ module.exports = {
     },
   },
 } satisfies Config;
-
-// Что, черт возьми, мне с этим делать
