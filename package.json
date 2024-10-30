@@ -23,6 +23,7 @@
     "@shower/cli": "^0.3.1",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
+    "lefthook": "1.8.2",
     "path-exists-cli": "2.0.0",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
