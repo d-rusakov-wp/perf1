@@ -1,7 +1,6 @@
 pre-commit:
   commands:
-    stylelint:
-      tags: frontend build
-      glob: '*.js'
-      run: npm run build
+    bundle:
+      tags: Bundle 🚀
+      run: npm run bundle
       stage_fixed: true
