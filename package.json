@@ -7,6 +7,7 @@
   "homepage": "https://github.com/d-rusakov-wp/perf",
   "scripts": {
     "dev": "shower serve & npm run tw:watch",
+    "format": "prettier . --write",
     "bundle": "npm run tw:bundle",
     "publish": "npm run bundle & shower publish --files '**' --files '!{docs,node_modules}{,/**}' --files '!*.{md,toml,json,yml,lockb,config.js,config.ts}'",
     "tw:watch": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css --watch",

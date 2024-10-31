@@ -1,10 +1,10 @@
-    class Scale extends HTMLElement {
-      constructor() {
-        super();
-      }
+class Scale extends HTMLElement {
+  constructor() {
+    super();
+  }
 
-      renderCSS() {
-        return `
+  renderCSS() {
+    return `
           .scale {
             position: relative;
             display: flex;
@@ -39,25 +39,25 @@
               width: ${this.getAttribute('percentage')}%;
             }
           }`;
-      }
+  }
 
-      connectedCallback() {
-        const shadow = this.attachShadow({ mode: 'open' });
+  connectedCallback() {
+    const shadow = this.attachShadow({ mode: 'open' });
 
-        const scale = document.createElement('div');
-        const style = document.createElement('style');
+    const scale = document.createElement('div');
+    const style = document.createElement('style');
 
-        scale.setAttribute('class', 'scale');
+    scale.setAttribute('class', 'scale');
 
-        style.textContent = this.renderCSS();
+    style.textContent = this.renderCSS();
 
-        shadow.appendChild(style);
-        shadow.appendChild(scale);
-      }
+    shadow.appendChild(style);
+    shadow.appendChild(scale);
+  }
 
-      init() {
-        customElements.define('custom-scale', this);
-      }
+  init() {
+    customElements.define('custom-scale', this);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {

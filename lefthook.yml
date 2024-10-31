@@ -1,6 +1,6 @@
 pre-commit:
   commands:
-    bundle:
-      tags: Bundle 🚀
-      run: npm run bundle
+    format:
+      tags: Format 🚀
+      run: npm run format
       stage_fixed: true
