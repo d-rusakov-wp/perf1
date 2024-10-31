@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "shower serve & npm run tw:watch",
     "build": "npm run tw:build",
-    "publish": "npm run build & shower publish --files '**' --files '!{node_modules,bundled}{,/**}' --files '!*.{md,json}'",
+    "publish": "npm run build & shower publish --files '**' --files '!{node_modules}{,/**}' --files '!*.{md,json}'",
     "tw:watch": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css --watch",
     "tw:build": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css --minify"
   },
