@@ -1,7 +1,0 @@
-pre-commit:
-  commands:
-    stylelint:
-      tags: frontend build
-      glob: '*.js'
-      run: npm run build
-      stage_fixed: true
