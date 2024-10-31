@@ -6,20 +6,22 @@
   "license": "MIT",
   "homepage": "https://github.com/d-rusakov-wp/perf",
   "scripts": {
-    "yarn": "please-use-npm",
-    "tw:watch": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css --watch",
-    "tw:build": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css --minify",
     "dev": "shower serve & npm run tw:watch",
-    "build": "npm run tw:build"
+    "build": "npm run tw:build",
+    "publish": "npm run build & shower publish --files '**' --files '!{node_modules,bundled}{,/**}' --files '!*.{md,json}'",
+    "tw:watch": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css --watch",
+    "tw:build": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css --minify"
   },
   "dependencies": {
     "@shower/core": "^3.3.0",
     "@shower/material": "^2.5.1",
-    "@shower/ribbon": "^3.5.1",
+    "@shower/ribbon": "3.5.2",
     "lottie-web": "5.12.2",
     "tailwindcss-motion": "0.3.0-beta"
   },
   "devDependencies": {
+    "@commitlint/cli": "19.5.0",
+    "@commitlint/config-conventional": "19.5.0",
     "@shower/cli": "^0.3.1",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
@@ -36,9 +38,13 @@
     "not dead"
   ],
   "engines": {
-    "node": "22.x"
+    "node": ">= 18",
+    "npm": ">= 9",
+    "yarn": "Please use npm instead of yarn to install dependencies",
+    "pnpm": "Please use npm instead of pnpm to install dependencies"
   },
   "files": [
+    "build",
     "index.html",
     "README.md"
   ],
@@ -48,5 +54,8 @@
   "repository": {
     "type": "git",
     "url": "git://github.com/d-rusakov-wp/perf.git"
-  }
+  },
+  "sideEffects": [
+    "*.css"
+  ]
 }

@@ -9,10 +9,16 @@
 
     <title>Семь раз отмерь, один раз оптимизируй</title>
 
+    <style>
+      .shower {
+        --slide-ratio: calc(16 / 9);
+      }
+    </style>
+
     <link rel="icon" href="./themes/tw/images/logo.png" type="image/svg+xml" />
-    <link rel="stylesheet" href="./themes/ribbon/styles/styles.css" />
+    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="./themes/tw/libs/highlight/hybrid.min.css" />
     <link rel="stylesheet" href="./bundled/main.css" />
-    <link rel="stylesheet" href="./libs/highlight/hybrid.min.css" />
   </head>
   <body class="shower list scrollbar bg-green">
     <header class="caption">
@@ -44,14 +50,14 @@
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <div class="mt-[70px] flex flex-col items-center justify-center opacity-90">
         <div class="-mx-8 flex items-start justify-center gap-8">
-          <img src="./themes/tw/images/o-reilly/1.jpg" width="200" height="200" alt="Книга 1" />
-          <img src="./themes/tw/images/o-reilly/2.jpg" width="200" height="200" alt="Книга 2" />
-          <img src="./themes/tw/images/o-reilly/3.jpg" width="200" height="200" alt="Книга 3" />
+          <img src="./themes/tw/images/preview/o-reilly/1.jpg" width="200" height="200" alt="Книга 1" />
+          <img src="./themes/tw/images/preview/o-reilly/2.jpg" width="200" height="200" alt="Книга 2" />
+          <img src="./themes/tw/images/preview/o-reilly/3.jpg" width="200" height="200" alt="Книга 3" />
         </div>
-        <img class="mt-8" src="./themes/tw/images/o-reilly/logo.svg" width="400" height="200" alt="Логотип O'Reilly" />
+        <img class="mt-8" src="./themes/tw/images/preview/o-reilly/logo.svg" width="400" height="200" alt="Логотип O'Reilly" />
         <a target="_blank" rel="noopener noreferrer" class="copyright" href="https://www.oreilly.com/"
           >o&rsquo;reilly</a
         >
@@ -61,8 +67,8 @@
       </footer>
     </section>
 
-    <section class="slide">
-      <img class="cover" src="./themes/tw/images/bird.jpg" width="536" height="490" alt="Жар птица" />
+    <section class="slide clear">
+      <img class="cover" src="./themes/tw/images/preview/bird.jpg" width="536" height="490" alt="Жар птица" />
       <footer>
         <p>Птица из&nbsp;новой Гвинеи</p>
         <p>
@@ -75,7 +81,7 @@
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Цель доклада</h2>
       <footer>
         <p>Подсветить важность производительности</p>
@@ -132,17 +138,17 @@
       <h2 class="cover text-left"><span class="text-gray">Акт 1</span> <br />Теория</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <div class="flex h-full items-center justify-center">
         <div class="loader"></div>
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img class="cover" src="./themes/tw/images/theory/numbers.png" width="989" height="316" alt="Numbers" />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <figure class="place w-[55%]">
         <blockquote class="flex items-start">
           <p>Преждевременная оптимизация&nbsp;&mdash; корень всех бед</p>
@@ -154,7 +160,7 @@
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <figure class="place w-[55%]">
         <blockquote class="flex items-start">
           <p>Если вы не можете что-то измерить, значит, вы не можете это исправить</p>
@@ -178,7 +184,7 @@
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Что такое скорость загрузки?</h2>
       <p class="next">
         Скорость загрузки - совокупность факторов, которые влияют на то, <mark>воспринимает</mark> ли пользователь
@@ -202,7 +208,7 @@
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Отзывчивость</h2>
       <footer>
         <p>
@@ -222,7 +228,7 @@
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">JIT</h2>
       <a>https://hacks.mozilla.org/2017/02/a-crash-course-in-just-in-time-jit-compilers/</a>
     </section>
@@ -238,7 +244,7 @@
       >
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Влияние</h2>
       <ul>
         <li class="next">
@@ -259,7 +265,7 @@
       </ul>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">WebVitals / CoreWebVitals</h2>
       <a href="https://web.dev/vitals/" hreflang="en" class="copyright" target="_blank">Web Vitals</a>
       <footer>
@@ -275,11 +281,11 @@
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">WebVitals: SI</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>WebVitals: SI</h2>
       <figure>
         <figcaption>
@@ -292,7 +298,7 @@
       <a href="https://web.dev/speed-index/" class="copyright" target="_blank">Speed Index</a>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Влияние Core Web Vitals</h2>
       <!-- https://web.dev/articles/css-web-vitals?hl=ru https://www.youtube.com/watch?v=kATRlMrtaaY
       https://web.dev/articles/remove-unused-code?hl=ru https://web.dev/articles/commonjs-larger-bundles?hl=ru
@@ -309,7 +315,7 @@
       >
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Цель оптимизаций</h2>
       <ul>
         <li class="next">Избежать загрузки лишних ресурсов</li>
@@ -320,7 +326,7 @@
       </ul>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>На что мы можем повлиять?</h2>
       <ul>
         <li class="next">Графика</li>
@@ -361,21 +367,21 @@
       </style>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Какие техники применить?</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Минификация</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <div>
-        <img class="m-auto" src="./themes/tw/images/tools/cdn.png" width="155" height="155" alt="" />
+        <img class="m-auto" src="./themes/tw/images/theory/tools/cdn.png" width="155" height="155" alt="" />
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Доставка современного кода</h2>
       <p class="next"><samp>modern.js</samp> и <samp>old.bundle.js</samp></p>
       <pre class="next">
@@ -396,19 +402,19 @@
       </ul>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Графика</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">The status quo</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Lazyload</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>А чем будем мерить?</h2>
       <ul>
         <li class="next">DevTools выполняется во время простоя браузера - Perfomance API</li>
@@ -450,7 +456,7 @@
       </ul>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <p class="place">
         <b>Движок JS</b>&nbsp;&mdash; специализированная программа, обрабатывающая&nbsp;JS, в&nbsp;частности,
         в&nbsp;браузерах.
@@ -465,26 +471,26 @@
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Какие движки существуют?</h2>
       <ul class="">
         <li class="next flex items-center">
           V8
-          <img class="next ml-4" src="./themes/tw/images/browsers/chrome.svg" alt="Chrome" width="56" height="56" />
-          <img class="next ml-4" src="./themes/tw/images/tools/node-js.svg" alt="Node.js" width="56" height="56" />
+          <img class="next ml-4" src="./themes/tw/images/theory/browsers/chrome.svg" alt="Chrome" width="56" height="56" />
+          <img class="next ml-4" src="./themes/tw/images/theory/tools/node-js.svg" alt="Node.js" width="56" height="56" />
         </li>
         <li class="next flex items-center">
           SpiderMonkey
-          <img class="next ml-4" src="./themes/tw/images/browsers/firefox.svg" alt="Firefox" width="56" height="56" />
+          <img class="next ml-4" src="./themes/tw/images/theory/browsers/firefox.svg" alt="Firefox" width="56" height="56" />
         </li>
         <li class="next flex items-center">
           Chakra&nbsp;/ ChakraCore
-          <img class="next ml-4" src="./themes/tw/images/browsers/edge.svg" alt="Edge" width="56" height="56" />
+          <img class="next ml-4" src="./themes/tw/images/theory/browsers/edge.svg" alt="Edge" width="56" height="56" />
         </li>
         <li class="next flex items-center">
           JavaScriptCore
-          <img class="next ml-4" src="./themes/tw/images/browsers/safari.svg" alt="Safari" width="56" height="56" />
-          <img class="next ml-4" src="./themes/tw/images/tools/bun.svg" alt="Bun" width="56" height="56" />
+          <img class="next ml-4" src="./themes/tw/images/theory/browsers/safari.svg" alt="Safari" width="56" height="56" />
+          <img class="next ml-4" src="./themes/tw/images/theory/tools/bun.svg" alt="Bun" width="56" height="56" />
         </li>
         <li class="next">и&nbsp;другие</li>
       </ul>
@@ -531,12 +537,12 @@
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>arc</h2>
       <a class="copyright">https://arc.net/</a>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre>
         <code>
           const startTime = Date.now();
@@ -557,19 +563,19 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">How I Created a 3.78MB Docker Image for a JavaScript Service</h2>
       <a class="copyright" href=""
         >https://shenzilong.cn/record/How%20I%20Created%20a%203.78MB%20Docker%20Image%20for%20a%20JavaScript%20Service</a
       >
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <div class="shout flex items-center justify-center">
         <h2 class="m-0">Как устроен <i>V8</i> ?</h2>
         <picture class="ml-4">
-          <source srcset="./themes/tw/images/emoji/eyes.webp" type="image/webp" />
-          <img src="./themes/tw/images/emoji/eyes.gif" alt="👀" width="56" height="56" />
+          <source srcset="./themes/tw/pictures/emoji/eyes.webp" type="image/webp" />
+          <img src="./themes/tw/pictures/emoji/eyes.gif" alt="👀" width="56" height="56" />
         </picture>
         <a class="copyright" href="https://v8.dev/blog/10-years" target="_blank" rel="noopener noreferrer">V8</a>
       </div>
@@ -593,20 +599,20 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img class="cover" src="./themes/tw/images/theory/codeium/1.jpg" width="989" height="316" alt="Codeium 1" />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img class="cover" src="./themes/tw/images/theory/codeium/2.jpg" width="989" height="316" alt="Codeium 2" />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img class="cover" src="./themes/tw/images/theory/v8/work.jpg" alt="Work" width="900" height="980" />
       <a class="copyright" href="https://addyosmani.com/">Addy Osmani</a>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="">
         <code>
           const team = "webpractik";
@@ -658,23 +664,23 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="place">Он&nbsp;развивается?</h2>
       <a class="copyright" href="https://v8.dev/blog/10-years" target="_blank" rel="noopener noreferrer"
         >10&nbsp;years</a
       >
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Мониторинг производительности</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Sentry</h2>
       <a class="copyright">https://docs.sentry.io/platforms/javascript/tracing/instrumentation/performance-metrics/</a>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Чем измерять?</h2>
       <footer>
         <p>Лабораторные</p>
@@ -692,21 +698,21 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Дом света <span class="next">(Lighthouse)</span></h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">PageSpeed</h2>
       <a class="copyright" href="https://pagespeed.web.dev/" target="_blank">PageSpeed</a>
     </section>
 
-    <section class="slide">
-      <img class="cover" src="./themes/tw/images/tools/unlighthouse.png" alt="" width="" height="" />
+    <section class="slide clear">
+      <img class="cover" src="./themes/tw/images/theory/tools/unlighthouse.png" alt="" width="" height="" />
       <a class="copyright" href="https://unlighthouse.dev/">Unlighthouse</a>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">DevTools</h2>
       <a class="copyright" href="https://www.youtube.com/watch?v=70XMVfGv2Q0" target="_blank" rel="noopener noreferrer"
         >Chrome DevTools&nbsp;&mdash; спрятанные полезности</a
@@ -717,14 +723,14 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img class="cover" src="./themes/tw/images/theory/dev-tools/network.jpg" alt="" width="1921" height="1080" />
       <footer>
         <p>Кто уже попробовал с&nbsp;129 хрома новую вкладку?</p>
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img class="cover" src="./themes/tw/images/theory/dev-tools/perfomance.jpg" alt="" width="1921" height="1080" />
       <a
         class="copyright"
@@ -751,11 +757,11 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img class="cover" src="./themes/tw/images/theory/dev-tools/stack.jpg" alt="Стек" width="1921" height="1080" />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img
         class="cover"
         src="./themes/tw/images/theory/dev-tools/perfomance-insights.png"
@@ -766,11 +772,11 @@ console.log(performance.now()); // produces a high resolution timestamp
       <a class="copyright"> https://doka.guide/js/performance/ </a>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img class="cover" src="./themes/tw/images/theory/dev-tools/memory.jpg" alt="" width="1921" height="1080" />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">ReactDeveloperTools</h2>
       <a
         class="copyright"
@@ -779,30 +785,30 @@ console.log(performance.now()); // produces a high resolution timestamp
       >
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img class="cover" src="./themes/tw/images/theory/stats.jpg" alt="Статистика" width="521" height="580" />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img class="cover" src="./themes/tw/images/theory/butterfly.jpg" alt="" width="380" height="588" />
       <a class="copyright" href="https://yandex.ru/q/science/2504230657/">https://yandex.ru/q/science/2504230657/</a>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Техники оптимизации</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Сжатие размера изображений <span class="next">, без потери качества</span></h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">
         Оптимизация шрифтов <span class="next">, где можно использовать только нужные символы</span>
       </h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Перфоманс CSS-селекторов</h2>
       <div class="box css light">
         <p>CSS</p>
@@ -811,12 +817,12 @@ console.log(performance.now()); // produces a high resolution timestamp
       <a class="copyright" href="">https://web.dev/blog/at-property-performance</a>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Lazy load</h2>
       <img src="./themes/tw/images/theory/techniques/lazy-load.gif" width="2000" height="860" alt="Lazy load" />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Tree shaking</h2>
       <img
         class="m-auto"
@@ -827,7 +833,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Code splitting</h2>
       <img
         class="m-auto"
@@ -838,7 +844,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Minify code</h2>
       <img
         class="m-auto"
@@ -849,7 +855,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Этого бывает мало...</h2>
     </section>
 
@@ -888,7 +894,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre>
         <code>
           // Создание метки
@@ -939,15 +945,15 @@ console.log(performance.now()); // produces a high resolution timestamp
       </script>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img class="cover" src="./themes/tw/pictures/memes/everywhere.jpg" alt="" width="580" height="1188" />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img class="cover" src="./themes/tw/pictures/memes/directed-by.jpg" alt="" width="900" height="750" />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout"><span>===</span> <br />Сравнение строк</h2>
       <footer>
         <p>
@@ -976,7 +982,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place w-[90%]">
         <code class="language-typescript">
           // #1
@@ -992,10 +998,10 @@ console.log(performance.now()); // produces a high resolution timestamp
           }
         </code>
       </pre>
-      <img class="" src="./themes/tw/images/arrow.svg" alt="Стрелка" width="56" height="56" />
+      <img class="" src="./themes/tw/pictures/arrows/1.svg" alt="Стрелка" width="56" height="56" />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place w-[90%]">
         <code class="language-typescript">
           let _ = 0;
@@ -1011,7 +1017,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Результат выполнения</h2>
       <div class="place w-[50%]">
         <custom-scale name="string" percentage="50"></custom-scale>
@@ -1019,7 +1025,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">
         <span>△ ▢</span> <br />
         Избегайте разных форм
@@ -1070,7 +1076,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place w-[90%]">
         <code class="language-typescript">
           // Вводные
@@ -1088,7 +1094,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place w-[90%]">
       <code class="language-typescript">
           const shape = [
@@ -1120,7 +1126,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           function add(a, b) {
@@ -1149,7 +1155,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           // Вводные
@@ -1171,7 +1177,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       <a class="copyright" href="https://mrale.ph/blog/2015/01/11/whats-up-with-monomorphism.html">monomorphism</a>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           // Вводные
@@ -1187,7 +1193,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       <a class="copyright" href="https://mrale.ph/blog/2015/01/11/whats-up-with-monomorphism.html">monomorphism</a>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           function add(a1, b1) {
@@ -1205,7 +1211,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Результат выполнения</h2>
       <div class="place w-[50%]">
         <custom-scale name="megamorphic" percentage="4"></custom-scale>
@@ -1214,7 +1220,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <div class="shout flex flex-col items-center">
         <h2>
           <span>[...] {...}</span><br />
@@ -1243,7 +1249,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre>
         <code class="language-typescript">
           // Вводные
@@ -1288,7 +1294,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Качество ПО</h2>
       <ul>
         <li>Корректность (в ПО нет дефектов)</li>
@@ -1299,7 +1305,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </ul>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Результат выполнения</h2>
       <div>
         <custom-scale name="Функциональный подход" percentage="36"></custom-scale>
@@ -1307,12 +1313,12 @@ console.log(performance.now()); // produces a high resolution timestamp
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <div class="shout flex items-center justify-center">
         <h2>
           <picture class="m-auto">
-            <source srcset="./themes/tw/images/emoji/evil.webp" type="image/webp" />
-            <img src="./themes/tw/images/emoji/evil.gif" alt="😈" width="56" height="56" />
+            <source srcset="./themes/tw/pictures/emoji/evil.webp" type="image/webp" />
+            <img src="./themes/tw/pictures/emoji/evil.gif" alt="😈" width="56" height="56" />
           </picture>
           Используйте eval
         </h2>
@@ -1336,7 +1342,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           // С&nbsp;eval
@@ -1356,7 +1362,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre>
         <code class="language-typescript">
           // Без eval
@@ -1379,7 +1385,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">
         Используйте&nbsp;строки&nbsp;
         <span class="next">,&nbsp;осторожно</span>
@@ -1431,7 +1437,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           const classNames = ['primary', 'selected', 'active', 'medium']
@@ -1449,7 +1455,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           const large = Array.from({ length: 10_000 }).map(() => 'string').join('')
@@ -1459,7 +1465,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           // replace a token that doesn't exist
@@ -1468,7 +1474,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Результат выполнения</h2>
       <div>
         <custom-scale name="mutation" percentage="37"></custom-scale>
@@ -1476,7 +1482,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Косвенность</h2>
       <footer>
         <p>
@@ -1503,7 +1509,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           const point = new Proxy({ x: 10, y: 20 }, { get: (t, k) => t[k] })
@@ -1513,7 +1519,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           const point = { x: 10, y: 20 }
@@ -1524,7 +1530,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Результаты</h2>
       <div>
         <custom-scale name="proxy" percentage="2"></custom-scale>
@@ -1532,7 +1538,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           const a = { state: { center: { point: { x: 10, y: 20 } } } }
@@ -1546,7 +1552,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           // 2. direct access
@@ -1561,7 +1567,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Результаты</h2>
       <div>
         <custom-scale name="nested" d="42"></custom-scale>
@@ -1569,7 +1575,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Избегайте промахов кэша</h2>
       <footer>
         <p>
@@ -1601,7 +1607,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           // setup:
@@ -1621,7 +1627,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           // 1. sequential
@@ -1635,7 +1641,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Результаты</h2>
       <div>
         <custom-scale name="sequential" percentage="100"></custom-scale>
@@ -1643,11 +1649,11 @@ console.log(performance.now()); // produces a high resolution timestamp
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Избегайте крупных предметов</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           const USERS_LENGTH = 100_000
@@ -1655,7 +1661,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           // setup:
@@ -1678,7 +1684,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Результаты</h2>
       <div>
         <custom-scale name="[]" percentage="43"></custom-scale>
@@ -1694,7 +1700,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Специализация</h2>
       <footer>
         <p>
@@ -1707,7 +1713,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           // 1. not specialized
@@ -1722,7 +1728,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="place">
         <code class="language-typescript">
           // 2. specialized
@@ -1737,7 +1743,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre>
                   <code class="language-typescript">
                     const descriptions = ['apples', 'oranges', 'bananas', 'seven']
@@ -1760,7 +1766,7 @@ console.log(performance.now()); // produces a high resolution timestamp
                 </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre>
                   <code class="language-typescript">
                     // Specialize it now
@@ -1797,7 +1803,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Бесплатных функций в программных продуктах не бывает</h2>
       <footer>
         <p>
@@ -1812,7 +1818,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Структуры данных</h2>
       <footer>
         <p>
@@ -1822,7 +1828,7 @@ console.log(performance.now()); // produces a high resolution timestamp
         </p>
       </footer>
     </section>
-    <section class="slide">
+    <section class="slide clear">
       <pre>
                     <code class="language-typescript">
                       // setup:
@@ -1864,7 +1870,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Результаты</h2>
       <div>
         <custom-scale name="array" percentage="32"></custom-scale>
@@ -1872,11 +1878,11 @@ console.log(performance.now()); // produces a high resolution timestamp
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       Web Perfomance - набор техник, которые позволяют улучшить производительность веб-приложений
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Избегайте работы</h2>
       <footer>
         <p>
@@ -1911,52 +1917,52 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">незнание (сопртивление страх) -> знание (дискусиия доверие)</section>
+    <section class="slide clear">незнание (сопртивление страх) -> знание (дискусиия доверие)</section>
 
-    <section class="slide">разный контекст - разные методы</section>
+    <section class="slide clear">разный контекст - разные методы</section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">В&nbsp;чём разница между типом и&nbsp;интерфейсом?</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Неээфективыне итерации</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Качество интернет соединения</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Слишком много зависимостей</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Когнитивное восприятие</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Девайсы</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Куда собирать?</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Подключить CDN</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Почему это проблема</h2>
       <p>ведь таски закрываются</p>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>У всех разная кодовоя база, разные фреймворки и разные пользователи ...нет универсального решения</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Что быстрее типы или интерфейсы?</h2>
       <footer>
         <p>Предпочитайте интерфейсы пересечениям</p>
@@ -1971,7 +1977,7 @@ console.log(performance.now()); // produces a high resolution timestamp
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre>
       <code>
           if (true) [
@@ -1984,7 +1990,7 @@ else [
         </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Statoscope</h2>
       https://treo.sh/
       <a>https://github.com/statoscope/statoscope</a>
@@ -2016,7 +2022,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img
         class="cover"
         src="./themes/tw/images/practice/ts/perfomance.jpg"
@@ -2026,17 +2032,17 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="place">Написание легкокомпилируемого кода</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="place">Сократить размер наших бандлов</h2>
       <h2 class="place">Оптимизировать скорость загрузки приложений</h2>
       <h2 class="place">Снизить нагрузку на RAM и CPU</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Использование аннотирования типов</h2>
       <pre>
         <code class="language-typescript">
@@ -2060,11 +2066,11 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Как найти неиспользуемые типы?</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre class="">
         <code class="language-typescript">
           const { createClient } = require('contentful')
@@ -2090,7 +2096,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Сайт должен ассоциироваться с&nbsp;вашим бизнесом с&nbsp;первой секунды посещения.</h2>
       <footer>
         <p>
@@ -2118,9 +2124,9 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </footer>
     </section>
 
-    <section class="slide">https://github.com/pdomdev/pdom</section>
+    <section class="slide clear">https://github.com/pdomdev/pdom</section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Контроль за&nbsp;добавлением @types</h2>
       <pre>
                 <code class="language-typescript">
@@ -2160,7 +2166,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img
         class="cover"
         src="./themes/tw/images/practice/ts/type-interface.jpg"
@@ -2170,13 +2176,13 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       />
     </section>
 
-    <section class="slide">
-      <img src="eslint.jpg" alt="" />
+    <section class="slide clear">
+      <img src="./themes/tw/eslint.jpg" alt="Eslint" />
     </section>
 
-    <section class="slide">Производительность - Синоним продуктивность доверя но проверяй</section>
+    <section class="slide clear">Производительность - Синоним продуктивность доверя но проверяй</section>
 
-    <section class="slide">
+    <section class="slide clear">
       <p>
         Одно из&nbsp;когнитивных искажений, проявляющееся в&nbsp;тенденции людей недооценивать последствия бездействия
         в&nbsp;сравнении с&nbsp;действием с&nbsp;аналогичным результатом. Люди более ответственно относятся к&nbsp;своим
@@ -2203,26 +2209,26 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </p>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>dependency-cruiser</h2>
       <a class="copyright">https://www.npmjs.com/package/dependency-cruiser</a>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>duplicate-package-checker-webpack-plugin</h2>
       <a class="copyright">https://www.npmjs.com/package/@cerner/duplicate-package-checker-webpack-plugin</a>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>depcheck</h2>
       <a class="copyright">https://www.npmjs.com/package/depcheck</a>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Чертовски хорошо</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>время важно</h2>
       <p>
         Каждый раз, когда пользователь посещает вашу веб-страницу, он&nbsp;начинает гонку за&nbsp;получение контента как
@@ -2303,7 +2309,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Мотивация</h2>
       <footer>
         <p>парсинг Лексический анализ Синтаксический анализ</p>
@@ -2337,7 +2343,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <a class="place" href="https://bloomberg.github.io/ts-blank-space/">ts-blank-space</a>
     </section>
 
@@ -2361,31 +2367,31 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Third Party Scripts</h2>
-      <img class="next ml-4" src="./themes/tw/images/memes/party.jpg" alt="Логотип Яндекс" width="56" height="56" />
+      <img class="next ml-4" src="./themes/tw/pictures/memes/party.jpg" alt="Логотип Яндекс" width="56" height="56" />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Чтобы пользователи не&nbsp;уходили</h2>
       <footer>
         <p>Мем с&nbsp;онлайн конвертером</p>
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Правильно и&nbsp;не&nbsp;правильно</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Синоптики</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>без привязки к&nbsp;кейсам, а&nbsp;к&nbsp;возможностям</h2>
     </section>
 
-    <!-- <section class="slide">
+    <!-- <section class="slide clear">
                   <h2 class="shout">Профилирование и инструменты</h2>
                   <footer>
                     <p>
@@ -2397,7 +2403,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
                   </footer>
                 </section> -->
 
-    <section class="slide">
+    <section class="slide clear">
       <pre>
             <code class="language-typescript">
             По умолчанию TypeScript автоматически включает каждый @typesпакет, который он находит в вашей node_modulesпапке, независимо от того, импортируете ли вы его. Это сделано для того, чтобы определенные вещи "просто работали" при использовании Node.js, Jasmine, Mocha, Chai и т. д., поскольку эти инструменты/пакеты не импортируются — они просто загружаются в глобальную среду.
@@ -2437,7 +2443,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
             </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre>
                     <code class="language-typescript">
             Добавление аннотаций типов, особенно возвращаемых типов, может сэкономить компилятору много работы. Отчасти это связано с тем, что именованные типы, как правило, более компактны, чем анонимные типы (которые компилятор может вывести), что сокращает время, затрачиваемое на чтение и запись файлов объявлений (например, для инкрементных сборок). Вывод типов очень удобен, поэтому нет необходимости делать это повсеместно — однако, это может быть полезно, если вы определили медленный раздел своего кода.
@@ -2453,14 +2459,14 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
                   </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <div class="shout flex items-center justify-center">
         <h2 class="">Code Run</h2>
-        <img class="next ml-4" src="./themes/tw/images/theory/yandex.jpg" alt="Логотип Яндекс" width="56" height="56" />
+        <img class="next ml-4" src="./themes/tw/images/practice/companies/yandex.svg" alt="Логотип Яндекс" width="56" height="56" />
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img
         class="cover"
         src="./themes/tw/images/practice/code-run/format.jpg"
@@ -2473,7 +2479,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre>
                     <code>
             module.exports = function(N, staff, K) {
@@ -2491,7 +2497,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
                   </pre>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <div class="column two">
         <pre>
                     <code>
@@ -2523,19 +2529,19 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Lessons learned from 222,557 font file subsets?</h2>
       <a href="https://www.phpied.com/lessons-learned-from-222557-font-file-subsets/">
         https://www.phpied.com/lessons-learned-from-222557-font-file-subsets/
       </a>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">How Bun supports V8 APIs without using V8 (part 1)</h2>
       https://bun.sh/blog/how-bun-supports-v8-apis-without-using-v8-part-1
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img
         class="cover"
         src="./themes/tw/images/practice/code-run/restrictions.jpg"
@@ -2545,12 +2551,12 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Всё познается в&nbsp;сравнении</h2>
-      <img class="cover" src="./themes/tw/images/memes/statham.jpg" alt="Ограничения" width="640" height="760" />
+      <img class="cover" src="./themes/tw/pictures/memes/statham.jpg" alt="Ограничения" width="640" height="760" />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <video></video>
       <style>
         video::cue {
@@ -2559,7 +2565,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </style>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <ul>
         <li>node --inspect-brk</li>
         <li>chrome://inspect</li>
@@ -2567,10 +2573,6 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
         <li>https://npmgraph.js.org/</li>
         <li>eslint-plugin-depend</li>
       </ul>
-    </section>
-
-    <section class="slide">
-      <img class="cover" src="./themes/tw/images/practice/code-run/code-optimized.svg" alt="" width="" height="" />
     </section>
 
     <section class="slide with-title">
@@ -2582,7 +2584,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </ul>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <figure class="place">
         <blockquote>
           <p>Самая опасная фраза: &laquo;Мы&nbsp;всегда так делали&raquo;</p>
@@ -2601,19 +2603,19 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">20% усилий <span class="next">= 80% результата</span></h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">заметно <span class="next">!== значимо</span></h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="cover">Что хотим/хотят от&nbsp;нашего кода?</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <div class="shout">
         <h2>Долголетие</h2>
       </div>
@@ -2623,12 +2625,12 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <div class="shout flex items-center justify-center">
         <h2>Эффективность</h2>
         <picture class="ml-4">
-          <source srcset="./themes/tw/images/emoji/battery.webp" type="image/webp" />
-          <img src="./themes/tw/images/emoji/battery.gif" alt="🔋" width="56" height="56" />
+          <source srcset="./themes/tw/pictures/emoji/battery.webp" type="image/webp" />
+          <img src="./themes/tw/pictures/emoji/battery.gif" alt="🔋" width="56" height="56" />
         </picture>
       </div>
       <footer>
@@ -2636,7 +2638,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <div class="shout flex items-center justify-center">
         <h2>Чтобы не&nbsp;прилетали баги</h2>
         <picture class="ml-4">
@@ -2646,32 +2648,32 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <div class="shout flex items-center justify-center">
         <h2>The Release Radar</h2>
         📡
       </div>
     </section>
 
-    <section class="slide">
-      <img src="./themes/tw/images/memes/the-twilight-zone/1.jpg" alt="The twilight zone 1" width="500" height="500" />
+    <section class="slide clear">
+      <img src="./themes/tw/pictures/memes/the-twilight-zone/1.jpg" alt="The twilight zone 1" width="500" height="500" />
     </section>
 
-    <section class="slide">
-      <img src="./themes/tw/images/memes/the-twilight-zone/2.jpg" alt="The twilight zone 2" width="500" height="500" />
+    <section class="slide clear">
+      <img src="./themes/tw/pictures/memes/the-twilight-zone/2.jpg" alt="The twilight zone 2" width="500" height="500" />
     </section>
 
-    <section class="slide">
-      <img src="./themes/tw/images/memes/the-twilight-zone/3.jpg" alt="The twilight zone 3" width="500" height="500" />
+    <section class="slide clear">
+      <img src="./themes/tw/pictures/memes/the-twilight-zone/3.jpg" alt="The twilight zone 3" width="500" height="500" />
     </section>
 
-    <section class="slide">
-      <img src="./themes/tw/images/memes/oop/encapsulation.jpg" alt="Инкапсуляция" width="500" height="500" />
-      <img src="./themes/tw/images/memes/oop/polymorphism.jpg" alt="Полиморфизм" width="500" height="500" />
-      <img src="./themes/tw/images/memes/oop/inheritance.jpg" alt="Наследование" width="500" height="500" />
+    <section class="slide clear">
+      <img src="./themes/tw/pictures/memes/oop/encapsulation.jpg" alt="Инкапсуляция" width="500" height="500" />
+      <img src="./themes/tw/pictures/memes/oop/polymorphism.jpg" alt="Полиморфизм" width="500" height="500" />
+      <img src="./themes/tw/pictures/memes/oop/inheritance.jpg" alt="Наследование" width="500" height="500" />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Когда?</h2>
       <ul>
         <li>прилетит задача</li>
@@ -2768,7 +2770,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Выводы</h2>
       <ol>
         <li class="next"></li>
@@ -2790,42 +2792,42 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </footer>
     </section>
 
-    <section class="slide">
-      <img class="cover" src="./themes/tw/images/memes/klitschko.jpg" alt="" width="525" height="340" />
+    <section class="slide clear">
+      <img class="cover" src="./themes/tw/pictures/memes/klitschko.jpg" alt="" width="525" height="340" />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Простота и&nbsp;предсказуемость</h2>
       <footer>
         <p>Раньше веб был таким</p>
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Производительность&nbsp;&mdash; это восприятие</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">Используйте оценку</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">petfomance <span class="next">!important</span></h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img class="cover" src="./themes/tw/images/ux-core.jpg" alt="" width="725" height="340" />
       <a class="copyright" href="https://keepsimple.io/ru/uxcore/" target="_blank" rel="noopener noreferrer"
         >https://keepsimple.io/ru/uxcore</a
       >
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img
         class="cover"
         target="_blank"
         rel="noopener noreferrer"
-        src="./themes/tw/images/memes/devs.jpg"
+        src="./themes/tw/pictures/memes/devs.jpg"
         alt=""
         width="725"
         height="340"
@@ -2835,22 +2837,22 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       >
     </section>
 
-    <section class="slide">
-      <img class="cover" src="./themes/tw/images/memes/silicon-valley.jpg" alt="" width="725" height="340" />
+    <section class="slide clear">
+      <img class="cover" src="./themes/tw/pictures/memes/silicon-valley.jpg" alt="" width="725" height="340" />
       <a class="copyright" target="_blank" rel="noopener noreferrer" href="https://www.kinopoisk.ru/series/1137249">
         https://www.kinopoisk.ru/series/1137249/?utm_referrer=yandex.ru
       </a>
     </section>
 
-    <section class="slide">
-      <img class="cover" src="./themes/tw/images/wiki.jpg" alt="Wiki" width="525" height="340" />
+    <section class="slide clear">
+      <img class="cover" src="./themes/tw/images/preview/wiki.jpg" alt="Wiki" width="525" height="340" />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img class="cover" src="./themes/tw/images/theory/v8-js-wasm.jpg" alt="" width="525" height="340" />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <div class="shout flex items-center justify-center">
         <h2>Спасибо за&nbsp;внимание!</h2>
         <picture class="ml-4">
@@ -2860,11 +2862,11 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img class="cover" src="./themes/tw/images/qr-code.svg" alt="Qr code" width="400" height="400" />
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <div class="highlight-blocks">
         <div class="highlight"></div>
         <div class="highlight"></div>
@@ -2876,7 +2878,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
         :root {
           --color-walbi-15: #3affa326;
           --color-walbi-45: #3affa373;
-          --walbi-glow: 0px 0px 36px 8px var(--color--walbi-15), 0px 0px 7px 1px var(--color--walbi-45);
+          --walbi-glow: 0px 0px 36px 8px var(--color-walbi-15), 0px 0px 7px 1px var(--color-walbi-45);
           --swiper-wrapper-transition-timing-function: cubic-bezier(0.5, 0.05, 0.05, 0.99);
           --ease-main: cubic-bezier(0.5, 0.05, 0.05, 0.99);
         }
@@ -2902,12 +2904,8 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
           position: relative;
         }
 
-        .highlight-blocks.is--small {
-          transform: scale(0.85);
-        }
-
         .highlight {
-          background-color: var(--color--walbi);
+          background-color: var(--color-walbi-15);
           width: 0.3125em;
           height: 0.875em;
           animation: 1s infinite highlight;
@@ -2915,7 +2913,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </style>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       Стоимость взаимодействия — это сумма усилий (умственных и физических), которые пользователи должны приложить при
       взаимодействии с цифровым продуктом для достижения своих целей. В идеале мы хотели бы, чтобы пользователи заходили
       на сайт и немедленно находили ответ, который они ищут. Это означало бы нулевую стоимость взаимодействия и было бы
@@ -2929,16 +2927,16 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </div>
     </section>
 <!--
-    <section class="slide">
+    <section class="slide clear">
       <h2>no(po)lyfill</h2>
       <a href="https://github.com/SukkaW/nolyfill">https://github.com/SukkaW/nolyfill</a>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>ценность webvitals</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       https://bloomberg.github.io/ts-blank-space/ ts-blank-space
       <footer>
         <p>
@@ -2960,7 +2958,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Ежели код с первого раза скомпилировался — жди лиха</h2>
       <h2>Коли тесты с первого раза прошли — не видать добра</h2>
       <h2>Было код ревью с тимлидом — жди скорого прогона тестов</h2>
@@ -2968,7 +2966,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       <h2>Таска на пять минут на месяц растянется</h2>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <footer>
         <p>
           Вспомните, когда вы последний раз были в отпуске. Что вы помните? Возможно, вы вспомнили особенно красивый вид
@@ -3002,7 +3000,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       Правило пика-конца: как впечатления становятся воспоминаниями Резюме: Когнитивные искажения меняют то, как мы
       вспоминаем прошлые события. Правило пика-конца фокусирует наши воспоминания вокруг самых интенсивных моментов
       опыта и того, как опыт заканчивается. Вспомните, когда вы последний раз были в отпуске. Что вы помните? Возможно,
@@ -3018,7 +3016,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       финальные моменты опыта («конец») имеют большой вес в наших ментальных расчетах.
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       производительность - это не математика
       <a href="https://rutube.ru/video/fe2a7cef6191e4a8790d2d8b8fa804d7/" target="_blank" rel="noopener noreferrer"
         >Видео с Rutube</a
@@ -3031,7 +3029,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       >
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <img
         class="cover"
         src="./themes/tw/images/theory/unused-js.jpg"
@@ -3042,7 +3040,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       <a>https://almanac.httparchive.org/ru/2022/</a>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre>
     const t0 = performance.now();
 for (let i = 0; i < array.length; i++)
@@ -3069,7 +3067,7 @@ console.log(t1 - t0, 'milliseconds');
       <img class="cover" src="./themes/tw/images/codeium-v8.jpg" width="700" height="350" alt="Codeium V8" />
       <img
         class="next translate-x-[600px] translate-y-[340px]"
-        src="./themes/tw/images/memes/Ilon.jpg"
+        src="./themes/tw/pictures/memes/Ilon.jpg"
         width="300"
         height="150"
         alt="Мем Ilon"
@@ -3113,7 +3111,7 @@ console.log(t1 - t0, 'milliseconds');
       </footer>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Восприятие времени</h2>
       <ul>
         <li>< 100 мс. мгновеннл</li>
@@ -3123,14 +3121,14 @@ console.log(t1 - t0, 'milliseconds');
       </ul>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       Ощущаемая пользователем "производительность" - это единственная производительность, которая имеет значение.
       Пользователи взаимодействуют с системой с помощью ввода каких-то данных: прикосновений, движения и речи. В ответ,
       они получают реакцию, основанную на зрительном, тактильном или слуховом аппаратах. Производительность - это
       качество того, как система реагирует на действия пользователя.
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2>Алгоритмы</h2>
       <ul>
         <li>
@@ -3143,7 +3141,7 @@ console.log(t1 - t0, 'milliseconds');
       </ul>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <div class="section-content">
         <p>
           Когда дело доходит до производительности веб-сайта, вы можете подумать о таких методах, как сжатие,
@@ -3221,7 +3219,7 @@ console.log(t1 - t0, 'milliseconds');
       </div>
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <h2 class="shout">JNT (Just Noticeable Difference)</h2>
       <h2>Хороший алгоритм решения проблемы</h2>
       <ol>
@@ -3241,7 +3239,7 @@ console.log(t1 - t0, 'milliseconds');
       де-факто
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       <pre>
       https://developer.mozilla.org/en-US/docs/Web/API/Performance/measure
 const markerNameA = "example-marker-a"
@@ -3277,7 +3275,7 @@ console.timeEnd("answer time");
       >
     </section>
 
-    <section class="slide">
+    <section class="slide clear">
       Дорогая Консоль, дай мне список всех ресурсов, блокирующих рендеринг
       copy(window.performance.getEntriesByType('resource').filter(entry => entry.renderBlockingStatus === 'blocking'
       ).map(({name}) => name).join('\n')) $$('*').forEach(el => el.style.outline=`1px solid hsl(${
@@ -3358,7 +3356,7 @@ export const CustomCursors = () => {
   }, []);
 
   return (
-    <section class="slide">
+    <section class="slide clear">
       <div ref={cursorWrapperRef} className="cursor-wrapper">
         <div className="default">
           <DefaultIcon fill={activeCursor.color} />
@@ -3385,18 +3383,14 @@ export const CustomCursors = () => {
   );
 }; -->
 
-        </code>
-      </pre>
-    </section>
-
-    <section class="slide">
+    <section class="slide clear">
       <a href="https://hacks.mozilla.org/2017/02/a-crash-course-in-just-in-time-jit-compilers/"
         >https://hacks.mozilla.org/2017/02/a-crash-course-in-just-in-time-jit-compilers/</a
       >
-      <img src="./themes/.arrival.webp" width="" height="" alt="" />
+      <img src="./themes/arrival.webp" width="" height="" alt="" />
     </section>
 
-    <!-- <section class="slide">
+    <!-- <section class="slide clear">
       Причина этому - в мобильных устройствах срабатывает задержка в несколько сотен миллисекунд между касанием экрана и
       запуском обработчика click. Из-за этого приложение может ощущаться медленным. Если вы будете тестировать ваше
       приложение на предмет работы с касаниями, вы не пожертвуете доступностью. Кроме того, существуют библиотеки,
@@ -3432,9 +3426,11 @@ export const CustomCursors = () => {
       <p>Всю оставшуюся часть статьи мы будем обсуждать производительность в свете этих показателей.</p>
     </section> -->
 
-    <script src="./libs/shower.min.js"></script>
-    <script src="./libs/highlight/highlight.min.js"></script>
-    <script src="./libs/highlight/init.js"></script>
-    <script src="./libs/custom-scale.js"></script>
+    <script src="node_modules/@shower/core/dist/shower.js"></script>
+    <!-- Copyright © 2024 Yours Truly, Famous Inc. -->
+
+    <script src="./themes/tw/libs/highlight/highlight.min.js"></script>
+    <script src="./themes/tw/libs/highlight/init.js"></script>
+    <script src="./themes/tw/libs/custom-scale.js"></script>
   </body>
 </html>

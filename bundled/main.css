@@ -1223,14 +1223,6 @@ code {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 mark {
   background-color: #b3441e !important;
   color: #fff;
@@ -1506,12 +1498,6 @@ code,
 .before\:animate-jump::before {
   content: var(--tw-content);
   animation: jump-left 1.5s linear infinite alternate, jump-top 0.75s cubic-bezier(0, 200, 0.8, 200) infinite;
-}
-
-.before\:bg-orange::before {
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(179 68 30 / var(--tw-bg-opacity));
 }
 
 .group:has(#first-item.active) .group-has-\[\#first-item\.active\]\:hidden {
