@@ -6,6 +6,7 @@
     <meta name="description" content="Презентация по TailwindCSS" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="color-scheme" content="light dark" />
 
     <title>Семь раз отмерь, один раз оптимизируй</title>
 
@@ -780,6 +781,56 @@
         height="841"
         alt="Minified"
       />
+    </section>
+
+    <section class="slide">
+      <footer>
+        <p>
+          Отсюда и взрыв разработки новых инструментов, которые являются, по большому счёту, упрощённой заменой
+          существующих: Rolldown для Rollup, Oxlint для ESLint, Biome для Prettier и так далее. Однако работают эти
+          инструменты быстрее не обязательно из-за того, что написаны на более быстром языке. Их скорость может
+          объясняться тем, что: 1) их пишут с упором на производительность и 2) поверхность API уже налажена, поэтому
+          авторам не нужно тратить время на проработку общего дизайна. Чёрт возьми, да вам даже не требуется писать
+          тесты! Просто используйте существующий набор от предыдущего инструмента.
+        </p>
+        <p>
+          За свою карьеру я часто видел, как в случаях, когда переписывание А в B приводит к повышению скорости, автор
+          этого ремейка заявляет, что B быстрее А. Тем не менее, как отметил Райан Карниато, ремейк зачастую быстрее,
+          просто потому что это ремейк — при переписывании чего-то вы знаете больше, больше внимания уделяете
+          производительности и так далее.
+        </p>
+      </footer>
+    </section>
+
+    <section class="slide">
+      <h2>Кэширование</h2>
+      <a href="https://v8.dev/blog/code-caching-for-devs">Code caching for devs</a>
+      <footer>
+        <p>
+          Вторая категория отрывов в производительности связана с теми возможностями, которые браузеры предоставляют нам
+          бесплатно, и тем, что мы редко думаем о кэшировании байткода и JIT-компиляции.
+        </p>
+        <p>
+          Если при загрузке сайта второй или третий раз JS-код правильно кэширован, то браузеру не приходится больше
+          парсить и компилировать исходный код в байткод. В таком случае он просто загружает последний напрямую с диска
+          — это называется кэшированием байткода. Более того, если функция «горячая» (часто выполняется), то она
+          дополнительно оптимизируется в машинный код. Так работает JIT-компиляция.
+        </p>
+        <p>
+          Тем не менее, благодаря непревзойдённому Джойи Чунгу, в Node появилась функциональность «compile cache».
+          Теперь вы можете настроить переменную среды и сразу получить ускорение загрузки скриптов Node.js: export
+          NODE_COMPILE_CACHE=~/.cache/nodejs-compile-cache
+        </p>
+      </footer>
+    </section>
+
+    <section class="slide">
+      <h2>Как Notion уменьшила задержку на 20% с помощью кэширования?</h2>
+      <a
+        class="copyright"
+        href="https://blog.quastor.org/p/notion-decreased-latency-20-caching-40c7?_bhlid=9dc7c5eafdb7c1ace16ba521b74792a35e9807c6"
+        >https://blog.quastor.org/p/notion-decreased-latency-20-caching-40c7?_bhlid=9dc7c5eafdb7c1ace16ba521b74792a35e9807c6</a
+      >
     </section>
 
     <section class="slide">
@@ -2931,6 +2982,10 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       <img class="cover" src="./themes/tw/images/conclusions/qr-code.svg" alt="Qr code" width="400" height="400" />
     </section>
 
+    <section class="slide">
+      <h2 class="shout">Ваша система – это ответственность надолго</h2>
+    </section>
+
     <section class="slide relative">
       <div class="shout flex flex-col items-center">
         <div class="dots before:animate-jump"></div>
@@ -3502,7 +3557,14 @@ export const CustomCursors = () => {
           взаимодействия и было бы святым Граалем юзабилити как поля. zero interaction cost
         </p>
       </footer>
-    </section> -->
+    </section>
+
+    <section class="slide">
+    <img src="" alt="" />
+    <a href="https://www.npmjs.com/package/size-limit">size limit</a>
+    </section>
+
+    -->
 
     <script src="node_modules/@shower/core/dist/shower.js"></script>
     <!-- Copyright © 2024 Yours Truly, Famous Inc. -->
