@@ -1,16 +1,16 @@
 function check() {
-    if (!hljs) {
-        console.error('hljs не найден')
+  if (!hljs) {
+    console.error('hljs не найден');
 
-        return;
-    }
+    return;
+  }
 }
 
 function init() {
-    hljs.highlightAll();
+  hljs.highlightAll();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   check();
   init();
 });
