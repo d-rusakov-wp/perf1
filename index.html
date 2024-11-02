@@ -2277,7 +2277,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
     </section>
 
     <section class="slide">
-      <img src="./themes/tw/eslint.jpg" alt="Eslint" />
+      <img src="./themes/tw/images/theory/tools/eslint.jpg" alt="ESLint" />
     </section>
 
     <section class="slide">Производительность - Синоним продуктивность доверя но проверяй</section>
@@ -2752,7 +2752,7 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
       <div class="shout flex items-center justify-center">
         <h2>Чтобы не&nbsp;прилетали баги</h2>
         <picture class="ml-4">
-          <source srcset="./themes/tw/images/emoji/air.webp" type="image/webp" />
+          <source srcset="./themes/tw/pictures/emoji/air.webp" type="image/webp" />
           <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6eb/512.gif" alt="🛫" width="56" height="56" />
         </picture>
       </div>
@@ -3572,5 +3572,72 @@ export const CustomCursors = () => {
     <script src="./themes/tw/libs/highlight/highlight.min.js"></script>
     <script src="./themes/tw/libs/highlight/init.js"></script>
     <script src="./themes/tw/libs/custom-scale.js"></script>
+
+    <img class="cursor" src="./themes/tw/pictures/decorators/cursor.svg" width="24" height="24" />
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const cursor = document.querySelector('.cursor');
+
+        if (!cursor) return;
+
+        const handleMove = ({ cursor, clientX, clientY }) => {
+          cursor.style.setProperty('--clientX', `${clientX}px`);
+          cursor.style.setProperty('--clientY', `${clientY}px`);
+        };
+
+        window.addEventListener('mousemove', ({ clientX, clientY }) => {
+          handleMove({ cursor, clientX, clientY });
+        });
+      });
+    </script>
+
+    <style>
+      body {
+        position: relative;
+        cursor: none;
+      }
+
+      .cursor {
+        --clientX: -100px;
+        --clientY: -100px;
+
+        position: absolute;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        transform: translate(var(--clientX), var(--clientY));
+      }
+
+      .pointer {
+        display: none;
+        animation: animateIn 0.4s ease;
+      }
+
+      @keyframes animateIn {
+        0% {
+          transform: scale(0.5);
+        }
+
+        50% {
+          transform: scale(1.2);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      :root:has(button:hover) {
+        .pointer {
+          display: block;
+        }
+
+        .default {
+          display: none;
+        }
+      }
+    </style>
   </body>
 </html>
