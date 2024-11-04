@@ -3,9 +3,25 @@ class Scale extends HTMLElement {
     super();
   }
 
+  connectedCallback() {
+    const shadow = this.attachShadow({ mode: 'open' });
+
+    const scale = document.createElement('div');
+
+    scale.setAttribute('class', 'scale');
+
+    shadow.appendChild(scale);
+
+    const style = this.renderCSS();
+
+    shadow.appendChild(style);
+  }
+
   renderCSS() {
-    return /* CSS */ `
-      .scale {
+    const style = document.createElement('style');
+
+    style.textContent = /* CSS */ `
+      :host {
         position: relative;
         display: flex;
         align-items: center;
@@ -36,23 +52,9 @@ class Scale extends HTMLElement {
         }
       }
     `;
+
+    return style;
   }
-
-  connectedCallback() {
-    const shadow = this.attachShadow({ mode: 'open' });
-
-    const scale = document.createElement('div');
-    const style = document.createElement('style');
-
-    scale.setAttribute('class', 'scale');
-
-    style.textContent = this.renderCSS();
-
-    shadow.appendChild(style);
-    shadow.appendChild(scale);
-  }
-
-  init() {}
 }
 
 document.addEventListener('DOMContentLoaded', () => {

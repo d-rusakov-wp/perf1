@@ -3,8 +3,47 @@
 @tailwind utilities;
 @tailwind variants;
 
+@layer scroll {
+  @property --scrollbar-thumb-color {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: rgba(0, 0, 0, 0);
+  }
+
+  body.platform-windows {
+    [data-scrollbar-thumb] {
+      scrollbar-gutter: stable;
+
+      transition: --scrollbar-thumb-color 1s;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumb-color);
+        border-radius: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+
+      &[data-scrollbar-thumb='true']:hover {
+        --scrollbar-thumb-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+  }
+}
+
 @layer base {
   body {
+    -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
   }
@@ -208,19 +247,6 @@
       @apply shadow-[0_20px_50px_rgb(0_0_0_/_30%)];
     }
 
-    /* .slide ol {
-    counter-reset: slide;
-  }
-
-  .slide ol > li:first-of-type::before {
-    counter-set: slide;
-  }
-
-  .slide ol > li::before {
-    counter-increment: slide;
-    content: counter(slide) '.';
-  } */
-
     .slide blockquote::before {
       @apply text-gray;
     }
@@ -257,16 +283,12 @@
     .dots {
       --linear-gradient: linear-gradient(currentColor 0 0);
 
-      color: #fff;
-      width: 52px;
-      height: 46px;
       background:
         var(--linear-gradient) 0 100%,
         var(--linear-gradient) 50% 100%,
         var(--linear-gradient) 100% 100%;
       background-size: 10px calc(100% - 6px);
       background-repeat: no-repeat;
-      position: relative;
     }
 
     .dots::before {
@@ -284,45 +306,7 @@
       padding-top: 0 !important;
       padding-bottom: 0 !important;
       line-height: 1.5 !important;
-    }
-
-    @layer scroll {
-      @property --scrollbar-thumb-color {
-        syntax: '<color>';
-        inherits: true;
-        initial-value: rgba(0, 0, 0, 0);
-      }
-
-      body.platform-windows {
-        [data-scrollbar-thumb] {
-          /* This prevent scrollbar from shifting the page content */
-          scrollbar-gutter: stable;
-
-          transition: --scrollbar-thumb-color 1s;
-
-          &::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-          }
-
-          &::-webkit-scrollbar-thumb {
-            background: var(--scrollbar-thumb-color);
-            border-radius: 8px;
-          }
-
-          &::-webkit-scrollbar-track {
-            background: transparent;
-          }
-
-          &::-webkit-scrollbar-button {
-            display: none;
-          }
-
-          &[data-scrollbar-thumb='true']:hover {
-            --scrollbar-thumb-color: rgba(0, 0, 0, 0.8);
-          }
-        }
-      }
+      font-size: 0.9em;
     }
 
     @supports not selector(::-webkit-scrollbar) {
@@ -477,18 +461,6 @@
     --width: 60vw;
   }
 
-  html {
-    font-size: var(--refsize);
-    line-height: 1.75rem;
-    -webkit-text-size-adjust: 100%;
-    background-color: #eff3f9;
-  }
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
   .wrapper {
     width: var(--width);
     margin: auto;
@@ -556,24 +528,6 @@
     white-space: pre-wrap !important;
   }
 
-  @media only screen and (max-width: 599px) {
-    :root {
-      --refsize: 16px;
-      --width: calc(100vw - 20px);
-    }
-  }
-  @media only screen and (min-width: 600px) {
-    :root {
-      --refsize: 18px;
-      --width: 90vw;
-    }
-  }
-  @media only screen and (min-width: 900px) {
-    :root {
-      --refsize: 20px;
-      --width: 80vw;
-    }
-  }
   @media only screen and (min-width: 1200px) {
     :root {
       --width: 60vw;

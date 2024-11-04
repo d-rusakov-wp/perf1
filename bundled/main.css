@@ -559,6 +559,7 @@ video {
 }
 
 body {
+  -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
 }
@@ -781,18 +782,6 @@ p {
     --tw-shadow-colored: 0 20px 50px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
-  /* .slide ol {
-    counter-reset: slide;
-  }
-
-  .slide ol > li:first-of-type::before {
-    counter-set: slide;
-  }
-
-  .slide ol > li::before {
-    counter-increment: slide;
-    content: counter(slide) '.';
-  } */
   .slide blockquote::before {
     --tw-text-opacity: 1;
     color: rgb(112 128 144 / var(--tw-text-opacity));
@@ -823,16 +812,12 @@ p {
   }
   .dots {
     --linear-gradient: linear-gradient(currentColor 0 0);
-    color: #fff;
-    width: 52px;
-    height: 46px;
     background:
       var(--linear-gradient) 0 100%,
       var(--linear-gradient) 50% 100%,
       var(--linear-gradient) 100% 100%;
     background-size: 10px calc(100% - 6px);
     background-repeat: no-repeat;
-    position: relative;
   }
   .dots::before {
     content: '';
@@ -848,46 +833,25 @@ p {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     line-height: 1.5 !important;
-  }
-  @layer scroll {
-    @property --scrollbar-thumb-color {
-      syntax: '<color>';
-
-      inherits: true;
-
-      initial-value: rgba(0, 0, 0, 0);
-    }
-
-    body.platform-windows {
-      [data-scrollbar-thumb] {
-        /* This prevent scrollbar from shifting the page content */
-        scrollbar-gutter: stable;
-        transition: --scrollbar-thumb-color 1s;
-        &::-webkit-scrollbar {
-          width: 8px;
-          height: 8px;
-        }
-        &::-webkit-scrollbar-thumb {
-          background: var(--scrollbar-thumb-color);
-          border-radius: 8px;
-        }
-        &::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        &::-webkit-scrollbar-button {
-          display: none;
-        }
-        &[data-scrollbar-thumb='true']:hover {
-          --scrollbar-thumb-color: rgba(0, 0, 0, 0.8);
-        }
-      }
-    }
+    font-size: 0.9em;
   }
   @supports not selector(::-webkit-scrollbar) {
     scrollbar-color: rgba(0, 0, 0, 0.8) transparent;
 
     scrollbar-width: thin;
   }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .static {
@@ -926,16 +890,12 @@ p {
   z-index: 10;
 }
 
-.z-20 {
-  z-index: 20;
-}
-
 .float-right {
   float: right;
 }
 
-.m-0 {
-  margin: 0px;
+.\!m-0 {
+  margin: 0px !important;
 }
 
 .m-auto {
@@ -962,6 +922,10 @@ p {
   margin-bottom: 0.5rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .ml-4 {
   margin-left: 1rem;
 }
@@ -986,10 +950,6 @@ p {
   margin-top: 70px;
 }
 
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
 }
@@ -998,12 +958,20 @@ p {
   display: table;
 }
 
+.h-\[46px\] {
+  height: 46px;
+}
+
 .h-full {
   height: 100%;
 }
 
 .w-\[50\%\] {
   width: 50%;
+}
+
+.w-\[52px\] {
+  width: 52px;
 }
 
 .w-\[55\%\] {
@@ -1128,11 +1096,6 @@ p {
     skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
-    skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .flex-col {
   flex-direction: column;
 }
@@ -1196,18 +1159,6 @@ p {
   line-height: 1;
 }
 
-.text-\[82px\] {
-  font-size: 82px;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.lowercase {
-  text-transform: lowercase;
-}
-
 .italic {
   font-style: italic;
 }
@@ -1231,6 +1182,11 @@ p {
   color: rgb(255 0 0 / var(--tw-text-opacity));
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .opacity-90 {
   opacity: 0.9;
 }
@@ -1242,38 +1198,6 @@ p {
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate)
     var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.transition {
-  transition-property:
-    color,
-    background-color,
-    border-color,
-    text-decoration-color,
-    fill,
-    stroke,
-    opacity,
-    box-shadow,
-    transform,
-    filter,
-    -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow,
-    transform, filter, backdrop-filter;
-  transition-property:
-    color,
-    background-color,
-    border-color,
-    text-decoration-color,
-    fill,
-    stroke,
-    opacity,
-    box-shadow,
-    transform,
-    filter,
-    backdrop-filter,
-    -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 
 mark {
@@ -1423,25 +1347,6 @@ mark {
   --width: 60vw;
 }
 
-html {
-  font-size: var(--refsize);
-  line-height: 1.75rem;
-  -webkit-text-size-adjust: 100%;
-  background-color: #eff3f9;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.wrapper {
-  width: var(--width);
-  margin: auto;
-  padding-top: 3rem;
-}
-
 .toc {
   position: relative;
   padding: 3rem;
@@ -1496,27 +1401,6 @@ pre {
   white-space: pre-wrap !important;
 }
 
-@media only screen and (max-width: 599px) {
-  :root {
-    --refsize: 16px;
-    --width: calc(100vw - 20px);
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  :root {
-    --refsize: 18px;
-    --width: 90vw;
-  }
-}
-
-@media only screen and (min-width: 900px) {
-  :root {
-    --refsize: 20px;
-    --width: 80vw;
-  }
-}
-
 @media only screen and (min-width: 1200px) {
   :root {
     --width: 60vw;
@@ -1562,4 +1446,38 @@ pre {
 
 .group:has(#first-item.active) .group-has-\[\#first-item\.active\]\:hidden {
   display: none;
+}
+
+@layer scroll {
+  @property --scrollbar-thumb-color {
+    syntax: '<color>';
+
+    inherits: true;
+
+    initial-value: rgba(0, 0, 0, 0);
+  }
+
+  body.platform-windows {
+    [data-scrollbar-thumb] {
+      scrollbar-gutter: stable;
+      transition: --scrollbar-thumb-color 1s;
+      &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumb-color);
+        border-radius: 8px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+      &[data-scrollbar-thumb='true']:hover {
+        --scrollbar-thumb-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+  }
 }
