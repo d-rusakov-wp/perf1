@@ -3,8 +3,102 @@
 @tailwind utilities;
 @tailwind variants;
 
+@layer scroll {
+  @property --scrollbar-thumb-color {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: rgba(0, 0, 0, 0);
+  }
+
+  .animated-gradient {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    height: 100vh;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+
+  :root {
+    --color-walbi-15: #3affa326;
+    --color-walbi-45: #3affa373;
+    --walbi-glow: 0px 0px 36px 8px var(--color-walbi-15), 0px 0px 7px 1px var(--color-walbi-45);
+    --swiper-wrapper-transition-timing-function: cubic-bezier(0.5, 0.05, 0.05, 0.99);
+    --ease-main: cubic-bezier(0.5, 0.05, 0.05, 0.99);
+  }
+
+  @keyframes highlight {
+    0%,
+    100% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .highlight-blocks {
+    z-index: 1;
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+    flex-flow: row;
+    margin-top: -0.1rem;
+    display: flex;
+    position: relative;
+  }
+
+  .highlight {
+    background-color: var(--color-walbi-15);
+    width: 0.3125em;
+    height: 0.875em;
+    animation: 1s infinite highlight;
+  }
+
+  body.platform-windows {
+    [data-scrollbar-thumb] {
+      scrollbar-gutter: stable;
+
+      transition: --scrollbar-thumb-color 1s;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumb-color);
+        border-radius: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+
+      &[data-scrollbar-thumb='true']:hover {
+        --scrollbar-thumb-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+  }
+}
+
 @layer base {
   body {
+    -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
   }
@@ -208,19 +302,6 @@
       @apply shadow-[0_20px_50px_rgb(0_0_0_/_30%)];
     }
 
-    /* .slide ol {
-    counter-reset: slide;
-  }
-
-  .slide ol > li:first-of-type::before {
-    counter-set: slide;
-  }
-
-  .slide ol > li::before {
-    counter-increment: slide;
-    content: counter(slide) '.';
-  } */
-
     .slide blockquote::before {
       @apply text-gray;
     }
@@ -257,16 +338,12 @@
     .dots {
       --linear-gradient: linear-gradient(currentColor 0 0);
 
-      color: #fff;
-      width: 52px;
-      height: 46px;
       background:
         var(--linear-gradient) 0 100%,
         var(--linear-gradient) 50% 100%,
         var(--linear-gradient) 100% 100%;
       background-size: 10px calc(100% - 6px);
       background-repeat: no-repeat;
-      position: relative;
     }
 
     .dots::before {
@@ -284,45 +361,7 @@
       padding-top: 0 !important;
       padding-bottom: 0 !important;
       line-height: 1.5 !important;
-    }
-
-    @layer scroll {
-      @property --scrollbar-thumb-color {
-        syntax: '<color>';
-        inherits: true;
-        initial-value: rgba(0, 0, 0, 0);
-      }
-
-      body.platform-windows {
-        [data-scrollbar-thumb] {
-          /* This prevent scrollbar from shifting the page content */
-          scrollbar-gutter: stable;
-
-          transition: --scrollbar-thumb-color 1s;
-
-          &::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-          }
-
-          &::-webkit-scrollbar-thumb {
-            background: var(--scrollbar-thumb-color);
-            border-radius: 8px;
-          }
-
-          &::-webkit-scrollbar-track {
-            background: transparent;
-          }
-
-          &::-webkit-scrollbar-button {
-            display: none;
-          }
-
-          &[data-scrollbar-thumb='true']:hover {
-            --scrollbar-thumb-color: rgba(0, 0, 0, 0.8);
-          }
-        }
-      }
+      font-size: 0.9em;
     }
 
     @supports not selector(::-webkit-scrollbar) {
@@ -477,18 +516,6 @@
     --width: 60vw;
   }
 
-  html {
-    font-size: var(--refsize);
-    line-height: 1.75rem;
-    -webkit-text-size-adjust: 100%;
-    background-color: #eff3f9;
-  }
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
   .wrapper {
     width: var(--width);
     margin: auto;
@@ -556,24 +583,6 @@
     white-space: pre-wrap !important;
   }
 
-  @media only screen and (max-width: 599px) {
-    :root {
-      --refsize: 16px;
-      --width: calc(100vw - 20px);
-    }
-  }
-  @media only screen and (min-width: 600px) {
-    :root {
-      --refsize: 18px;
-      --width: 90vw;
-    }
-  }
-  @media only screen and (min-width: 900px) {
-    :root {
-      --refsize: 20px;
-      --width: 80vw;
-    }
-  }
   @media only screen and (min-width: 1200px) {
     :root {
       --width: 60vw;
