@@ -11,7 +11,8 @@
     "bundle": "npm run tw:bundle",
     "publish": "npm run bundle & shower publish --files '**' --files '!{docs,node_modules}{,/**}' --files '!*.{md,toml,json,yml,lockb,config.js,config.ts}'",
     "tw:watch": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css --watch",
-    "tw:bundle": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css --minify"
+    "tw:bundle": "tailwindcss -i ./themes/tw/styles/main.css -o ./bundled/main.css --minify",
+    "find-unused-images": "node ./themes/tw/libs/search-unused-images.js"
   },
   "dependencies": {
     "@shower/core": "^3.3.0",
@@ -26,6 +27,7 @@
     "@shower/cli": "^0.3.1",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
+    "htmlparser2": "9.1.0",
     "lefthook": "1.8.2",
     "path-exists-cli": "2.0.0",
     "postcss": "^8.4.47",

@@ -10,6 +10,61 @@
     initial-value: rgba(0, 0, 0, 0);
   }
 
+  .animated-gradient {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    height: 100vh;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+
+  :root {
+    --color-walbi-15: #3affa326;
+    --color-walbi-45: #3affa373;
+    --walbi-glow: 0px 0px 36px 8px var(--color-walbi-15), 0px 0px 7px 1px var(--color-walbi-45);
+    --swiper-wrapper-transition-timing-function: cubic-bezier(0.5, 0.05, 0.05, 0.99);
+    --ease-main: cubic-bezier(0.5, 0.05, 0.05, 0.99);
+  }
+
+  @keyframes highlight {
+    0%,
+    100% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .highlight-blocks {
+    z-index: 1;
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+    flex-flow: row;
+    margin-top: -0.1rem;
+    display: flex;
+    position: relative;
+  }
+
+  .highlight {
+    background-color: var(--color-walbi-15);
+    width: 0.3125em;
+    height: 0.875em;
+    animation: 1s infinite highlight;
+  }
+
   body.platform-windows {
     [data-scrollbar-thumb] {
       scrollbar-gutter: stable;
