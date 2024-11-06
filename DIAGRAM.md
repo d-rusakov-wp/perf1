@@ -1,11 +1,9 @@
 ```mermaid
 flowchart TB
-    subgraph themes/
-      direction LR
+  subgraph themes/
+    direction LR
 
-      subgraph MD[Папка с темами]
-      end
-
+    subgraph MD[Папка с темами]
       subgraph tw
         direction LR
 
@@ -17,4 +15,5 @@ flowchart TB
         video --> index.html
       end
     end
+  end
 ```
