@@ -19,7 +19,7 @@
     "@shower/material": "^2.5.1",
     "@shower/ribbon": "3.5.2",
     "lottie-web": "5.12.2",
-    "tailwindcss-motion": "0.3.0-beta"
+    "tailwindcss-motion": "0.4.1-beta"
   },
   "devDependencies": {
     "@commitlint/cli": "19.5.0",
