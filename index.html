@@ -134,8 +134,194 @@
           V8&nbsp;&mdash; это высокопроизводительный движок&nbsp;JS и&nbsp;WebAssembly от&nbsp;Google с&nbsp;открытым
           исходным кодом, написанный на C++.&nbsp;Он&nbsp;используется в&nbsp;Chrome и&nbsp;Node.js. Он&nbsp;реализует
           ECMAScript и&nbsp;WebAssembly и&nbsp;работает в&nbsp;системах Windows, macOS и&nbsp;Linux, использующих
-          процессоры x64, IA-32 или ARM. V8&nbsp;можно встроить в&nbsp;любое приложение C++.
+          процессоры x64, IA-32 или ARM. V8&nbsp;можно встроить в&nbsp;любое приложение C++. C++ Реализует ECMAScript,
+          как указано в ECMA-262 последней версии Microsoft Edge
         </p>
+      </footer>
+    </section>
+
+    <section class="slide">
+      <footer>
+        Анализ JavaScript Итак, первым делом мы обрабатываем наш код JavaScript, чтобы разобрать его. Давайте обсудим,
+        что такое парсинг. Анализ состоит из двух этапов: Eager (полный анализ) — анализирует каждую строку сразу
+        Ленивый (предварительный анализ) — делаем минимум, анализируем то, что нам нужно, и оставляем остальное на
+        потом. Что лучше? Все зависит от обстоятельств. Давайте посмотрим на код.
+        <pre>
+        <code>
+          // eager parse declarations right away
+const a = 1;
+const b = 2;
+
+// lazily parse this as we don't need it right away
+function add(a, b) {
+  return a + b;
+}
+
+// oh looks like we do need add so lets go back and parse it
+add(a, b);
+        </code>
+      </pre>
+
+        <pre>
+          <code>
+            // eager parse declarations right away
+const a = 1;
+const b = 2;
+
+// eager parse this too
+var add = (function(a, b) {
+  return a + b;
+})();
+
+// we can use this right away as we have eager parsed
+// already
+add(a, b);
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+            const square = (x) => { return x * x }
+
+const callFunction100Times = (func) => {
+  for(let i = 0; i < 100; i++) {
+    // the func param will be called 100 times
+    func(2)
+  }
+}
+
+callFunction100Times(square)
+          </code>
+        </pre>
+
+        <pre>
+          <code>
+            const square = (x) => { return x * x }
+
+const callFunction100Times = (func) => {
+  for(let i = 100; i < 100; i++) {
+    // the function is inlined so we don't have
+    // to keep calling func
+    return x * x
+  }
+}
+
+callFunction100Times(square)
+
+
+            const square = (x) => { return x * x }
+const cube = (x) => { return x * x * x }
+
+const callFunction100Times = (func) => {
+  for(let i = 100; i < 100; i++) {
+    // the function is inlined so we don't have
+    // to keep calling func
+    func(2)
+  }
+}
+
+callFunction100Times(square)
+callFunction100Times(cube)
+Итак, на этот раз после того, как мы вызвали squareфункцию 100times, мы затем вызовем cubeфункцию 100times. Перед тем, cubeкак ее можно будет вызвать, мы должны сначала деоптимизировать, callFunction100Timesтак как мы встроили squareтело функции. В таких случаях squareфункция будет казаться быстрее, чем cubeфункция, но на самом деле этап деоптимизации делает выполнение более долгим.
+
+
+       // mono example
+const person = { name: 'John' }
+const person2 = { name: 'Paul' }
+// poly example
+const person = { name: 'John' }
+const person2 = { name: 'Paul', age: 27 }
+            // mega example
+const person = { name: 'John' }
+const building = { rooms: ['cafe', 'meeting room A', 'meeting room B'], doors: 27 }
+
+
+            Скрытые классы — это то, как V8 идентифицирует наши объекты.
+
+Давайте разберем это на этапы.
+
+Мы объявляем объект:
+
+const obj = { name: 'John'}
+Затем V8 объявит classIdдля этого объекта.
+
+const objClassId = ['name', 1]
+Тогда наш объект создается следующим образом:
+
+const obj = {...objClassId, 'John'}
+Затем, когда мы получаем доступ к nameсвойству нашего объекта следующим образом:
+
+obj.name
+V8 выполняет следующий поиск:
+
+obj[getProp(obj[0], name)]
+Это процесс, который V8 выполняет при создании наших объектов. Теперь давайте посмотрим, как мы можем оптимизировать наши объекты и использовать их повторно classIds.
+
+            Советы по созданию объектов
+Если вы можете, вы должны объявить свои свойства в конструкторе . Это гарантирует, что структура объекта останется прежней, чтобы V8 мог оптимизировать ваши объекты.
+
+class Point {
+  constructor(x,y) {
+    this.x = x
+    this.y = y
+  }
+}
+
+const p1 = new Point(11, 22) // hidden classId created
+const p2 = new Point(33, 44)
+Вам следует поддерживать постоянный порядок свойств , возьмем следующий пример:
+
+const obj = { a: 1 } // hidden class created
+obj.b = 3
+
+const obj2 = { b: 3 } // another hidden class created
+obj2.a = 1
+
+// this would be better
+const obj = { a: 1 } // hidden class created
+obj.b = 3
+
+const obj2 = { a: 1 } // hidden class is reused
+obj2.b = 3
+Общие советы по оптимизации
+Теперь давайте рассмотрим несколько общих советов, которые помогут лучше оптимизировать ваш код JavaScript.
+
+Исправлены типы аргументов функции
+Когда аргументы передаются в функцию, важно, чтобы они были одного типа. Turbofan прекратит попытки оптимизировать ваш JavaScript после 4 попыток, если типы аргументов различаются.
+
+Возьмем следующий пример:
+
+function add(x,y) {
+  return x + y
+}
+
+add(1,2) // monomorphic
+add('a', 'b') // polymorphic
+add(true, false)
+add({},{})
+add([],[]) // megamorphic - at this stage, 4+ tries, no optimization will happen
+Еще один совет — обязательно объявляйте классы в глобальной области видимости :
+
+// don't do this
+function createPoint(x, y) {
+  class Point {
+    constructor(x,y) {
+      this.x = x
+      this.y = y
+    }
+  }
+
+  // new point object created every time
+  return new Point(x,y)
+}
+
+function length(point) {
+  //...
+}
+Заключение
+Надеюсь, вы узнали кое-что новое о том, как работает V8 «под капотом» и как писать более оптимизированный код JavaScript.
+          </code>
+        </pre>
       </footer>
     </section>
 
@@ -2004,6 +2190,8 @@ console.timeEnd("answer time");
         <span class="text-gray">Акт 2</span> <br />Практика
       </h2>
     </section>
+
+    <section class="slide"></section>
 
     <section class="slide">
       <p>
