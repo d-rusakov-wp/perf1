@@ -1,6 +1,6 @@
 ```mermaid
 flowchart TB
-  subgraph themes/
+  subgraph themes
     direction LR
 
     subgraph MD[Папка с темами]
