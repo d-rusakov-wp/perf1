@@ -17,6 +17,25 @@
     height: 100vh;
   }
 
+  .test > div {
+    display: flex;
+    justify-content: center;
+  }
+
+  video::cue {
+    font-size: 1rem;
+  }
+
+  .test h2 {
+    text-align: left !important;
+    text-transform: lowercase;
+    font-size: 38px !important;
+  }
+
+  .test h2 span {
+    text-transform: uppercase;
+  }
+
   @keyframes gradient {
     0% {
       background-position: 0 50%;
