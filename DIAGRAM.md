@@ -1,19 +1,17 @@
 ```mermaid
 flowchart TB
-  subgraph themes/
+  subgraph themes
     direction LR
 
-    subgraph MD[Папка с темами]
-      subgraph tw
-        direction LR
+    subgraph tw
+      direction LR
 
-        fonts --> styles -> main.css
-        images --> index.html
-        libs --> index.html
-        pictures --> index.html
-        styles --> index.html
-        video --> index.html
-      end
+      fonts --> styles
+      styles --> index.html
+      images --> index.html
+      libs --> index.html
+      pictures --> index.html
+      video --> index.html
     end
   end
 ```
