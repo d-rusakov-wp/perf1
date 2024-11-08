@@ -3797,6 +3797,37 @@ export function quickMath(a: number, b: number): number;
         width="1907"
         height="846"
       />
+      <footer>
+        <p>
+          Для тех, кто заметил, что «мономорфный» также связан с моим постом о производительности: да, наличие
+          мономорфного значения не только улучшает читаемость, но и значительно повышает производительность
+        </p>
+        <p>
+          Я слишком часто вижу, как люди используют по умолчанию null/ undefinedкак способ показать, что значение еще не
+          установлено. Но действительно ли вам нужно пустое значение? Пример. type Dimension = { width: number, height:
+          number } // This is our component's dimensions. It's // calculated on the first render, so we don't have // a
+          value for it yet. Let it be null for now. let rootDimensions = null as Dimension | null Это может быть не
+          сразу очевидно, но последствием выбора nullпустого значения является то, что оно осуждает каждый последующий
+          раздел кода, который rootDimensionsдобавляет проверки на null и значения по умолчанию: let sidebarWidth =
+          (rootDimensions?.width ?? 0) * 0.20 // ^^^^^^^^^^^^ // This is going to be repeated *each* time rootDimensions
+          is used. В то время как инициализация измерений мономорфным значением исключает необходимость последующих
+          проверок на нуль: const EMPTY_DIMENSIONS = { width: 0, height: 0 } as Dimension let rootDimensions =
+          EMPTY_DIMENSIONS // no more | null needed!
+        </p>
+        <p>
+          Жадные алгоритмы (https://htmlacademy.ru/blog/js/algorithm) — это подход к решению задач оптимизации,
+          в котором мы делаем лучший выбор на каждом шаге, надеясь, что это приведёт к лучшему решению в итоге. Это
+          простые для понимания алгоритмы, которые ещё и быстро работают.
+        </p>
+        <p>
+          Алгоритм — это набор инструкций для решения какой-то задачи. Всё, что мы делаем: готовим утром кофе, идём
+          на работу, пишем код — это исполнение определённых алгоритмов.
+        </p>
+        <p>
+          "peerDependencies": { - "react": "^16.8 ^17.0 ^18.0", + "react": "^16.8 ^17.0 ^18.0 || ^19.0", - "react-dom":
+          "^16.8 ^17.0 ^18.0" + "react-dom": "^16.8 ^17.0 ^18.0 || ^19.0" },
+        </p>
+      </footer>
     </section>
 
     <section class="slide">
