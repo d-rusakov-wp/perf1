@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./themes/tw/libs/highlight/hybrid.min.css" />
     <link rel="stylesheet" href="./bundled/main.css" />
   </head>
-  <body class="shower list scrollbar all-clear">
+  <body class="shower list custom-scrollbar all-clear">
     <header class="caption">
       <h1>Семь раз отмерь, один раз оптимизируй</h1>
       <p class="mt-2">
@@ -466,16 +466,16 @@ function length(point) {
     <section class="slide group">
       <h2>Какой план?</h2>
       <ul class="toc">
-        <li class="entry next">
-          <div class="chapter">Теория <span>(подготовка)</span></div>
+        <li class="toc__list-item next">
+          <div class="toc__name">Теория <span>(подготовка)</span></div>
           <div class="page">1</div>
         </li>
-        <li class="entry next">
-          <div class="chapter">Практика (набор приемов/советов)</div>
+        <li class="toc__list-item next">
+          <div class="toc__name">Практика (набор приемов/советов)</div>
           <div class="page">5</div>
         </li>
-        <li class="entry next">
-          <div class="chapter">Выводы</div>
+        <li class="toc__list-item next">
+          <div class="toc__name">Выводы</div>
           <div class="page">9</div>
         </li>
       </ul>
@@ -2227,7 +2227,14 @@ console.timeEnd("answer time");
     </section>
 
     <section class="slide">
-      <h2 class="shout" style="color: white">Анимации</h2>
+      <h2 class="" style="color: white">Анимации</h2>
+      <ul>
+        <li class="next">вынести на отдельный слой</li>
+        <li class="next">не допускать перестройку макета</li>
+        <li class="next">использовать CSS</li>
+        <li class="next">использовать will-change <span class="next">(точечно)</span></li>
+        <li class="next">RequestAnimationFrame</li>
+      </ul>
       <div class="cover width height animated-gradient"></div>
     </section>
 
