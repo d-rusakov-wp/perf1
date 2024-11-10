@@ -23,7 +23,7 @@
   </head>
   <body class="shower list custom-scrollbar all-clear">
     <header class="caption">
-      <h1>Семь раз отмерь, один раз оптимизируй</h1>
+      <h1 class="text-white">Семь раз отмерь, один раз оптимизируй</h1>
       <p class="mt-2">
         <i>Денис Русаков</i>
       </p>
@@ -39,16 +39,6 @@
           </p>
         </div>
       </div>
-      <footer>
-        <p>Всем привет</p>
-        <p>На&nbsp;слайде изображено перо жар птицы</p>
-        <p>
-          Фраза &laquo;семь раз отмерь, один раз отрежь&raquo; означает, что перед принятием важного решения или
-          совершением действия нужно тщательно обдумать все возможные последствия и&nbsp;взвесить все
-          за&nbsp;и&nbsp;против. Эта пословица призывает к&nbsp;осторожности, планированию и&nbsp;размышлению, чтобы
-          сделать верный выбор или действие с&nbsp;первого раза, избегая необдуманных поступков
-        </p>
-      </footer>
     </section>
 
     <section class="slide">
@@ -70,14 +60,11 @@
           >o&rsquo;reilly</a
         >
       </div>
-      <footer>
-        <p>Многие на&nbsp;обложках находятся на&nbsp;грани вымирания</p>
-      </footer>
     </section>
 
     <section class="slide">
-      <h2 class="sr-only">Жар птица</h2>
-      <img class="cover" src="./themes/tw/images/preview/bird.jpg" width="736" height="490" alt="Жар птица" />
+      <h2 class="sr-only">Птица</h2>
+      <img class="cover" src="./themes/tw/images/preview/bird.jpg" width="536" height="490" alt="Птица" />
       <footer>
         <p>Птица из&nbsp;новой Гвинеи</p>
         <p>
@@ -86,7 +73,6 @@
           По&nbsp;другим легендам, она была символом бессмертия и&nbsp;богатства, поэтому добыть себе перо
           из&nbsp;ее&nbsp;хвоста считалось настоящим счастьем
         </p>
-        <p>Перо&nbsp;&mdash; это производительность, которую нам иногда необходимо достичь/поймать?</p>
         <p>
           Вспомните, когда вы&nbsp;последний раз были в&nbsp;отпуске. Что вы&nbsp;помните? Возможно, вы&nbsp;вспомнили
           особенно красивый вид с&nbsp;вершины горы после долгого похода. Возможно, вы&nbsp;подумали об&nbsp;интересной
@@ -140,12 +126,6 @@
           использующих процессоры x64, IA-32 или ARM. V8&nbsp;можно встроить в&nbsp;любое приложение C++.
           C++&nbsp;Реализует ECMAScript, как указано в&nbsp;ECMA-262 последней версии Microsoft Edge
         </p>
-      </footer>
-    </section>
-
-    <section class="slide">
-      <h2 class="sr-only">Test</h2>
-      <footer>
         Анализ JavaScript Итак, первым делом мы&nbsp;обрабатываем наш код JavaScript, чтобы разобрать его. Давайте
         обсудим, что такое парсинг. Анализ состоит из&nbsp;двух этапов: Eager (полный анализ)&nbsp;&mdash; анализирует
         каждую строку сразу Ленивый (предварительный анализ)&nbsp;&mdash; делаем минимум, анализируем&nbsp;то, что нам
@@ -331,13 +311,16 @@ function length(point) {
     </section>
 
     <section class="slide">
+      <h2>Сэмплирование</h2>
+    </section>
+
+    <!-- <section class="slide">
       <h2 class="sr-only">Test</h2>
       <ul>
         <li>отправка формы занимает очень много времени</li>
-        <li>отправка формы занимает очень много времени</li>
         <li>npm install работает медленно</li>
       </ul>
-    </section>
+    </section> -->
 
     <section class="slide">
       <h2>Алгоритмы</h2>
@@ -488,6 +471,7 @@ function length(point) {
         aria-hidden="true"
       />
       <footer>
+        <p>Оценка смещения макета = доля воздействия * доля расстояния'</p>
         <p>В&nbsp;теории подведу через некоторые истории и&nbsp;кейсы к&nbsp;сути темы</p>
         <p>
           V8&nbsp;&mdash; движок с&nbsp;открытым исходным кодом, написан на&nbsp;C++, его разработкой занимается Google.
@@ -497,8 +481,58 @@ function length(point) {
     </section>
 
     <section class="slide">
-      <h2 class="cover !left-0 mt-[24px] -translate-y-[50%] pl-[100px] text-left">
-        <span class="text-gray">Акт 1</span> <br />Теория
+      <pre class="place">
+        <code>
+          const items = await getItems()
+
+          for (let item of items) {
+            await processItem(item)
+          }
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>
+          // Using Promise.all allows promises to be handled in parallel
+const items = await getItems()
+await Promise.all(items.map(processItem))
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Dev среда</h2>
+    </section>
+
+    <section class="slide">
+      <h2>https://github.com/v8/v8/blob/master/src/builtins/array-map.tq</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Pre (предварительный)</h2>
+      <ul>
+        <li><span>Pre</span>fetching</li>
+        <li><span>Pre</span>rendering</li>
+        <li><span>Pre</span>caching</li>
+      </ul>
+      <a class="copyright">https://web.dev/learn/performance/prefetching-prerendering-precaching</a>
+    </section>
+
+    <section class="slide">
+      <ul>
+        <li>Микрозадачи</li>
+        <li>Макрозадачи</li>
+        <li>Задачи отрисовки</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2 class="cover left-0 mt-[24px] -translate-y-[50%] pl-[120px] text-left">
+        <span class="text-gray">Акт 1</span>
+        <br />
+        <span>Теория</span>
       </h2>
     </section>
 
@@ -524,6 +558,23 @@ function length(point) {
     </section>
 
     <section class="slide">
+      <p>
+        Render Tree - это термин, который используется движком WebKit, в других движках он может отличаться. Например,
+        Gecko использует термин Frame Tree.
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2 class="sr-only">Test</h2>
+      <figure class="place w-[55%]">
+        <blockquote class="flex items-start">
+          <p>Если мои ответы пугают тебя, перестань задавать страшные вопросы</p>
+        </blockquote>
+        <figcaption>Криминальное чтиво</figcaption>
+      </figure>
+    </section>
+
+    <section class="slide">
       <h2 class="sr-only">Test</h2>
       <figure class="place w-[55%]">
         <blockquote class="flex items-start">
@@ -537,7 +588,7 @@ function length(point) {
     </section>
 
     <section class="slide">
-      <h2 class="shout">производительность === продуктивность</h2>
+      <h2 class="shout !text-[42px]">производительность <span class="bold text-orange">===</span> продуктивность</h2>
     </section>
 
     <section class="slide">
@@ -587,7 +638,7 @@ function length(point) {
     <section class="slide">
       <h2 class="sr-only">Test</h2>
       <div class="flex h-full items-center justify-center">
-        <div class="loader"></div>
+        <div class="loader animate-wave before:content-['Загрузка...']"></div>
       </div>
     </section>
 
@@ -677,14 +728,14 @@ function length(point) {
 
     <section class="slide">
       <h2 class="sr-only">Test</h2>
-      <pre>
-        <code class="language-typescript">
-            if (true) [
-              console.log('да')
-            ]
-            else [
-              console.log('да нет же')
-            ]
+      <pre class="place">
+        <code class="language-typescript !text-[1.5rem]">
+          if (true) [
+            console.log('будет true');
+          ]
+          else [
+            console.log('будет не true');
+          ]
         </code>
           </pre>
     </section>
@@ -694,7 +745,7 @@ function length(point) {
       <ul>
         <li class="next flex items-center">
           V8
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.google.com/intl/ru_ru/chrome/" target="_blank" rel="noopener noreferrer">
             <img
               class="next ml-4"
               src="./themes/tw/images/theory/browsers/chrome.svg"
@@ -962,6 +1013,20 @@ function length(point) {
         <p>Мономофризм что у&nbsp;объектов одинаковые ключи без отличий</p>
         <p>Мегаморфизм тут объекты совершенно разные и&nbsp;их&nbsp;нельзя сравнивать</p>
         <p>Полиморфизм у&nbsp;объектов общая структура но&nbsp;меняются небольшие отличия</p>
+        <p>
+          Если вы не можете удалить фрагмент кода, постарайтесь выполнять его реже Ваш код работает в том числе за счет
+          простого повторения операций, но тут легко переборщить и начать выполнять их чаще необходимого. Вот несколько
+          конкретных примеров, на которые стоит обратить внимание.
+        </p>
+        <p>
+          preload– когда вам понадобится ресурс через несколько секунд prefetch– когда вам нужен ресурс для следующей
+          страницы preconnect– когда вы знаете, что вам скоро понадобится ресурс, но вы пока не знаете его полный URL
+          dns-prefetch– когда вы знаете, что вам скоро понадобится ресурс, но вы еще не знаете его полный URL (для
+          старых браузеров) prerender– когда вы уверены, что большинство пользователей перейдут на определенную
+          страницу, и вы хотите ускорить этот процесс modulepreload– когда вам скоро понадобится скрипт модуля ES других
+          статьях я писал о том, что использовать Set может быть быстрее, чем Array, а Map — чем регулярные объекты. Set
+          и Map — это коллекции, которые используют ключи, они могу пригодиться, если вы регулярно
+        </p>
       </footer>
     </section>
 
@@ -1174,7 +1239,7 @@ function length(point) {
     <section class="slide">
       <h2>CLS</h2>
       <p>Измеряет визуальную стабильность страницы</p>
-      <p>Загрузка шрифтов (мжет вам не&nbsp;нужен шрифт)</p>
+      <p>Загрузка шрифтов (мжет вам не&nbsp;нужен шрифт) (unicode-range)</p>
       <p>размеры изображений</p>
       <p>резерв места</p>
     </section>
@@ -2393,12 +2458,14 @@ console.timeEnd("answer time");
 
     <section class="slide">
       <h2 class="sr-only">Test</h2>
-      <div class="highlight-blocks">
-        <div class="highlight"></div>
-        <div class="highlight"></div>
-        <div class="highlight"></div>
-        <div class="highlight"></div>
-        <div class="highlight"></div>
+      <div class="">
+        <div class="flex animate-highlight bg-light-green">
+          <div class="relative z-[1] mt-[-0.1rem] flex h-[0.875em] w-[0.3125em] gap-x-[3px] gap-y-[3px]"></div>
+          <div class="relative z-[1] mt-[-0.1rem] flex h-[0.875em] w-[0.3125em] gap-x-[3px] gap-y-[3px]"></div>
+          <div class="relative z-[1] mt-[-0.1rem] flex h-[0.875em] w-[0.3125em] gap-x-[3px] gap-y-[3px]"></div>
+          <div class="relative z-[1] mt-[-0.1rem] flex h-[0.875em] w-[0.3125em] gap-x-[3px] gap-y-[3px]"></div>
+          <div class="relative z-[1] mt-[-0.1rem] flex h-[0.875em] w-[0.3125em] gap-x-[3px] gap-y-[3px]"></div>
+        </div>
       </div>
       <footer>
         <p>
@@ -2419,9 +2486,13 @@ console.timeEnd("answer time");
         height="700"
         id="iframe-vanilla-js"
       ></iframe>
-      <div class="con">
-        <button class="brutalist-button" type="button" id="upload-iframe">
-          <span class="button-text">
+      <div class="absolute left-1/2 top-1/2 my-2 -translate-x-1/2 -translate-y-1/2">
+        <button
+          class="upload-btn-iframe relative box-border flex h-[60px] w-[169px] cursor-pointer items-center overflow-hidden rounded-sm border-[3px] border-solid border-white bg-black px-[15px] py-0 font-[bold] font-arsenal text-white no-underline shadow-[6px_6px_0_#00a4ef] transition-all duration-[0.1s] ease-[ease-out] before:rounded-sm"
+          type="button"
+          id="upload-iframe"
+        >
+          <span>
             <span>Нажми на&nbsp;меня</span>
           </span>
         </button>
@@ -2499,6 +2570,145 @@ console.timeEnd("answer time");
                   console.log(`Длительность выполнения: ${Date.now() - startTime} ms`);
                 </code>
               </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>
+          import { HTMLAttributes } from "react";
+
+          type InputProps = HTMLAttributesHTMLInputElement & {
+            variant: 'base' | 'custom';
+          };
+
+          const Input = ({ variant, ...props }: InputProps) => {
+            console.log({ variant });
+
+            return input {...props}
+          };
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>
+          import { MouseEvent } from "react";
+
+          Input
+            extraProp="base"
+            onClick={(event) => {
+              // event: MouseEventHTMLButtonElement, MouseEvent
+            }}
+        </code>
+      </pre>
+      <footer>
+        <p>В случае строковых перечислений это также очень хорошо сжималось gzip из-за повторяющихся строк.</p>
+        <p>
+          Циклы должны завершаться как можно раньше Оценочный тест Обращайте внимание, есть ли необходимость выполнять
+          каждую итерацию цикла. Например, если вы ищете конкретное значение и находите его, нет смысла в дальнейших
+          итерациях, лучше прервать выполнение цикла оператором break: for (let i = 0; i < haystack.length; i++) { if
+          (haystack[i] !== needle) break; } Или, если нужно произвести операции с определенными элементами цикла, вы
+          можете пропустить другие операции с помощью оператора continue, который останавливает выполнение операторов в
+          текущей итерации и немедленно переходит к следующей: for (let i = 0; i < haystack.length; i++) { if
+          (!haystack[i] === needle) continue; doSomething(); } Стоит также помнить, что вложенные циклы можно разрывать
+          с помощью меток. Это позволяет привязать оператор break или continue к определенному циклу: loop1: for (let i
+          = 0; i < haystacks.length; i++) { loop2: for (let j = 0; j < haystacks[i].length; j++) { if (haystacks[i][j]
+          === needle) { break loop1; } } }
+        </p>
+        <p>Удалите ненужные функции</p>
+        <p>
+          LCP LCP основывается на том, когда был отрендерен самый большой элемент на веб-странице. Обычно рендеринг
+          больших элементов ставится в первую очередь, для того чтобы показать как можно больше контента пользователю.
+          Первым большим элементом может быть большой блок текста, картинка или видео. CSR, SSR, SSG, ISR и другие
+          аббревиатуры FID FID это показатель времени, который указывает на то, сколько занимает времени обработать
+          первое взаимодействие пользователя с приложением. CSR, SSR, SSG, ISR и другие аббревиатуры CLS CLS это
+          показатель сдвига элементов на странице. Если у приложения есть огромный скрипт, который долго грузится, а
+          после загрузки дополняет DOM-дерево какими-то элементами в результате чего все на странице сдвигается - это
+          плохо. Данный показатель измеряется не по временной шкале, а по шкале перцентилей. Данная шкала измеряется
+          следующей формулой: Оценка смещения макета = доля воздействия * доля расстояния Если вы более подробно хотите
+          разобраться в том что такое "доля воздействия" и "доля расстояния", то вы можете ознакомиться с данными
+          понятиями на странице CLS в
+        </p>
+      </footer>
+    </section>
+
+    <section class="slide">
+      <img class="place" src="./themes/tw/images/theory/tools/patch-package.svg" width="" height="" alt="" />
+      <a href="https://www.npmjs.com/package/patch-package">https://www.npmjs.com/package/patch-package</a>
+    </section>
+
+    <section class="slide">
+      <h2>Вид пламени (Flame view) стек вызовов</h2>
+    </section>
+
+    <section class="slide">
+      <h2>O нотация</h2>
+    </section>
+
+    <section class="slide">
+      <a href="https://e18e.dev/">https://e18e.dev/</a>
+    </section>
+
+    <section class="slide">
+      <h2>Mathematical Optimization</h2>
+    </section>
+
+    <section class="slide">
+      <a>https://yandex.ru/company/researches/2023/frontenders</a>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>
+          console.profile();
+          doSomeVeryExpensiveWork();
+          console.profileEnd();
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>
+          import React from "react";
+
+          interface ButtonProps
+            extends React.HTMLAttributesHTMLButtonElement {
+            extraProp: string;
+          }
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>
+          if (person?.isActive) {
+            console.log('Пользователь активен');
+          }
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>
+          if (person !== null && person !== void 0 && person.isActive) {
+            console.log('Пользователь активен');
+          }
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>
+          if (person && person.isActive) {
+            console.log('Пользователь активен');
+          }
+        </code>
+      </pre>
     </section>
 
     <section class="slide">
@@ -2586,18 +2796,18 @@ console.timeEnd("answer time");
     <section class="slide">
       <h2 class="sr-only">Test</h2>
       <pre class="place w-[90%]">
-                <code class="language-typescript">
-                  let _ = 0;
+        <code class="language-typescript">
+          let _ = 0;
 
-                  for (let i = 0; i < 1000000; i++) {
-                    let current = i % 2 === 0 ? Position.TOP : Position.BOTTOM;
+          for (let i = 0; i < 1000000; i++) {
+            let current = i % 2 === 0 ? Position.TOP : Position.BOTTOM;
 
-                    if (current === Position.TOP) {
-                      _ += 1;
-                    }
-                  }
-                </code>
-              </pre>
+            if (current === Position.TOP) {
+              _ += 1;
+            }
+          }
+        </code>
+      </pre>
     </section>
 
     <section class="slide">
@@ -3651,11 +3861,6 @@ console.timeEnd("answer time");
     </section>
 
     <section class="slide">
-      <h2 class="sr-only">Test</h2>
-      <img class="cover" src="./themes/tw/images/theory/tools/png2jpg.zip" alt="png2jpg" width="1921" height="1080" />
-    </section>
-
-    <section class="slide">
       <h2>Использование аннотирования типов</h2>
       <pre>
                     <code class="language-typescript">
@@ -4087,13 +4292,66 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
     </section>
 
     <section class="slide">
+      <h2>https://github.com/megahertz/howfat</h2>
+    </section>
+
+    <section class="slide">
+      <h2>https://github.com/danielroe/beasties (Critters)</h2>
+      <footer>
+        <p>
+          Браузерный движок (англ. layout engine) — представляет собой программу (движок), преобразующую содержимое
+          веб-страниц (файлы HTML, XML, цифровые изображения и т. д.) и информацию о форматировании (в форматах CSS, XSL
+          и т. д.) в интерактивное изображение форматированного содержимого на экране. Браузерный движок обычно
+          используется в веб-браузерах (отсюда название), почтовых клиентах и других программах, нуждающихся в
+          отображении и редактировании содержимого веб-страниц.
+        </p>
+      </footer>
+    </section>
+
+    <section class="slide">
+      <h2>https://github.com/hatoo/oha</h2>
+    </section>
+
+    <section class="slide">
+      <h2>
+        Typescript VS Javascript benchmarks https://programming-language-benchmarks.vercel.app/typescript-vs-javascript
+      </h2>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>
+          .wave {
+            animation:
+              wave 1s 1s ease-out,
+              wave 1s 2s ease-out,
+              wave 1s 3s ease-out,
+              wave 1s 4s ease-out,
+              wave 1s 5s ease-out;
+          }
+
+          .wave {
+            animation:
+              wave-1 1s 1s ease-out,
+              wave-2 1s 2s ease-out,
+              wave-3 1s 3s ease-out,
+              wave-4 1s 4s ease-out,
+              wave-5 1s 5s ease-out;
+          }
+
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
       <h2 class="sr-only">Test</h2>
       <ul>
         <li>node &mdash;inspect-brk</li>
         <li>chrome://inspect</li>
         <li><a href="https://perf.link">perf.link</a></li>
         <li>https://npmgraph.js.org/</li>
-        <li>eslint-plugin-depend</li>
+        <li>eslint-plugin-depend https://github.com/es-tooling/eslint-plugin-depend</li>
+        <li>https://github.com/thepassle/eslint-plugin-barrel-files</li>
       </ul>
     </section>
 
@@ -4159,52 +4417,52 @@ result[i + ARRAY_SIZE_SMALL] = arr2[i];
     <section class="slide">
       <h2 class="sr-only">Test</h2>
       <pre>
-                    <code class="language-typescript">
-            module.exports = function(N, staff, K) {
-              staff.sort((a, b) => b - a);
+        <code class="language-typescript">
+          module.exports = function(N, staff, K) {
+            staff.sort((a, b) => b - a);
 
-              let sum = 0;
+            let sum = 0;
 
-              for (let = 0; i < Math.min(K, N); i++) {
-                sum += staff[i];
-              }
-
-              return sum;
+            for (let = 0; i < Math.min(K, N); i++) {
+              sum += staff[i];
             }
-                    </code>
-                  </pre>
+
+            return sum;
+          }
+        </code>
+      </pre>
     </section>
 
     <section class="slide">
       <h2 class="sr-only">Sort</h2>
       <div class="column two">
         <pre>
-                    <code class="language-typescript">
-                      module.exports = function(N, staff, K) {
-                        let count = new Array(26).fill(0);
-                        let maxGrade = 0;
-                        let keyboardsUsed = 0;
-                        ley grade = 25;
+          <code class="language-typescript">
+            module.exports = function(N, staff, K) {
+              let count = new Array(26).fill(0);
+              let maxGrade = 0;
+              let keyboardsUsed = 0;
+              ley grade = 25;
 
-                        for (let i = 0; i < N; i++) {
-                          count[staff[i]]++;
-                        }
+              for (let i = 0; i < N; i++) {
+                count[staff[i]]++;
+              }
 
-                        while (keyboardUsed < K) {
-                          if (count[grade] > 0) {
-                            maxGrade += grade;
-                            count[grade]--;
-                            keyboardUsed++;
-                          } else {
-                            grade--;
-                          }
-                        }
+              while (keyboardUsed < K) {
+                if (count[grade] > 0) {
+                  maxGrade += grade;
+                  count[grade]--;
+                  keyboardUsed++;
+                } else {
+                  grade--;
+                }
+              }
 
 
-                        return maxGrade;
-                      }
-                    </code>
-                  </pre>
+              return maxGrade;
+            }
+          </code>
+        </pre>
       </div>
     </section>
 
