@@ -1,7 +1,7 @@
 {
   "name": "perf",
   "description": "Презентация: «Семь раз отмерь, один раз оптимизируй»",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "license": "MIT",
   "homepage": "https://github.com/d-rusakov-wp/perf",
@@ -16,9 +16,7 @@
   },
   "dependencies": {
     "@shower/core": "^3.3.0",
-    "@shower/material": "^2.5.1",
     "@shower/ribbon": "3.5.2",
-    "lottie-web": "5.12.2",
     "tailwindcss-motion": "0.4.1-beta"
   },
   "devDependencies": {
@@ -30,10 +28,9 @@
     "htmlparser2": "9.1.0",
     "lefthook": "1.8.2",
     "path-exists-cli": "2.0.0",
-    "postcss": "^8.4.47",
+    "postcss": "8.4.49",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "0.6.8",
-    "sd-tailwindcss-transformer": "2.0.0",
     "tailwindcss": "3.4.14"
   },
   "browserslist": [

@@ -87,10 +87,15 @@
     </section>
 
     <section class="slide">
+      <h2>Тестируйте много раз и в разных браузерах</h2>
+    </section>
+
+    <section class="slide">
       <h2 class="sr-only">The twilight zone 1</h2>
       <img
+        class="cover"
         src="./themes/tw/pictures/memes/the-twilight-zone/1.jpg"
-        width="1082"
+        width="782"
         height="722"
         alt="The twilight zone 1"
       />
@@ -99,8 +104,9 @@
     <section class="slide">
       <h2 class="sr-only">The twilight zone 2</h2>
       <img
+        class="cover"
         src="./themes/tw/pictures/memes/the-twilight-zone/2.jpg"
-        width="1280"
+        width="880"
         height="720"
         alt="The twilight zone 2"
       />
@@ -109,8 +115,9 @@
     <section class="slide">
       <h2 class="sr-only">The twilight zone 3</h2>
       <img
+        class="cover"
         src="./themes/tw/pictures/memes/the-twilight-zone/3.jpg"
-        width="1200"
+        width="700"
         height="628"
         alt="The twilight zone 3"
       />
@@ -161,11 +168,11 @@
       </ul>
     </section>
 
-    <section class="slide">
-      <h2 class="cover left-0 mt-[24px] -translate-y-[50%] pl-[120px] text-left">
+    <section class="slide" id="act-1">
+      <h2 class="cover left-0 mt-[24px] -translate-y-[50%] pl-[120px] text-left group-has-[&.visited]:hidden">
         <span class="text-gray">Акт 1</span>
         <br />
-        <span>Основы</span>
+        <span class="motion-duration-2000">Основы</span>
       </h2>
     </section>
 
@@ -222,9 +229,6 @@
         </blockquote>
         <figcaption>Дональд Кнут</figcaption>
       </figure>
-      <footer>
-        <p>Памятка</p>
-      </footer>
     </section>
 
     <section class="slide">
@@ -534,9 +538,6 @@
           <img src="./themes/tw/pictures/emoji/battery.gif" alt="🔋" width="56" height="56" />
         </picture>
       </div>
-      <footer>
-        <p>Хотим чтобы код был эффективным</p>
-      </footer>
     </section>
 
     <section class="slide">
@@ -552,13 +553,11 @@
       <h2>Использование аннотирования типов</h2>
       <pre class="place">
         <code class="language-typescript">
-          - import { otherFunc } from "other";
-          + import { otherFunc, otherType } from "other";
+          import { otherFunc } from "other";
 
-          - export function func() {
-          + export function func(): otherType {
-                return otherFunc();
-            }
+          export function func() {
+              return otherFunc();
+          }
         </code>
       </pre>
       <footer>
@@ -570,6 +569,19 @@
           когда находишь в&nbsp;своём коде медленные фрагменты.
         </p>
       </footer>
+    </section>
+
+    <section class="slide">
+      <h2>Использование аннотирования типов</h2>
+      <pre class="place">
+        <code class="language-typescript">
+          import { otherFunc, otherType } from "other";
+
+          export function func(): otherType {
+                return otherFunc();
+          }
+        </code>
+      </pre>
     </section>
 
     <section class="slide">
@@ -962,10 +974,6 @@
       <a class="copyright" href="https://www.youtube.com/watch?v=70XMVfGv2Q0" target="_blank" rel="noopener noreferrer"
         >Chrome DevTools&nbsp;&mdash; спрятанные полезности</a
       >
-      <footer>
-        <p>Тестируйте производительность в&nbsp;разных браузерах</p>
-        <p>Запускайте функции по&nbsp;много раз</p>
-      </footer>
     </section>
 
     <section class="slide">
@@ -3499,7 +3507,7 @@
     <section class="slide relative">
       <div class="shout flex flex-col items-center">
         <div class="dots relative h-[46px] w-[52px] text-white before:animate-jump"></div>
-        <h2>Вопросы</h2>
+        <h2 class="place">Вопросы</h2>
       </div>
     </section>
 

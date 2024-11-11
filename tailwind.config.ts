@@ -1,7 +1,9 @@
 import type { Config } from 'tailwindcss';
+import TailwindCSSMotion from 'tailwindcss-motion';
 
 module.exports = {
   content: ['./index.html'],
+  plugins: [TailwindCSSMotion],
   theme: {
     colors: {
       transparent: 'transparent',
@@ -16,40 +18,33 @@ module.exports = {
     },
     fontFamily: {
       arsenal: 'Arsenal, sans-serif',
+      system: [
+        '-apple-system',
+        'BlinkMacSystemFont',
+        'Segoe UI',
+        'Roboto',
+        'Oxygen',
+        'Ubuntu',
+        'Cantarell',
+        'Open Sans',
+        'Helvetica Neue',
+        'sans-serif',
+        'Apple Color Emoji',
+        'Twemoji Mozilla',
+        'Segoe UI Emoji',
+        'Segoe UI Symbol',
+        'Noto Color Emoji',
+        'EmojiOne Color',
+        'Android Emoji',
+      ],
     },
     extend: {
-      fontFamily: {
-        system: [
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Segoe UI',
-          'Roboto',
-          'Oxygen',
-          'Ubuntu',
-          'Cantarell',
-          'Open Sans',
-          'Helvetica Neue',
-          'sans-serif',
-          'Apple Color Emoji',
-          'Twemoji Mozilla',
-          'Segoe UI Emoji',
-          'Segoe UI Symbol',
-          'Noto Color Emoji',
-          'EmojiOne Color',
-          'Android Emoji',
-        ],
-      },
       animation: {
         jump: 'jump-left 1.5s linear infinite alternate, jump-top 0.75s cubic-bezier(0, 200, 0.8, 200) infinite',
         'linear-gradient': 'linear-gradient 10s ease infinite',
         wave: 'wave 2s linear infinite',
       },
       keyframes: {
-        highlight: {
-          0: { opacity: '0' },
-          '50%': { opacity: '1' },
-          '100%': { opacity: '0' },
-        },
         slide: {
           '0%': { left: '-100%' },
           '100%': { left: '100%' },
@@ -64,11 +59,6 @@ module.exports = {
         'jump-top': {
           from: { top: '0' },
           to: { top: '-0.1px' },
-        },
-        'linear-gradient': {
-          '0%': { 'background-position': '0 50%' },
-          '50%': { 'background-position': '100% 50%' },
-          '100%': { 'background-position': '0 50%' },
         },
       },
       screens: {
