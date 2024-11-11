@@ -41,7 +41,6 @@ module.exports = {
       },
       animation: {
         jump: 'jump-left 1.5s linear infinite alternate, jump-top 0.75s cubic-bezier(0, 200, 0.8, 200) infinite',
-        highlight: 'highlight 1s infinite',
         'linear-gradient': 'linear-gradient 10s ease infinite',
         wave: 'wave 2s linear infinite',
       },
