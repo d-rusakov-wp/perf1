@@ -830,7 +830,6 @@ d8 --trace-opt primes.js
           токены. С&nbsp;помощью парсера V8&nbsp;токены преобразуются
           в&nbsp;абстрактное дерево и&nbsp;проверка синтаксиса языка
         </p>
-        https://nolanlawson.com/2024/09/18/improving-rendering-performance-with-css-content-visibility/
       </footer>
     </section>
 
@@ -2354,6 +2353,13 @@ d8 --trace-opt primes.js
 
     <section class="slide">
       <h2>content-visibility</h2>
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        class="copyright"
+        href="https://nolanlawson.com/2024/09/18/improving-rendering-performance-with-css-content-visibility/"
+        >https://nolanlawson.com/2024/09/18/improving-rendering-performance-with-css-content-visibility/</a
+      >
     </section>
 
     <section class="slide">
@@ -3195,7 +3201,22 @@ d8 --trace-opt primes.js
             // slow 🐌
           }
 
+          '<link rel="prefetch" href="/style.css" as="style" />'
+          '<link rel="preload" href="/style.css" as="style" />'
+          '<link rel="preconnect" href="https://example.com" />'
+          '<link rel="dns-prefetch" href="https://example.com" />'
+          '<link rel="prerender" href="https://example.com/about.html" />'
+          '<link rel="modulepreload" href="/script.js" />'
+
+          'preload– когда вам понадобится ресурс через несколько секунд'
+          'prefetch– когда вам нужен ресурс для следующей страницы'
+          'preconnect– когда вы знаете, что вам скоро понадобится ресурс, но вы пока не знаете его полный URL'
+          'dns-prefetch– когда вы знаете, что вам скоро понадобится ресурс, но вы еще не знаете его полный URL (для старых браузеров)'
+          'prerender– когда вы уверены, что большинство пользователей перейдут на определенную страницу, и вы хотите ускорить этот процесс'
+          'modulepreload– когда вам скоро понадобится скрипт модуля ES'
+
           https://v8.dev/blog/react-cliff
+          https://www.npmjs.com/package/autocannon
         </code>
       </pre>
       <footer>
