@@ -134,11 +134,11 @@
     </section>
 
     <section class="slide">
-      <h2>Тестируйте много раз и в разных браузерах</h2>
+      <h2 class="shout">Тестируйте много раз и в разных браузерах</h2>
     </section>
 
     <section class="slide">
-      <h2 class="sr-only">The twilight zone 1</h2>
+      <h2 class="sr-only">Сумеречная зона 1</h2>
       <img
         class="cover"
         src="./themes/tw/pictures/memes/the-twilight-zone/1.jpg"
@@ -149,7 +149,7 @@
     </section>
 
     <section class="slide">
-      <h2 class="sr-only">The twilight zone 2</h2>
+      <h2 class="sr-only">Сумеречная зона 2</h2>
       <img
         class="cover"
         src="./themes/tw/pictures/memes/the-twilight-zone/2.jpg"
@@ -160,7 +160,7 @@
     </section>
 
     <section class="slide">
-      <h2 class="sr-only">The twilight zone 3</h2>
+      <h2 class="sr-only">Сумеречная зона 3</h2>
       <img
         class="cover"
         src="./themes/tw/pictures/memes/the-twilight-zone/3.jpg"
@@ -231,8 +231,12 @@
           Что такое<br /><span class="text-[82px]">производительность?</span>
         </h2>
       </div>
-      <a class="copyright" href="https://doka.guide/js/performance/"
-        >https://doka.guide/js/performance/</a
+      <a
+        class="copyright"
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://doka.guide/js/performance/"
+        >Performance</a
       >
       <footer>
         <p>
@@ -263,7 +267,7 @@
     </section>
 
     <section class="slide">
-      <h2 class="sr-only">Numbers</h2>
+      <h2 class="sr-only">Цифры</h2>
       <img
         class="cover"
         src="./themes/tw/images/basics/numbers.jpg"
@@ -287,7 +291,7 @@
     </section>
 
     <section class="slide">
-      <h2 class="sr-only">Heads</h2>
+      <h2 class="sr-only">Мы разные</h2>
       <img
         class="cover"
         src="./themes/tw/images/preview/heads.jpg"
@@ -298,7 +302,7 @@
     </section>
 
     <section class="slide">
-      <h2 class="sr-only">Test</h2>
+      <h2 class="sr-only">Цитата</h2>
       <figure class="place w-[55%]">
         <blockquote class="flex items-start">
           <p>Преждевременная оптимизация&nbsp;&mdash; корень всех бед</p>
@@ -308,28 +312,37 @@
     </section>
 
     <section class="slide">
-      <h2 class="sr-only">Test</h2>
+      <h2 class="sr-only">Лоадер</h2>
       <div class="flex h-full items-center justify-center">
         <div class="loader animate-wave before:content-['Загрузка...']"></div>
       </div>
     </section>
 
-    <section class="slide">
-      <h2 class="sr-only">Test</h2>
+    <section class="slide" id="cube">
+      <h2 class="sr-only">Кубы</h2>
       <div
         class="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
       >
         <video
           class="rounded-sm"
-          controls
           muted
+          loop
           preload="metadata"
-          controlsList="nodownload nofullscreen noremoteplayback"
+          disablepictureinpicture
+          controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
           poster=""
         >
           <source src="./themes/tw/video/basics/cube.mp4" type="video/mp4" />
         </video>
       </div>
+      <script>
+        const cubeSlide = document.querySelector("#cube");
+        const video = cubeSlide.querySelector("video");
+
+        console.log(window);
+
+        // video.play();
+      </script>
     </section>
 
     <section class="slide">
@@ -354,7 +367,7 @@
     </section>
 
     <section class="slide">
-      <h2 class="sr-only">Test</h2>
+      <h2 class="sr-only">OCF</h2>
       <div
         class="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
       >
@@ -372,7 +385,7 @@
     </section>
 
     <section class="slide">
-      <h2 class="sr-only">Test</h2>
+      <h2 class="sr-only">Ncode</h2>
       <div
         class="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
       >
@@ -394,7 +407,7 @@
     </section>
 
     <section class="slide">
-      <h2 class="sr-only">Test</h2>
+      <h2 class="sr-only">Apple</h2>
       <video
         controls
         muted
@@ -409,17 +422,65 @@
     <section class="slide">
       <h2>JIT</h2>
       <img
-        src="./themes/tw/images/basics/browsers/arrival.svg"
+        src="./themes/tw/images/basics/arrival.jpg"
         alt="Arrival"
         width="56"
         height="56"
       />
-      <a class="copyright"
-        >https://hacks.mozilla.org/2017/02/a-crash-course-in-just-in-time-jit-compilers/</a
+      <pre>
+        <code>
+          «Полный» компилятор, способный генерировать хороший код для любого JavaScript.
+Оптимизирующий компилятор, который создает отличный код для большинства JavaScript, но его компиляция занимает больше времени
+
+          Полный компилятор
+В V8 полный компилятор работает со всем кодом и начинает его выполнять как можно скорее, быстро генерируя хороший, но не очень хороший код. Этот компилятор почти ничего не предполагает о типах во время компиляции — он ожидает, что типы переменных могут и будут меняться во время выполнения. Код, сгенерированный полным компилятором, использует встроенные кэши (IC) для уточнения знаний о типах во время работы программы, повышая эффективность на лету.
+
+Целью встроенных кэшей является эффективная обработка типов путем кэширования зависящего от типа кода для операций; когда код запускается, он сначала проверяет предположения о типе, а затем использует встроенный кеш для сокращения операции. Однако это означает, что операции, принимающие несколько типов, будут менее производительными.
+
+Поэтому
+Мономорфное использование операций предпочтительнее полиморфных операций.
+Операции являются мономорфными, если скрытые классы входных данных всегда одни и те же, в противном случае они являются полиморфными, что означает, что некоторые аргументы могут менять тип при разных вызовах операции. Например, второй вызов add() в этом примере вызывает полиморфизм:
+
+
+function add(x, y) {
+  return x + y;
+}
+
+add(1, 2);      // + in add is monomorphic
+add("a", "b");  // + in add becomes polymorphic```
+
+          Оптимизирующий компилятор
+Параллельно с полным компилятором V8 перекомпилирует «горячие» функции (то есть функции, которые выполняются много раз) с помощью оптимизирующего компилятора. Этот компилятор использует обратную связь по типам, чтобы ускорить скомпилированный код — фактически, он использует типы, взятые из микросхем, о которых мы только что говорили!
+
+В оптимизирующем компиляторе операции спекулятивно встраиваются (размещаются непосредственно там, где они вызываются). Это ускоряет выполнение (за счет занимаемой памяти), но также позволяет осуществлять другие оптимизации. Мономорфные функции и конструкторы могут быть полностью встроены (это еще одна причина, почему мономорфизм — хорошая идея в V8).
+
+Вы можете записать то, что оптимизируется, используя автономную версию движка V8 «d8»:
+
+
+d8 --trace-opt primes.js
+(это записывает имена оптимизированных функций в стандартный вывод.)
+
+Однако не все функции могут быть оптимизированы - некоторые функции не позволяют оптимизирующему компилятору запускать данную функцию («спасение»). В частности, оптимизирующий компилятор в настоящее время отказывается от функций с блоками try {} catch {}!
+
+Поэтому
+Поместите код, чувствительный к производительности, во вложенную функцию, если у вас есть блоки try {} catch {}: ```js function perf_sensitivity() { // Здесь выполняется работа, чувствительная к производительности }
+try { perf_sensitivity() } catch (e) { // Здесь обрабатываем исключения } ```
+
+Это руководство, вероятно, изменится в будущем, поскольку мы включим блоки try/catch в оптимизирующем компиляторе. Вы можете проверить, как оптимизирующий компилятор освобождает функции, используя опцию «--trace-opt» с d8, как указано выше, которая дает вам больше информации о том, какие функции были освобождены:
+
+
+d8 --trace-opt primes.js
+        </code>
+      </pre>
+      <a
+        class="copyright"
+        href="https://hacks.mozilla.org/2017/02/a-crash-course-in-just-in-time-jit-compilers/"
+        >JIT компилятор</a
       >
     </section>
 
     <section class="slide">
+      <h2 class="sr-only">Мем</h2>
       <img
         src="./themes/tw/pictures/memes/madman.jpg"
         alt="Arrival"
@@ -429,6 +490,7 @@
     </section>
 
     <section class="slide">
+      <h2 class="sr-only">Мем</h2>
       <img
         src="./themes/tw/pictures/memes/devs.jpg"
         alt="Arrival"
@@ -493,6 +555,19 @@
 
     <section class="slide">
       <h2 class="shout">Счётчики vs&nbsp;PageSpeed</h2>
+      <footer>
+        <p>
+          Важно поместить любые советы по производительности в контекст. Советы
+          по производительности вызывают привыкание, и иногда сосредоточение
+          внимания сначала на более глубоких советах может сильно отвлечь от
+          реальных проблем. Вам необходимо получить целостное представление о
+          производительности вашего веб-приложения — прежде чем сосредоточиться
+          на этих советах по производительности, вам, вероятно, следует
+          проанализировать свой код с помощью таких инструментов, как PageSpeed
+          , и получить оценку. Это поможет вам избежать преждевременной
+          оптимизации.
+        </p>
+      </footer>
     </section>
 
     <section class="slide">
@@ -2046,7 +2121,7 @@
       <h2 class="sr-only">O notation</h2>
       <img
         class="cover"
-        src="./themes/tw/images/theory/o-notation.jpg"
+        src="./themes/tw/images/possibilities/o-notation.jpg"
         alt="O notation"
         width="1280"
         height="1008"
@@ -2469,9 +2544,10 @@
       <video
         class="rounded-sm"
         controls
+        autoplay
         muted
         preload="metadata"
-        controlsList="nodownload nofullscreen noremoteplayback"
+        controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
         poster=""
       >
         <source
@@ -4173,6 +4249,87 @@
 
           obj[getProp(obj[0], name)]
           Это процесс, который V8 выполняет при создании наших объектов. Теперь давайте посмотрим, как мы можем оптимизировать наши объекты и использовать их повторно classIds.
+
+          function Point(x, y) {
+  this.x = x;
+  this.y = y;
+}
+
+var p1 = new Point(11, 22);
+var p2 = new Point(33, 44);
+// At this point, p1 and p2 have a shared hidden class
+p2.z = 55;
+// warning! p1 and p2 now have different hidden classes!```
+        </code>
+      </pre>
+      <footer>
+        <p>
+          В JavaScript имеется ограниченная информация о типах во время
+          компиляции: типы могут быть изменены во время выполнения, поэтому
+          естественно ожидать, что рассуждать о типах JS во время компиляции
+          будет затратно. Это может заставить вас задаться вопросом, как
+          производительность JavaScript может когда-либо приблизиться к C++.
+          Однако в V8 есть скрытые типы, созданные внутри объектов во время
+          выполнения; объекты с одним и тем же скрытым классом могут затем
+          использовать один и тот же оптимизированный сгенерированный код.
+        </p>
+        <p>
+          Пока в экземпляре объекта p2 не будет добавлен дополнительный элемент
+          «.z», p1 и p2 внутри имеют один и тот же скрытый класс, поэтому V8
+          может генерировать одну версию оптимизированной сборки для кода
+          JavaScript, который манипулирует либо p1, либо p2. Чем больше вы
+          сможете избежать расхождения скрытых классов, тем выше
+          производительность вы добьетесь. Поэтому Инициализируйте все члены
+          объекта в функциях-конструкторах (чтобы экземпляры не меняли тип
+          позже) Всегда инициализируйте члены объекта в одном и том же порядке.
+        </p>
+      </footer>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>
+          for (var b = 0; b &lt; 10; b++) {
+  a[0] |= b;  // Oh no!
+}
+//vs.
+a = new Array();
+a[0] = 0;
+for (var b = 0; b &lt; 10; b++) {
+  a[0] |= b;  // Much better! 2x faster.
+}
+        </code>
+      </pre>
+      <footer>
+        <p>
+          Для обработки больших и разреженных массивов существует два типа
+          внутреннего хранилища массивов: Fast Elements: линейное хранилище для
+          компактных наборов ключей Элементы словаря: хранение хэш-таблицы в
+          противном случае Лучше не переключать хранилище массива с одного типа
+          на другой. Поэтому Используйте смежные ключи, начиная с 0, для
+          массивов. Не выделяйте заранее большие массивы (например, > 64 КБ
+          элементов) до максимального размера, вместо этого увеличивайте их по
+          мере продвижения. Не удаляйте элементы в массивах, особенно числовых
+          массивах. Не загружайте неинициализированные или удаленные элементы:
+        </p>
+      </footer>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>
+          Кроме того, массивы двойных значений работают быстрее - скрытый класс массива отслеживает типы элементов, а массивы, содержащие только двойные значения, распаковываются (что вызывает скрытое изменение класса). Однако небрежное манипулирование массивами может вызвать дополнительную работу из-за упаковки и распаковки - например
+
+
+var a = new Array();
+a[0] = 77;   // Allocates
+a[1] = 88;
+a[2] = 0.5;   // Allocates, converts
+a[3] = true; // Allocates, converts```
+менее эффективен, чем:
+
+
+var a = [77, 88, 0.5, true];
         </code>
       </pre>
     </section>
@@ -4266,17 +4423,6 @@
         width="701"
         height="996"
         alt="Perfomance"
-      />
-    </section>
-
-    <section class="slide">
-      <h2 class="sr-only">Test</h2>
-      <img
-        class="cover"
-        src="./themes/tw/images/tips/ts/type-interface.jpg"
-        width="1074"
-        height="309"
-        alt="Type or interface"
       />
     </section>
 
