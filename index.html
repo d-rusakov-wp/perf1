@@ -226,9 +226,11 @@
     </section>
 
     <section class="slide test">
-      <div class="shout">
+      <div class="place">
         <h2 class="text-left">
-          Что такое<br /><span class="text-[82px]">производительность?</span>
+          Что такое
+          <br />
+          <span class="text-[82px]">производительность?</span>
         </h2>
       </div>
       <a
@@ -236,7 +238,7 @@
         rel="noopener noreferrer"
         target="_blank"
         href="https://doka.guide/js/performance/"
-        >Performance</a
+        >Производительность</a
       >
       <footer>
         <p>
@@ -335,33 +337,25 @@
           <source src="./themes/tw/video/basics/cube.mp4" type="video/mp4" />
         </video>
       </div>
-      <script>
-        const cubeSlide = document.querySelector("#cube");
-        const video = cubeSlide.querySelector("video");
-
-        console.log(window);
-
-        // video.play();
-      </script>
     </section>
 
     <section class="slide">
-      <h2>How Fat?</h2>
+      <h2 class="shout">How Fat?</h2>
       <a class="copyright" href="https://github.com/megahertz/howfat">Howfat</a>
     </section>
 
     <section class="slide">
-      <h2>Local develop</h2>
+      <h2 class="shout">Local develop</h2>
     </section>
 
     <section class="slide">
       <h2 class="sr-only">Test</h2>
       <div
-        class="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
+        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
       >
         <video
-          controls
           muted
+          width="500"
           disablepictureinpicture
           preload="metadata"
           class="rounded-sm"
@@ -370,7 +364,7 @@
         >
           <source
             src="./themes/tw/video/cases/registry.webm"
-            type="video/mp4"
+            type="video/webm"
           />
         </video>
       </div>
@@ -378,40 +372,31 @@
 
     <section class="slide">
       <h2 class="sr-only">OCF</h2>
-      <div
-        class="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
+      <video
+        muted
+        disablepictureinpicture
+        preload="metadata"
+        class="rounded-sm absolute left-1/2 top-1/2 w-[600px] -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
+        controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
+        poster=""
       >
-        <video
-          class="rounded-sm"
-          controls
-          muted
-          preload="metadata"
-          disablepictureinpicture
-          controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
-          poster=""
-        >
-          <source src="./themes/tw/video/cases/ocf.webm" type="video/mp4" />
-        </video>
-      </div>
+        <source src="./themes/tw/video/cases/ocf.webm" type="video/mp4" />
+      </video>
     </section>
 
     <section class="slide">
       <h2 class="sr-only">Ncode</h2>
-      <div
-        class="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
+      <video
+        muted
+        disablepictureinpicture
+        width="500"
+        class="rounded-sm absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
+        preload="metadata"
+        controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
+        poster=""
       >
-        <video
-          class="rounded-sm"
-          controls
-          muted
-          preload="metadata"
-          disablepictureinpicture
-          controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
-          poster=""
-        >
-          <source src="./themes/tw/video/cases/ncode.webm" type="video/mp4" />
-        </video>
-      </div>
+        <source src="./themes/tw/video/cases/ncode.webm" type="video/mp4" />
+      </video>
     </section>
 
     <section class="slide">
@@ -421,10 +406,11 @@
     <section class="slide">
       <h2 class="sr-only">Apple</h2>
       <video
-        controls
         muted
-        preload="metadata"
         disablepictureinpicture
+        preload="metadata"
+        width="600"
+        class="rounded-sm absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
         controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
         poster=""
       >
@@ -571,7 +557,7 @@ d8 --trace-opt primes.js
     </section>
 
     <section class="slide">
-      <h2 class="shout">Счётчики vs&nbsp;PageSpeed</h2>
+      <h2 class="shout">Счётчики vs&nbsp;Page Speed</h2>
       <footer>
         <p>
           Важно поместить любые советы по производительности в контекст. Советы
@@ -806,7 +792,11 @@ d8 --trace-opt primes.js
       <h2 class="shout">
         How Bun supports V8&nbsp;APIs without using&nbsp;V8 (part&nbsp;1)
       </h2>
-      https://bun.sh/blog/how-bun-supports-v8-apis-without-using-v8-part-1
+      <a
+        class="copyright"
+        href="https://bun.sh/blog/how-bun-supports-v8-apis-without-using-v8-part-1"
+        >https://bun.sh/blog/how-bun-supports-v8-apis-without-using-v8-part-1</a
+      >
     </section>
 
     <section class="slide">
@@ -2201,7 +2191,7 @@ d8 --trace-opt primes.js
     <section class="slide">
       <h2>Lazy load</h2>
       <img
-        src="./themes/tw/images/tools/biome.svg"
+        src="./themes/tw/images/shared/tools/biome.svg"
         width="2000"
         height="860"
         alt="Lazy load"
@@ -2211,7 +2201,7 @@ d8 --trace-opt primes.js
     <section class="slide">
       <h2>Lazy load</h2>
       <img
-        src="./themes/tw/images/tools/browserstack.svg"
+        src="./themes/tw/images/shared/tools/browserstack.svg"
         width="2000"
         height="860"
         alt="Lazy load"
@@ -2221,7 +2211,7 @@ d8 --trace-opt primes.js
     <section class="slide">
       <h2>Lazy load</h2>
       <img
-        src="./themes/tw/images/tools/oxc.svg"
+        src="./themes/tw/images/shared/tools/oxc.svg"
         width="2000"
         height="860"
         alt="Lazy load"
@@ -5148,5 +5138,6 @@ var a = [77, 88, 0.5, true];
     <script src="./themes/tw/libs/highlight/highlight.min.js"></script>
     <script src="./themes/tw/libs/highlight/init.js"></script>
     <script src="./themes/tw/libs/custom-scale.js"></script>
+    <script src="./themes/tw/libs/playing-video.js"></script>
   </body>
 </html>
