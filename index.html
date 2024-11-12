@@ -575,6 +575,27 @@
     </section>
 
     <section class="slide">
+      <h2 class="shout !text-[42px]">
+        производительность
+        <span class="bold text-orange">===</span> продуктивность
+      </h2>
+    </section>
+
+    <section class="slide">
+      <h2>Памятка</h2>
+      <ul>
+        <li class="next">
+          выбрать метрики, которыми можно можно охарактериозовать &laquo;степень
+          оптимальности&raquo; нашего сайта или приложения
+        </li>
+        <li class="next">найти код сильене всего ухудшающий метрики</li>
+        <li class="next">внести изменния в&nbsp;код</li>
+        <li class="next">измерить новые значения</li>
+        <li class="next">повторить</li>
+      </ul>
+    </section>
+
+    <section class="slide">
       <h2 class="shout">Отзывчивость</h2>
       <footer>
         <p>
@@ -1946,6 +1967,51 @@
         rel="noopener noreferrer"
         >The business impact of&nbsp;Core Web Vitals</a
       >
+    </section>
+
+    <section class="slide">
+      <h2>Node.js</h2>
+      <ul>
+        <li>node &mdash;inspect-brk</li>
+        <li>chrome://inspect</li>
+        <li><a href="https://perf.link">perf.link</a></li>
+        <li>https://npmgraph.js.org/</li>
+        <li>
+          eslint-plugin-depend
+          https://github.com/es-tooling/eslint-plugin-depend
+        </li>
+        <li>https://github.com/thepassle/eslint-plugin-barrel-files</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Влияние</h2>
+      <ul>
+        <li class="next">
+          Для
+          <a
+            href="https://www.gigaspaces.com/blog/amazon-found-every-100ms-of-latency-cost-them-1-in-sales"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Amazon</a
+          >
+          каждые 100мс задержки обходятся в&nbsp;1% продаж.
+        </li>
+        <li class="next">
+          <a
+            href="https://www.walmart.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >walmart: 1&nbsp;секунда ускорения + 2%&nbsp;конверсии от&nbsp;400
+            млрд</a
+          >
+        </li>
+        <li class="next">
+          AliExpress сократил время загрузки на&nbsp;36%, увеличил количество
+          заказов на&nbsp;10,5% и&nbsp;увеличил конверсию для новых клиентов
+          на&nbsp;27%.
+        </li>
+      </ul>
     </section>
 
     <section class="slide">
@@ -3951,6 +4017,207 @@
         rel="noopener noreferrer"
         >https://web.dev/blog/at-property-performance</a
       >
+      <footer>
+        <p>
+          мобильные браузеры будут ждать около 300&nbsp;мс с&nbsp;момента
+          нажатия кнопки, чтобы запустить событие click. Причина этого
+          в&nbsp;том, что браузер ждет, чтобы увидеть, действительно&nbsp;ли
+          вы&nbsp;выполняете двойное нажатие
+        </p>
+      </footer>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>
+          function add(x,y) {
+            return x + y
+          }
+
+          add(1,2) // monomorphic
+          add('a', 'b') // polymorphic
+          add(true, false)
+          add({},{})
+          add([],[]) // megamorphic - at this stage, 4+ tries, no optimization will happen
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2 class="sr-only">Test</h2>
+      <pre>
+          <code>
+            const markerNameA = "example-marker-a"
+          const markerNameB = "example-marker-b"
+
+          // Run some nested timeouts, and create a PerformanceMark for each.
+          performance.mark(markerNameA);
+          setTimeout(function() {
+          performance.mark(markerNameB);
+          setTimeout(function() {
+
+            // Create a variety of measurements.
+            performance.measure("measure a to b", markerNameA, markerNameB);
+            performance.measure("measure a to now", markerNameA);
+            performance.measure("measure from navigation start to b", undefined, markerNameB);
+            performance.measure("measure from the start of navigation to now");
+
+            // Pull out all of the measurements.
+            console.log(performance.getEntriesByType("measure"));
+
+            // Finally, clean up the entries.
+            performance.Marks();
+            performance.Measures();
+          }, 1000);
+          }, 1000);
+
+                console.time("answer time");
+          alert("Click to continue");
+          console.timeLog("answer time");
+          alert("Do a bunch of other stuff...");
+          console.timeEnd("answer time");
+          </code>
+        </pre>
+      <footer>
+        <p>
+          Высота дерева особенно важна, когда мы&nbsp;имеем дело
+          с&nbsp;определенными типами деревьев, такими как двоичные деревья
+          поиска (BST) . Вот почему существует так много различных структур
+          данных, которые реализуют самобалансирующиеся BST&nbsp;&mdash; так,
+          чтобы мы&nbsp;могли поддерживать высоту дерева на&nbsp;минимальном
+          уровне по&nbsp;мере его роста и&nbsp;выполнять такие операции, как
+          поиск, как можно быстрее. Если вы&nbsp;только что оптимизировали
+          функцию, и теперь она работает в&nbsp;100 раз быстрее, усомнитесь
+          в&nbsp;ней. Попробуйте опровергнуть свои результаты, попробуйте
+          ее&nbsp;в&nbsp;режиме производства, забросайте ее&nbsp;всякой
+          всячиной. Аналогично, усомнитесь и&nbsp;в&nbsp;своих инструментах. Сам
+          факт наблюдения за&nbsp;бенчмарком с&nbsp;помощью devtools может
+          изменить ее&nbsp;поведение.
+        </p>
+        <p>
+          Анализ JavaScript Итак, первым делом мы&nbsp;обрабатываем наш код
+          JavaScript, чтобы разобрать его. Давайте обсудим, что такое парсинг.
+          Анализ состоит из&nbsp;двух этапов: Eager (полный анализ)&nbsp;&mdash;
+          анализирует каждую строку сразу Ленивый (предварительный
+          анализ)&nbsp;&mdash; делаем минимум, анализируем&nbsp;то, что нам
+          нужно, и&nbsp;оставляем остальное на потом. Что лучше? Все зависит
+          от&nbsp;обстоятельств. Давайте посмотрим на&nbsp;код
+        </p>
+        <p>
+          Избегайте ненужных утверждений типов Утверждения типов следует
+          использовать осторожно. Чрезмерное их использование может привести
+          к&nbsp;ненужным проверкам типов, что может снизить производительность.
+          Вместо этого позвольте TypeScript выводить типы, когда это возможно.
+          let value: any = &laquo;Hello, TypeScript!&raquo;; let strLength:
+          number = (value as&nbsp;string).length; // Avoid using &rsquo;as
+          string&rsquo; if&nbsp;TypeScript can infer the type
+        </p>
+        <p>
+          Когда аргументы передаются в функцию, важно, чтобы они были одного
+          типа. Turbofan прекратит попытки оптимизировать ваш JavaScript после 4
+          попыток, если типы аргументов различаются. Возьмем следующий пример:
+        </p>
+        <p>
+          Если в&nbsp;течение 10-15 секунд пользователь не&nbsp;покинул ваш
+          сайт, то&nbsp;это почти успех. Главная страница&nbsp;&mdash; лицо
+          вашей фирмы в&nbsp;интернете. Захватите внимание пользователя,
+          удержите его и&nbsp;перенаправьте на&nbsp;нужные ему разделы.
+          Эффективно работающая главная страница сайта является четвертой
+          татуировкой для вашего ресурса.
+        </p>
+        <p>
+          Постоянные улучшения Чтобы сайт не&nbsp;лежал мертвым грузом
+          в&nbsp;сети интернет, а&nbsp;работал как один из&nbsp;ваших лучших
+          сотрудников, необходимо время от&nbsp;времени производить анализ
+          поведения пользователей и&nbsp;делать выводы, основываясь на&nbsp;этих
+          данных, повышать конверсию (превращение обычного пользователя
+          в&nbsp;лояльного клиента). Постоянные улучшения&nbsp;&mdash;
+          15&nbsp;татуировка для вашего сайта.
+        </p>
+        <p>
+          Акцент на&nbsp;качество и&nbsp;доверие Доверие к&nbsp;вашей компании
+          будет стимулировать посетителя вашего сайта к&nbsp;покупке. Поэтому
+          очень важно заполучить его расположение. В&nbsp;этом поможет
+          размещенная на&nbsp;сайте следующая информация: официальная отчетность
+          о&nbsp;деятельности вашей организации, информация о&nbsp;партнерах,
+          ссылки на&nbsp;приложения вашего ресурса, данные по&nbsp;количеству
+          просмотров каждой из&nbsp;статей на&nbsp;сайте, возможность оставлять
+          комментарии и&nbsp;отзывы на&nbsp;вашем сайте, удобное портфолио
+          с&nbsp;вашими реальными работами, фото ваших сотрудников, ссылки
+          на&nbsp;социальные сети и&nbsp;т.д. Также предоставьте клиентам все
+          необходимые гарантии: продемонстрируйте свои награды, сертификаты
+          качества продукции, грамоты и&nbsp;лицензии.
+        </p>
+      </footer>
+    </section>
+
+    <section class="slide">
+      <h2>Скрытые классы — это то, как V8 идентифицирует наши объекты</h2>
+      <pre>
+        <code>
+          Давайте разберем это на этапы.
+
+          Мы объявляем объект:
+
+          const obj = { name: 'John'}
+          Затем V8 объявит classId для этого объекта.
+
+          const objClassId = ['name', 1]
+          Тогда наш объект создается следующим образом:
+
+          const obj = {...objClassId, 'John'}
+          Затем, когда мы получаем доступ к name свойству нашего объекта следующим образом:
+
+          obj.name
+          V8 выполняет следующий поиск:
+
+          obj[getProp(obj[0], name)]
+          Это процесс, который V8 выполняет при создании наших объектов. Теперь давайте посмотрим, как мы можем оптимизировать наши объекты и использовать их повторно classIds.
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <pre>
+        <code>
+           Если вы можете, вы должны объявить свои свойства в конструкторе . Это гарантирует, что структура объекта останется прежней, чтобы V8 мог оптимизировать ваши объекты.
+
+           class Point {
+             constructor(x,y) {
+               this.x = x
+               this.y = y
+             }
+           }
+
+           const p1 = new Point(11, 22) // hidden classId created
+           const p2 = new Point(33, 44)
+        </code>
+      </pre>
+      <footer>
+        <p>
+          Процентные результаты представляют собой количество операций,
+          выполненных в&nbsp;течение 1&nbsp;с, деленное на количество операций
+          в&nbsp;случае с&nbsp;наивысшей оценкой. Чем выше, тем лучше
+        </p>
+      </footer>
+    </section>
+
+    <section class="slide">
+      <h2>node --cpu-prof $(which npm) run script</h2>
+      <footer>
+        <p>
+          Большая часть времени тратится на загрузку всех модулей, составляющих
+          npm cli. Время скрипта, который мы запускаем, меркнет в сравнении. Мы
+          видим кучу файлов, которые кажутся необходимыми только при выполнении
+          определенных условий. Примером этого может служить код для
+          форматирования сообщений об ошибках, который требуется только при
+          возникновении ошибки.
+        </p>
+      </footer>
+    </section>
+
+    <section class="slide">
+      <h2>https://github.com/danielroe/beasties (Critters)</h2>
     </section>
 
     <section class="slide">
@@ -3967,16 +4234,16 @@
     <section class="slide">
       <h2 class="sr-only">Test</h2>
       <pre>
-          <code class="language-typescript">
-          - import { otherFunc } from "other";
-          + import { otherFunc, OtherType } from "other";
+                       <code class="language-typescript">
+                       - import { otherFunc } from "other";
+                       + import { otherFunc, OtherType } from "other";
 
-          - export function func() {
-          + export function func(): OtherType {
-                return otherFunc();
-            }
-          </code>
-        </pre>
+                       - export function func() {
+                       + export function func(): OtherType {
+                             return otherFunc();
+                         }
+                       </code>
+                     </pre>
       <footer>
         <p>
           Добавление аннотаций типов, особенно возвращаемых типов, может
@@ -4057,50 +4324,50 @@
     <section class="slide">
       <h2 class="sr-only">Test</h2>
       <pre class="place">
-        <code class="language-typescript">
-          module.exports = function(N, staff, K) {
-            staff.sort((a, b) => b - a);
+                     <code class="language-typescript">
+                       module.exports = function(N, staff, K) {
+                         staff.sort((a, b) => b - a);
 
-            let sum = 0;
+                         let sum = 0;
 
-            for (let = 0; i < Math.min(K, N); i++) {
-              sum += staff[i];
-            }
+                         for (let = 0; i < Math.min(K, N); i++) {
+                           sum += staff[i];
+                         }
 
-            return sum;
-          }
-        </code>
-      </pre>
+                         return sum;
+                       }
+                     </code>
+                   </pre>
     </section>
 
     <section class="slide">
       <h2 class="sr-only">Код</h2>
       <pre class="place">
-        <code class="language-typescript">
-          module.exports = function(N, staff, K) {
-            let count = new Array(26).fill(0);
-            let maxGrade = 0;
-            let keyboardsUsed = 0;
-            ley grade = 25;
+                     <code class="language-typescript">
+                       module.exports = function(N, staff, K) {
+                         let count = new Array(26).fill(0);
+                         let maxGrade = 0;
+                         let keyboardsUsed = 0;
+                         ley grade = 25;
 
-            for (let i = 0; i < N; i++) {
-              count[staff[i]]++;
-            }
+                         for (let i = 0; i < N; i++) {
+                           count[staff[i]]++;
+                         }
 
-            while (keyboardUsed < K) {
-              if (count[grade] > 0) {
-                maxGrade += grade;
-                count[grade]--;
-                keyboardUsed++;
-              } else {
-                grade--;
-              }
-            }
+                         while (keyboardUsed < K) {
+                           if (count[grade] > 0) {
+                             maxGrade += grade;
+                             count[grade]--;
+                             keyboardUsed++;
+                           } else {
+                             grade--;
+                           }
+                         }
 
-            return maxGrade;
-          }
-        </code>
-      </pre>
+                         return maxGrade;
+                       }
+                     </code>
+                   </pre>
     </section>
 
     <section class="slide">
@@ -4289,7 +4556,7 @@
       <img
         class="cover"
         src="./themes/tw/pictures/memes/klitschko.jpg"
-        alt="klitschko"
+        alt="Кличко"
         width="525"
         height="340"
       />
