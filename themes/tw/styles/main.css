@@ -11,36 +11,36 @@
   }
 
   @font-face {
-    font-family: 'Arsenal';
+    font-family: "Arsenal";
     font-weight: 400;
     font-display: swap;
     font-style: normal;
     src:
-      local('Arsenal'),
-      url('../themes/tw/fonts/Arsenal/Regular.ttf') format('truetype'),
-      url('../themes/tw/fonts/Arsenal/Regular.woff') format('woff');
+      local("Arsenal"),
+      url("../themes/tw/fonts/Arsenal/Regular.ttf") format("truetype"),
+      url("../themes/tw/fonts/Arsenal/Regular.woff") format("woff");
   }
 
   @font-face {
-    font-family: 'Arsenal';
+    font-family: "Arsenal";
     font-weight: 400;
     font-display: swap;
     font-style: italic;
     src:
-      local('Arsenal'),
-      url('../themes/tw/fonts/Arsenal/Italic.ttf') format('truetype'),
-      url('../themes/tw/fonts/Arsenal/Italic.woff') format('woff');
+      local("Arsenal"),
+      url("../themes/tw/fonts/Arsenal/Italic.ttf") format("truetype"),
+      url("../themes/tw/fonts/Arsenal/Italic.woff") format("woff");
   }
 
   @font-face {
-    font-family: 'Arsenal';
+    font-family: "Arsenal";
     font-weight: 700;
     font-display: swap;
     font-style: normal;
     src:
-      local('Arsenal'),
-      url('../themes/tw/fonts/Arsenal/Bold.ttf') format('truetype'),
-      url('../themes/tw/fonts/Arsenal/Bold.woff') format('woff');
+      local("Arsenal"),
+      url("../themes/tw/fonts/Arsenal/Bold.ttf") format("truetype"),
+      url("../themes/tw/fonts/Arsenal/Bold.woff") format("woff");
   }
 
   h1,
@@ -58,10 +58,7 @@
   h3,
   h4,
   h5,
-  h6 {
-    text-wrap: balance;
-  }
-
+  h6,
   h1& {
     text-wrap: balance;
   }
@@ -176,7 +173,7 @@
           @apply text-white;
         }
 
-        th[scope='column'] {
+        th[scope="column"] {
           @apply text-center;
         }
 
@@ -237,7 +234,7 @@
     .toc__list-item {
       @apply grid grid-cols-[auto_max-content] gap-[0_1ch];
 
-      grid-template-areas: 'chapter page';
+      grid-template-areas: "chapter page";
       align-items: end;
     }
 
@@ -267,16 +264,29 @@
     @apply w-fit font-arsenal text-[62px] font-bold uppercase leading-normal text-transparent;
     -webkit-text-stroke: 2px theme(colors.white);
     background:
-      radial-gradient(1.13em at 50% 1.6em, theme(colors.white) 99%, transparent 101%) calc(50% - 1.6em) 0/3.2em 100%
-        text,
-      radial-gradient(1.13em at 50% -0.8em, transparent 99%, theme(colors.white) 101%) 50% 0.8em/3.2em 100% repeat-x
-        text;
+      radial-gradient(
+          1.13em at 50% 1.6em,
+          theme(colors.white) 99%,
+          transparent 101%
+        )
+        calc(50% - 1.6em) 0/3.2em 100% text,
+      radial-gradient(
+          1.13em at 50% -0.8em,
+          transparent 99%,
+          theme(colors.white) 101%
+        )
+        50% 0.8em/3.2em 100% repeat-x text;
   }
 
   .upload-btn-iframe {
     &::before {
       @apply absolute -left-full top-0 z-[1] h-full w-full opacity-0 transition-none content-[''];
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent
+      );
     }
 
     &:hover {
