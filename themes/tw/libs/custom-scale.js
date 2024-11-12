@@ -4,11 +4,11 @@ class Scale extends HTMLElement {
   }
 
   connectedCallback() {
-    const shadow = this.attachShadow({ mode: 'open' });
+    const shadow = this.attachShadow({ mode: "open" });
 
-    const scale = document.createElement('div');
+    const scale = document.createElement("div");
 
-    scale.setAttribute('class', 'scale');
+    scale.setAttribute("class", "scale");
 
     shadow.appendChild(scale);
 
@@ -18,7 +18,7 @@ class Scale extends HTMLElement {
   }
 
   renderCSS() {
-    const style = document.createElement('style');
+    const style = document.createElement("style");
 
     style.textContent = /* CSS */ `
       :host {
@@ -37,7 +37,7 @@ class Scale extends HTMLElement {
 
         &::before {
           transform: translateX(calc(-100% - 15px));
-          content: '${this.getAttribute('name')}';
+          content: '${this.getAttribute("name")}';
           z-index: 1;
           font: normal 400 24px/1 "Arsenal";
         }
@@ -48,7 +48,7 @@ class Scale extends HTMLElement {
           height: 100%;
           background: repeating-linear-gradient(90deg, #b3441e, #b3441e 20px, #fff 20px, #fff 23px);
           content: '';
-          width: ${this.getAttribute('percentage')}%;
+          width: ${this.getAttribute("percentage")}%;
         }
       }
     `;
@@ -57,6 +57,6 @@ class Scale extends HTMLElement {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  customElements.define('custom-scale', Scale);
+document.addEventListener("DOMContentLoaded", () => {
+  customElements.define("custom-scale", Scale);
 });

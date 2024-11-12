@@ -1,20 +1,22 @@
-const fs = require('node:fs');
-const path = require('node:path');
+const fs = require("node:fs");
+const path = require("node:path");
 
-const INDEX_HTML_PATH = './index.html';
-const IMAGES_FOLDER_PATH = './themes/tw';
-const EXCLUDED_FORMATS = ['ttf', 'woff', 'js'];
+const INDEX_HTML_PATH = "./index.html";
+const IMAGES_FOLDER_PATH = "./themes/tw";
+const EXCLUDED_FORMATS = ["ttf", "woff", "js"];
 
 function getExtension(fileName) {
-  return fileName.split('.').pop();
+  return fileName.split(".").pop();
 }
 
 function findMissingImages(folderPath) {
-  const files = fs.readdirSync(folderPath).filter(file => !EXCLUDED_FORMATS.includes(getExtension(file)));
+  const files = fs
+    .readdirSync(folderPath)
+    .filter((file) => !EXCLUDED_FORMATS.includes(getExtension(file)));
   const missingImages = [];
-  const indexHtmlContent = fs.readFileSync(INDEX_HTML_PATH, 'utf8');
+  const indexHtmlContent = fs.readFileSync(INDEX_HTML_PATH, "utf8");
 
-  files.forEach(file => {
+  files.forEach((file) => {
     const filePath = path.join(folderPath, file);
 
     if (fs.lstatSync(filePath).isDirectory()) {
@@ -33,4 +35,4 @@ function findMissingImages(folderPath) {
 
 const missingImages = findMissingImages(IMAGES_FOLDER_PATH);
 
-console.log('Неиспользованные изображения:', missingImages);
+console.log("Неиспользованные изображения:", missingImages);
