@@ -11,36 +11,36 @@
   }
 
   @font-face {
-    font-family: 'Arsenal';
+    font-family: "Arsenal";
     font-weight: 400;
     font-display: swap;
     font-style: normal;
     src:
-      local('Arsenal'),
-      url('../themes/tw/fonts/Arsenal/Regular.ttf') format('truetype'),
-      url('../themes/tw/fonts/Arsenal/Regular.woff') format('woff');
+      local("Arsenal"),
+      url("../themes/tw/fonts/Arsenal/Regular.ttf") format("truetype"),
+      url("../themes/tw/fonts/Arsenal/Regular.woff") format("woff");
   }
 
   @font-face {
-    font-family: 'Arsenal';
+    font-family: "Arsenal";
     font-weight: 400;
     font-display: swap;
     font-style: italic;
     src:
-      local('Arsenal'),
-      url('../themes/tw/fonts/Arsenal/Italic.ttf') format('truetype'),
-      url('../themes/tw/fonts/Arsenal/Italic.woff') format('woff');
+      local("Arsenal"),
+      url("../themes/tw/fonts/Arsenal/Italic.ttf") format("truetype"),
+      url("../themes/tw/fonts/Arsenal/Italic.woff") format("woff");
   }
 
   @font-face {
-    font-family: 'Arsenal';
+    font-family: "Arsenal";
     font-weight: 700;
     font-display: swap;
     font-style: normal;
     src:
-      local('Arsenal'),
-      url('../themes/tw/fonts/Arsenal/Bold.ttf') format('truetype'),
-      url('../themes/tw/fonts/Arsenal/Bold.woff') format('woff');
+      local("Arsenal"),
+      url("../themes/tw/fonts/Arsenal/Bold.ttf") format("truetype"),
+      url("../themes/tw/fonts/Arsenal/Bold.woff") format("woff");
   }
 
   h1,
@@ -175,7 +175,7 @@
           @apply text-white;
         }
 
-        th[scope='column'] {
+        th[scope="column"] {
           @apply text-center;
         }
 
@@ -236,7 +236,7 @@
     .toc__list-item {
       @apply grid grid-cols-[auto_max-content] gap-[0_1ch];
 
-      grid-template-areas: 'chapter page';
+      grid-template-areas: "chapter page";
       align-items: end;
     }
 
