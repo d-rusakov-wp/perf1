@@ -322,26 +322,29 @@
 
     <section class="slide" id="cube">
       <h2 class="sr-only">Кубы</h2>
-      <div
-        class="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
+      <video
+        muted
+        loop
+        disablepictureinpicture
+        preload="metadata"
+        width="400"
+        class="rounded-sm absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
+        controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
+        poster=""
       >
-        <video
-          muted
-          loop
-          disablepictureinpicture
-          preload="metadata"
-          class="rounded-sm"
-          controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
-          poster=""
-        >
-          <source src="./themes/tw/video/basics/cube.mp4" type="video/mp4" />
-        </video>
-      </div>
+        <source src="./themes/tw/video/basics/cube.mp4" type="video/mp4" />
+      </video>
     </section>
 
     <section class="slide">
       <h2 class="shout">How Fat?</h2>
-      <a class="copyright" href="https://github.com/megahertz/howfat">Howfat</a>
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        class="copyright"
+        href="https://github.com/megahertz/howfat"
+        >Howfat</a
+      >
     </section>
 
     <section class="slide">
@@ -358,7 +361,7 @@
           width="500"
           disablepictureinpicture
           preload="metadata"
-          class="rounded-sm"
+          class="rounded-sm absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
           controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
           poster=""
         >
@@ -376,7 +379,8 @@
         muted
         disablepictureinpicture
         preload="metadata"
-        class="rounded-sm absolute left-1/2 top-1/2 w-[600px] -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
+        width="500"
+        class="rounded-sm absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
         controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
         poster=""
       >
@@ -397,6 +401,40 @@
       >
         <source src="./themes/tw/video/cases/ncode.webm" type="video/mp4" />
       </video>
+    </section>
+
+    <section class="slide">
+      <h2>Кто помог?</h2>
+      <ul>
+        <li>
+          CSS:
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://doka.guide/css/will-change/"
+            >will-change</a
+          >
+        </li>
+        <li>
+          JS:
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame"
+            >requestAnimationFrame()</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <pre class="place">
+        <code class="language-typescript">
+          myMap.geoObjects.add(myPlacemark)
+
+          window.objectManager.add(featureCollection);
+        </code>
+      </pre>
     </section>
 
     <section class="slide">
@@ -426,8 +464,8 @@
         width="56"
         height="56"
       />
-      <pre>
-        <code>
+      <pre class="place">
+        <code class="language-typescript">
           «Полный» компилятор, способный генерировать хороший код для любого JavaScript.
 Оптимизирующий компилятор, который создает отличный код для большинства JavaScript, но его компиляция занимает больше времени
 
@@ -472,6 +510,8 @@ d8 --trace-opt primes.js
         </code>
       </pre>
       <a
+        rel="noopener noreferrer"
+        target="_blank"
         class="copyright"
         href="https://hacks.mozilla.org/2017/02/a-crash-course-in-just-in-time-jit-compilers/"
         >JIT компилятор</a
@@ -550,6 +590,8 @@ d8 --trace-opt primes.js
     <section class="slide">
       <h2>Performance: measure() method</h2>
       <a
+        rel="noopener noreferrer"
+        target="_blank"
         class="copyright"
         href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/measure"
         >https://developer.mozilla.org/en-US/docs/Web/API/Performance/measure</a
@@ -576,6 +618,8 @@ d8 --trace-opt primes.js
     <section class="slide">
       <h2>Performance: measure() method</h2>
       <a
+        rel="noopener noreferrer"
+        target="_blank"
         class="copyright"
         href="https://almanac.httparchive.org/en/2022/third-parties#performance-impact"
         >https://almanac.httparchive.org/en/2022/third-parties#performance-impact</a
@@ -585,6 +629,8 @@ d8 --trace-opt primes.js
     <section class="slide">
       <h2>Чертовски хорошо</h2>
       <a
+        rel="noopener noreferrer"
+        target="_blank"
         class="copyright"
         href="https://rutube.ru/video/fe2a7cef6191e4a8790d2d8b8fa804d7/"
         >https://rutube.ru/video/fe2a7cef6191e4a8790d2d8b8fa804d7/</a
@@ -735,7 +781,7 @@ d8 --trace-opt primes.js
 
     <section class="slide">
       <h2 class="sr-only">Test</h2>
-      <pre>
+      <pre class="place">
                 <code class="language-typescript">
                   const team = "webpractik";
                 </code>
@@ -794,6 +840,8 @@ d8 --trace-opt primes.js
       </h2>
       <a
         class="copyright"
+        rel="noopener noreferrer"
+        target="_blank"
         href="https://bun.sh/blog/how-bun-supports-v8-apis-without-using-v8-part-1"
         >https://bun.sh/blog/how-bun-supports-v8-apis-without-using-v8-part-1</a
       >
@@ -1744,6 +1792,8 @@ d8 --trace-opt primes.js
     <section class="slide">
       <h2 class="shout">AI&nbsp;assistance panel</h2>
       <a
+        rel="noopener noreferrer"
+        target="_blank"
         class="copyright"
         href="https://developer.chrome.com/docs/devtools/ai-assistance?hl=ru"
         >AI assistance</a
@@ -1764,6 +1814,8 @@ d8 --trace-opt primes.js
     <section class="slide">
       <h2 class="shout">Custom Dev Tools</h2>
       <a
+        rel="noopener noreferrer"
+        target="_blank"
         class="copyright"
         href="https://github.com/coryhouse/react-switchboard?tab=readme-ov-file"
         >React Switchboard</a
@@ -1784,6 +1836,8 @@ d8 --trace-opt primes.js
     <section class="slide">
       <h2 class="shout">Lighthouse Scoring Calculator</h2>
       <a
+        rel="noopener noreferrer"
+        target="_blank"
         class="copyright"
         href="https://googlechrome.github.io/lighthouse/scorecalc/#FCP=6000&SI=1000&FMP=4000&TTI=7300&FCI=6500&LCP=1000&TBT=0&CLS=0&device=mobile&version=10"
         >Lighthouse scoring calculator</a
@@ -1803,7 +1857,12 @@ d8 --trace-opt primes.js
 
     <section class="slide">
       <h2>Benchmarks</h2>
-      <a class="https://jsbenchmark.com/">https://jsbenchmark.com/</a>
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        class="https://jsbenchmark.com/"
+        >https://jsbenchmark.com/</a
+      >
     </section>
 
     <section class="slide">
@@ -1811,20 +1870,30 @@ d8 --trace-opt primes.js
       <ul>
         <li>
           <a
+            rel="noopener noreferrer"
+            target="_blank"
             href="https://docs.sentry.io/platforms/javascript/tracing/instrumentation/performance-metrics/"
             >Sentry</a
           >
         </li>
         <li>
-          <a href="https://treo.sh/">https://treo.sh/</a>
+          <a rel="noopener noreferrer" target="_blank" href="https://treo.sh/"
+            >https://treo.sh/</a
+          >
         </li>
         <li>
-          <a href="https://browserbench.org/Speedometer3.0/"
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://browserbench.org/Speedometer3.0/"
             >https://browserbench.org/Speedometer3.0/</a
           >
         </li>
         <li>
-          <a href="https://www.npmjs.com/package/perfume.js"
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.npmjs.com/package/perfume.js"
             >https://www.npmjs.com/package/perfume.js</a
           >
         </li>
@@ -1976,20 +2045,6 @@ d8 --trace-opt primes.js
         rel="noopener noreferrer"
         >Web Dev</a
       >
-      <footer>
-        <p>
-          Web Vitals&nbsp;&mdash; это инициатива Google, цель
-          которой&nbsp;&mdash; предоставить единое руководство по&nbsp;сигналам
-          качества, необходимым для обеспечения хорошего взаимодействия
-          с&nbsp;пользователем в&nbsp;Интернете.
-        </p>
-        <p>
-          Core Web Vitals&nbsp;&mdash; это часть метрик Web Vitals, используемых
-          для оценки веб-страниц и&nbsp;включенных во&nbsp;все инструменты
-          Google.
-        </p>
-        <p>C&nbsp;2021 года Core Web Vitals учитываются при ранжировании</p>
-      </footer>
     </section>
 
     <section class="slide">
@@ -2009,11 +2064,14 @@ d8 --trace-opt primes.js
           <li class="next">TTI</li>
         </ul>
       </div>
-      <a class="copyright" href="https://www.debugbear.com/test/core-web-vitals"
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        class="copyright"
+        href="https://www.debugbear.com/test/core-web-vitals"
         >Test core-web-vitals</a
       >
       <footer>
-        <p>preconnect&nbsp;/ dns-prefetch</p>
         <p>
           Длительная задача&nbsp;&mdash; это задача, выполнение которой занимает
           более 50&nbsp;мс. Это непрерывный период, когда основной поток
@@ -2030,16 +2088,26 @@ d8 --trace-opt primes.js
       <h2>Влияние Core Web Vitals</h2>
       <ul>
         <li class="next">
-          <a href="https://aliexpress.ru/">AliExpress</a> улучшил CLS
-          в&nbsp;10&nbsp;раз, а&nbsp;LCP в&nbsp;2&nbsp;раза, что привело
-          к&nbsp;снижению показателя отказов на&nbsp;15%
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://aliexpress.ru/"
+            >AliExpress</a
+          >
+          улучшил CLS в&nbsp;10&nbsp;раз, а&nbsp;LCP в&nbsp;2&nbsp;раза, что
+          привело к&nbsp;снижению показателя отказов на&nbsp;15%
         </li>
         <li class="next">
-          <a href="https://onlineconvertfree.com/">Onlineconvertfree</a> улучшив
-          CLS, LCP, INP
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://onlineconvertfree.com/"
+            >Onlineconvertfree</a
+          >
+          улучшив CLS, LCP, INP
         </li>
         <li class="next">
-          <a href="">2pdf</a>
+          <a rel="noopener noreferrer" target="_blank" href="">2pdf</a>
         </li>
       </ul>
       <a
@@ -2056,7 +2124,11 @@ d8 --trace-opt primes.js
       <ul>
         <li>node &mdash;inspect-brk</li>
         <li>chrome://inspect</li>
-        <li><a href="https://perf.link">perf.link</a></li>
+        <li>
+          <a rel="noopener noreferrer" target="_blank" href="https://perf.link"
+            >perf.link</a
+          >
+        </li>
         <li>https://npmgraph.js.org/</li>
         <li>
           eslint-plugin-depend
@@ -2209,6 +2281,17 @@ d8 --trace-opt primes.js
     </section>
 
     <section class="slide">
+      <h2>Фичи</h2>
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        class="copyright"
+        href="https://webstatus.dev/"
+        >https://webstatus.dev/</a
+      >
+    </section>
+
+    <section class="slide">
       <h2>Lazy load</h2>
       <img
         src="./themes/tw/images/shared/tools/oxc.svg"
@@ -2248,7 +2331,9 @@ d8 --trace-opt primes.js
         height="967"
         alt="Code splitting"
       />
-      <a class="copyright">https://www.npmjs.com/package/size-limit</a>
+      <a rel="noopener noreferrer" target="_blank" class="copyright"
+        >https://www.npmjs.com/package/size-limit</a
+      >
     </section>
 
     <section class="slide">
@@ -2273,12 +2358,19 @@ d8 --trace-opt primes.js
 
     <section class="slide">
       <h2>
-        <a href="https://github.com/sharkdp/hyperfine">hyperfine</a>
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://github.com/sharkdp/hyperfine"
+          >hyperfine</a
+        >
       </h2>
     </section>
 
     <section class="slide">
-      <a href="https://biomejs.dev/">Biome</a>
+      <a rel="noopener noreferrer" target="_blank" href="https://biomejs.dev/"
+        >Biome</a
+      >
     </section>
 
     <section class="slide">
@@ -2349,7 +2441,7 @@ d8 --trace-opt primes.js
         <li><span>Pre</span>rendering</li>
         <li><span>Pre</span>caching</li>
       </ul>
-      <a class="copyright"
+      <a rel="noopener noreferrer" target="_blank" class="copyright"
         >https://web.dev/learn/performance/prefetching-prerendering-precaching</a
       >
     </section>
@@ -2363,7 +2455,11 @@ d8 --trace-opt primes.js
         width="1200"
         height="742"
       />
-      <a class="copyright" href="https://almanac.httparchive.org/ru/2022/"
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        class="copyright"
+        href="https://almanac.httparchive.org/ru/2022/"
         >httparchive</a
       >
     </section>
@@ -2372,18 +2468,29 @@ d8 --trace-opt primes.js
       <ul>
         <li>
           <a
+            rel="noopener noreferrer"
+            target="_blank"
             href="https://www.npmjs.com/package/@cerner/duplicate-package-checker-webpack-plugin"
           >
             duplicate-package-checker-webpack-plugin
           </a>
         </li>
         <li>
-          <a href="https://www.npmjs.com/package/dependency-cruiser">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.npmjs.com/package/dependency-cruiser"
+          >
             dependency-cruiser
           </a>
         </li>
         <li>
-          <a href="https://www.npmjs.com/package/depcheck">depcheck</a>
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.npmjs.com/package/depcheck"
+            >depcheck</a
+          >
         </li>
       </ul>
     </section>
@@ -2398,7 +2505,6 @@ d8 --trace-opt primes.js
         >Code caching for devs</a
       >
       <footer>
-        <p>BFCache</p>
         <p>
           Вторая категория отрывов в&nbsp;производительности связана с&nbsp;теми
           возможностями, которые браузеры предоставляют нам бесплатно,
@@ -2428,7 +2534,11 @@ d8 --trace-opt primes.js
 
     <section class="slide">
       <h2 class="shout">Parallel DOM</h2>
-      <a class="copyright" href="https://github.com/pdomdev/pdom"
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        class="copyright"
+        href="https://github.com/pdomdev/pdom"
         >https://github.com/pdomdev/pdom</a
       >
     </section>
@@ -2442,7 +2552,11 @@ d8 --trace-opt primes.js
           &lt;script no module src="old.bundle.js" defer&gt;&lt;/script&gt;
         </code>
       </pre>
-      <a class="copyright" href="https://www.npmjs.com/package/size-limit"
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        class="copyright"
+        href="https://www.npmjs.com/package/size-limit"
         >size limit</a
       >
     </section>
@@ -2481,7 +2595,11 @@ d8 --trace-opt primes.js
         height="200"
         alt="Patch package"
       />
-      <a class="copyright" href="https://www.npmjs.com/package/patch-package"
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        class="copyright"
+        href="https://www.npmjs.com/package/patch-package"
         >https://www.npmjs.com/package/patch-package</a
       >
     </section>
@@ -2593,12 +2711,12 @@ d8 --trace-opt primes.js
 
     <section class="slide">
       <video
-        controls
         autoplay
         muted
-        preload="metadata"
-        class="rounded-sm"
         disablepictureinpicture
+        preload="metadata"
+        class="rounded-sm absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
+        width="500"
         controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
         poster=""
       >
@@ -2608,6 +2726,8 @@ d8 --trace-opt primes.js
         />
       </video>
       <a
+        rel="noopener noreferrer"
+        target="_blank"
         class="copyright"
         href="https://yandex.ru/company/researches/2023/frontenders"
         >Researches frontenders</a
@@ -2724,7 +2844,7 @@ d8 --trace-opt primes.js
 
     <section class="slide">
       <h2 class="sr-only">Test</h2>
-      <pre>
+      <pre class="place">
         <code class="language-typescript">
           // Создание метки
           performance.mark('task-start');
@@ -3065,8 +3185,8 @@ d8 --trace-opt primes.js
     </section>
 
     <section class="slide">
-      <pre>
-        <code>
+      <pre class="place">
+        <code class="language-typescript">
           for (let i = 0; i < 1000; ++i) {
             // fast 🚀
           }
@@ -3103,12 +3223,6 @@ d8 --trace-opt primes.js
           Избегайте методов<br />массивов/объектов
         </h2>
       </div>
-      <footer>
-        <p>
-          нет, вы&nbsp;не&nbsp;зря сдавали или будете сдавть компитишн про
-          методы массивов
-        </p>
-      </footer>
     </section>
 
     <section class="slide relative">
@@ -3375,7 +3489,7 @@ d8 --trace-opt primes.js
 
     <section class="slide">
       <h2 class="sr-only">Test</h2>
-      <pre>
+      <pre class="place">
         <code class="language-typescript">
           // Без eval
           const key = "requestId";
@@ -3643,7 +3757,7 @@ d8 --trace-opt primes.js
 
     <section class="slide">
       <h2 class="sr-only">Test</h2>
-      <pre>
+      <pre class="place">
         <code class="language-typescript">
           const descriptions = ['apples', 'oranges', 'bananas', 'seven']
           const someTags = {
@@ -3668,7 +3782,7 @@ d8 --trace-opt primes.js
 
     <section class="slide">
       <h2 class="sr-only">Test</h2>
-      <pre>
+      <pre class="place">
         <code class="language-typescript">
           // Specialize it now
           function productsToStringSpecialized(description, tags) {
@@ -3724,30 +3838,23 @@ d8 --trace-opt primes.js
           />
         </picture>
       </h2>
-      <footer>
-        <p>
-          Я&nbsp;не&nbsp;буду вдаваться в&nbsp;подробности о&nbsp;структурах
-          данных, так как они требуют отдельного поста. Но&nbsp;имейте
-          в&nbsp;виду, что использование некорректных структур данных для вашего
-          варианта использования может иметь большее влияние, чем любая
-          из&nbsp;оптимизаций выше.
-        </p>
-      </footer>
     </section>
 
     <section class="slide">
       <h2 class="sr-only">Test</h2>
-      <pre>
+      <pre class="place">
         <code class="language-typescript">
-          // setup:
+          // Вводные:
           const userIds = Array.from({ length: 1_000 }).map((_, i) => i)
           const adminIdsArray = userIds.slice(0, 10)
           const adminIdsSet = new Set(adminIdsArray)
+
           // 1. Array
           let _ = 0
           for (let i = 0; i < userIds.length; i++) {
             if (adminIdsArray.includes(userIds[i])) { _ += 1 }
           }
+
           // 2. Set
           let _ = 0
           for (let i = 0; i < userIds.length; i++) {
@@ -4037,6 +4144,8 @@ d8 --trace-opt primes.js
     <section class="slide">
       <h2 class="shout">Что быстрее типы или интерфейсы?</h2>
       <a
+        rel="noopener noreferrer"
+        target="_blank"
         class="copyright"
         href="https://github.com/microsoft/TypeScript/wiki/Performance"
         >https://github.com/microsoft/TypeScript/wiki/Performance</a
@@ -4178,7 +4287,7 @@ d8 --trace-opt primes.js
 
     <section class="slide">
       <h2>Контроль за типами</h2>
-      <pre>
+      <pre class="place">
         <code class="language-typescript">
           // src/tsconfig.json
           {
@@ -4222,7 +4331,7 @@ d8 --trace-opt primes.js
 
     <section class="slide">
       <h2 class="sr-only">Test</h2>
-      <pre>
+      <pre class="place">
         <code class="language-typescript">
         {
           "compilerOptions": {
@@ -4266,8 +4375,8 @@ d8 --trace-opt primes.js
     </section>
 
     <section class="slide">
-      <pre>
-        <code>
+      <pre class="place">
+        <code class="language-typescript">
                      // src/tsconfig.json
             {
                "compilerOptions": {
@@ -4303,8 +4412,8 @@ d8 --trace-opt primes.js
     </section>
 
     <section class="slide">
-      <pre>
-        <code>
+      <pre class="place">
+        <code class="language-typescript">
           function add(x,y) {
             return x + y
           }
@@ -4320,8 +4429,8 @@ d8 --trace-opt primes.js
 
     <section class="slide">
       <h2 class="sr-only">Test</h2>
-      <pre>
-          <code>
+      <pre class="place">
+          <code class="language-typescript">
             const markerNameA = "example-marker-a"
           const markerNameB = "example-marker-b"
 
@@ -4428,8 +4537,8 @@ d8 --trace-opt primes.js
 
     <section class="slide">
       <h2>Скрытые классы — это то, как V8 идентифицирует наши объекты</h2>
-      <pre>
-        <code>
+      <pre class="place">
+        <code class="language-typescript">
           Давайте разберем это на этапы.
 
           Мы объявляем объект:
@@ -4486,8 +4595,8 @@ p2.z = 55;
     </section>
 
     <section class="slide">
-      <pre>
-        <code>
+      <pre class="place">
+        <code class="language-typescript">
           for (var b = 0; b &lt; 10; b++) {
   a[0] |= b;  // Oh no!
 }
@@ -4515,8 +4624,8 @@ for (var b = 0; b &lt; 10; b++) {
     </section>
 
     <section class="slide">
-      <pre>
-        <code>
+      <pre class="place">
+        <code class="language-typescript">
           Кроме того, массивы двойных значений работают быстрее - скрытый класс массива отслеживает типы элементов, а массивы, содержащие только двойные значения, распаковываются (что вызывает скрытое изменение класса). Однако небрежное манипулирование массивами может вызвать дополнительную работу из-за упаковки и распаковки - например
 
 
@@ -4534,8 +4643,8 @@ var a = [77, 88, 0.5, true];
     </section>
 
     <section class="slide">
-      <pre>
-        <code>
+      <pre class="place">
+        <code class="language-typescript">
            Если вы можете, вы должны объявить свои свойства в конструкторе . Это гарантирует, что структура объекта останется прежней, чтобы V8 мог оптимизировать ваши объекты.
 
            class Point {
@@ -4589,7 +4698,7 @@ var a = [77, 88, 0.5, true];
 
     <section class="slide">
       <h2 class="sr-only">Test</h2>
-      <pre>
+      <pre class="place">
                        <code class="language-typescript">
                        - import { otherFunc } from "other";
                        + import { otherFunc, OtherType } from "other";
@@ -4718,6 +4827,8 @@ var a = [77, 88, 0.5, true];
     <section class="slide">
       <h2>Typescript VS Javascript benchmarks</h2>
       <a
+        rel="noopener noreferrer"
+        target="_blank"
         class="copyright"
         href="https://programming-language-benchmarks.vercel.app/typescript-vs-javascript"
         >https://programming-language-benchmarks.vercel.app/typescript-vs-javascript</a
@@ -4748,6 +4859,8 @@ var a = [77, 88, 0.5, true];
     <section class="slide">
       <h2 class="shout">Lessons learned from 222,557 font file subsets?</h2>
       <a
+        rel="noopener noreferrer"
+        target="_blank"
         class="copyright"
         href="https://www.phpied.com/lessons-learned-from-222557-font-file-subsets/"
       >
@@ -4760,6 +4873,8 @@ var a = [77, 88, 0.5, true];
         How I&nbsp;Created a&nbsp;3.78MB Docker Image for a&nbsp;JS Service
       </h2>
       <a
+        rel="noopener noreferrer"
+        target="_blank"
         class="copyright"
         href="https://shenzilong.cn/record/How%20I%20Created%20a%203.78MB%20Docker%20Image%20for%20a%20JavaScript%20Service"
         >How I&nbsp;Created a&nbsp;3.78MB Docker Image for a&nbsp;JavaScript
@@ -4769,7 +4884,11 @@ var a = [77, 88, 0.5, true];
 
     <section class="slide">
       <h2 class="shout">Analyzing Notion app performance</h2>
-      <a class="copyright" href="https://3perf.com/blog/notion/"
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        class="copyright"
+        href="https://3perf.com/blog/notion/"
         >https://3perf.com/blog/notion/</a
       >
     </section>
@@ -4788,11 +4907,21 @@ var a = [77, 88, 0.5, true];
     </section>
 
     <section class="slide">
-      <img src="./themes/tw/images/cases/CLS.jpg" alt="" width="" height="" />
+      <img
+        src="./themes/tw/images/cases/CLS.jpg"
+        alt="CLS"
+        width="100"
+        height="100"
+      />
     </section>
 
     <section class="slide">
-      <img src="./themes/tw/images/cases/wiki.jpg" alt="" width="" height="" />
+      <img
+        src="./themes/tw/images/cases/wiki.jpg"
+        alt="Wiki"
+        width="100"
+        height="100"
+      />
     </section>
 
     <section class="slide">
@@ -4827,10 +4956,11 @@ var a = [77, 88, 0.5, true];
     <section class="slide">
       <h2 class="sr-only">Test</h2>
       <video
-        controls
         muted
-        preload="metadata"
         disablepictureinpicture
+        preload="metadata"
+        width="500"
+        class="rounded-sm absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
         controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
         poster=""
       >
@@ -4844,10 +4974,11 @@ var a = [77, 88, 0.5, true];
     <section class="slide">
       <h2 class="sr-only">DoubleB</h2>
       <video
-        controls
         muted
         disablepictureinpicture
         preload="metadata"
+        width="500"
+        class="rounded-sm absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
         controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
         poster=""
       >
@@ -4858,10 +4989,11 @@ var a = [77, 88, 0.5, true];
     <section class="slide">
       <h2 class="sr-only">Greencof</h2>
       <video
-        controls
         muted
         disablepictureinpicture
         preload="metadata"
+        width="500"
+        class="rounded-sm absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
         controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
         poster=""
       >
@@ -4872,10 +5004,11 @@ var a = [77, 88, 0.5, true];
     <section class="slide">
       <h2 class="sr-only">MSC</h2>
       <video
-        controls
         muted
         disablepictureinpicture
         preload="metadata"
+        width="500"
+        class="rounded-sm absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#000] object-cover"
         controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
         poster=""
       >
@@ -4998,27 +5131,29 @@ var a = [77, 88, 0.5, true];
 
     <section class="slide">
       <h2 class="sr-only">Test</h2>
-      <img
-        class="cover"
-        src="./themes/tw/pictures/memes/oop/encapsulation.jpg"
-        alt="Инкапсуляция"
-        width="1184"
-        height="1141"
-      />
-      <img
-        class="cover"
-        src="./themes/tw/pictures/memes/oop/inheritance.jpg"
-        alt="Наследование"
-        width="1183"
-        height="1133"
-      />
-      <img
-        class="cover"
-        src="./themes/tw/pictures/memes/oop/polymorphism.jpg"
-        alt="Полиморфизм"
-        width="1183"
-        height="1137"
-      />
+      <div class="columns three">
+        <img
+          class="cover"
+          src="./themes/tw/pictures/memes/oop/encapsulation.jpg"
+          alt="Инкапсуляция"
+          width="1184"
+          height="1141"
+        />
+        <img
+          class="cover"
+          src="./themes/tw/pictures/memes/oop/inheritance.jpg"
+          alt="Наследование"
+          width="1183"
+          height="1133"
+        />
+        <img
+          class="cover"
+          src="./themes/tw/pictures/memes/oop/polymorphism.jpg"
+          alt="Полиморфизм"
+          width="1183"
+          height="1137"
+        />
+      </div>
     </section>
 
     <section class="slide">
@@ -5041,20 +5176,22 @@ var a = [77, 88, 0.5, true];
 
     <section class="slide">
       <h2 class="sr-only">Test</h2>
-      <img
-        class="cover"
-        src="./themes/tw/images/conclusions/qr-code-form.svg"
-        alt="Qr code form"
-        width="400"
-        height="400"
-      />
-      <img
-        class="cover"
-        src="./themes/tw/images/conclusions/qr-code-presentation.svg"
-        alt="Qr code form"
-        width="400"
-        height="400"
-      />
+      <div class="columns two">
+        <img
+          class="cover"
+          src="./themes/tw/images/conclusions/qr-code-form.svg"
+          alt="Qr code form"
+          width="400"
+          height="400"
+        />
+        <img
+          class="cover"
+          src="./themes/tw/images/conclusions/qr-code-presentation.svg"
+          alt="Qr code form"
+          width="400"
+          height="400"
+        />
+      </div>
       <footer>
         <p>
           Big O&nbsp;&mdash; нотация, которая позволяет определить верхнюю
