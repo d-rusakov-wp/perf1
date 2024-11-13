@@ -5,7 +5,7 @@ module.exports = {
   trailingComma: "es5",
   printWidth: 120,
   semi: true,
-  singleQuote: true,
+  singleQuote: false,
   bracketSpacing: true,
   bracketSameLine: false,
   singleAttributePerLine: false,
