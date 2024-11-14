@@ -1,6 +1,6 @@
-<img style="margin: 20px 20px 0 0; float: left;" src="./themes/tw/images/logo.png" width="150" height="150" alt="Логотип">
+# Презентация: «Семь раз отмерь, один раз оптимизируй»
 
-# Презентация:<br>«Семь раз отмерь,<br>один раз оптимизируй»
+![Логотип](./themes/tw/images/logo.png =150x150)
 
 ![Deploy status](https://github.com/d-rusakov-wp/perf/actions/workflows/deploy.yml/badge.svg?branch=main&event=push)
 
