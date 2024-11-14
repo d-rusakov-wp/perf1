@@ -1,4 +1,4 @@
-function initPlayingVideo(event) {
+function init(event) {
   const element = event.target;
 
   if (element.tagName !== "VIDEO") return;
@@ -7,5 +7,5 @@ function initPlayingVideo(event) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.body.addEventListener("click", initPlayingVideo);
+  document.body.addEventListener("click", init);
 });
