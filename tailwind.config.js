@@ -66,5 +66,8 @@ module.exports = {
         raw: "(display-mode: standalone)",
       },
     },
+    transitionDuration: {
+      DEFAULT: ".3s",
+    },
   },
 };

@@ -92,8 +92,7 @@
       @apply bg-green p-[24px_90px_0] shadow-[0_20px_50px_rgb(0_0_0_/_30%)];
 
       h1,
-      h2,
-      i {
+      h2 {
         @apply font-arsenal;
       }
 
@@ -102,6 +101,12 @@
 
         &.shout {
           @apply m-0 text-7xl;
+        }
+      }
+
+      .shout {
+        h2 {
+          @apply m-0;
         }
       }
 
@@ -168,8 +173,6 @@
       }
 
       table {
-        @apply mb-0;
-
         th,
         td {
           @apply text-white;
