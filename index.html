@@ -891,7 +891,7 @@
     </section>
 
     <section class="slide">
-      <h2 class="sr-only">Works</h2>
+      <h2 class="sr-only">Js engine pipeline</h2>
       <img
         class="cover"
         src="./themes/tw/images/basics/v8/works/js-engine-pipeline.svg"
@@ -902,7 +902,7 @@
     </section>
 
     <section class="slide">
-      <h2 class="sr-only">Works</h2>
+      <h2 class="sr-only">Pipeline detail v8</h2>
       <img
         class="cover"
         src="./themes/tw/images/basics/v8/works/pipeline-detail-v8.svg"
@@ -913,7 +913,7 @@
     </section>
 
     <section class="slide">
-      <h2 class="sr-only">Works</h2>
+      <h2 class="sr-only">Pipiline detail spidermonkey</h2>
       <img
         class="cover"
         src="./themes/tw/images/basics/v8/works/pipeline-detail-spidermonkey.svg"
@@ -1386,6 +1386,22 @@ var a = [77, 88, 0.5, true];
     </section>
 
     <section class="slide">
+      <pre>
+        <code>
+          console.log('Initial Memory Usage:', process.memoryUsage());
+
+          Initial Memory Usage: {
+            rss: 38502400,
+            heapTotal: 4702208,
+            heapUsed: 2559000,
+            external: 1089863,
+            arrayBuffers: 10515
+          }
+          </code>
+      </pre>
+    </section>
+
+    <section class="slide">
       <h2 class="sr-only">Perfomance memory</h2>
       <img
         class="cover"
@@ -1394,6 +1410,7 @@ var a = [77, 88, 0.5, true];
         width="854"
         height="1319"
       />
+      <a class="copyright" href="https://github.com/facebook/memlab">memlab</a>
     </section>
 
     <section class="slide">
