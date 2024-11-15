@@ -4,11 +4,6 @@
 @tailwind variants;
 
 @layer base {
-  *,
-  *::before,
-  *::after {
-    outline: 1px dashed blueviolet;
-  }
   body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
@@ -97,8 +92,7 @@
       @apply bg-green p-[24px_90px_0] shadow-[0_20px_50px_rgb(0_0_0_/_30%)];
 
       h1,
-      h2,
-      i {
+      h2 {
         @apply font-arsenal;
       }
 
@@ -107,6 +101,12 @@
 
         &.shout {
           @apply m-0 text-7xl;
+        }
+      }
+
+      .shout {
+        h2 {
+          @apply m-0;
         }
       }
 
@@ -173,8 +173,6 @@
       }
 
       table {
-        @apply mb-0;
-
         th,
         td {
           @apply text-white;
@@ -271,29 +269,16 @@
     @apply w-fit font-arsenal text-[62px] font-bold uppercase leading-normal text-transparent;
     -webkit-text-stroke: 2px theme(colors.white);
     background:
-      radial-gradient(
-          1.13em at 50% 1.6em,
-          theme(colors.white) 99%,
-          transparent 101%
-        )
-        calc(50% - 1.6em) 0/3.2em 100% text,
-      radial-gradient(
-          1.13em at 50% -0.8em,
-          transparent 99%,
-          theme(colors.white) 101%
-        )
-        50% 0.8em/3.2em 100% repeat-x text;
+      radial-gradient(1.13em at 50% 1.6em, theme(colors.white) 99%, transparent 101%) calc(50% - 1.6em) 0/3.2em 100%
+        text,
+      radial-gradient(1.13em at 50% -0.8em, transparent 99%, theme(colors.white) 101%) 50% 0.8em/3.2em 100% repeat-x
+        text;
   }
 
   .upload-btn-iframe {
     &::before {
       @apply absolute -left-full top-0 z-[1] h-full w-full opacity-0 transition-none content-[''];
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.8),
-        transparent
-      );
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
     }
 
     &:hover {

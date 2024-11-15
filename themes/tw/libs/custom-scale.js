@@ -8,8 +8,6 @@ class Scale extends HTMLElement {
 
     const scale = document.createElement("div");
 
-    scale.setAttribute("class", "scale");
-
     shadow.appendChild(scale);
 
     const style = this.renderCSS();
@@ -26,14 +24,10 @@ class Scale extends HTMLElement {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
-        height: 40px;
-        background-color: #fff;
-        border-radius: 4px;
+        height: 30px;
+        border-radius: 0.125rem;
         color: #fff;
-        font-weight: bold;
-        margin-bottom: 15px;
-        border: 4px solid #fff;
+        border: 1px solid #fff !important;
 
         &::before {
           transform: translateX(calc(-100% - 15px));
@@ -46,8 +40,14 @@ class Scale extends HTMLElement {
           position: absolute;
           left: 0;
           height: 100%;
-          background: repeating-linear-gradient(90deg, #b3441e, #b3441e 20px, #fff 20px, #fff 23px);
-          content: '';
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          padding-right: 5px;
+          background-color: #b3441e;
+          border-radius: 0.125rem;
+          font-size: 17px;
+          content: '${this.getAttribute("winner") ? "✅" : ""}';
           width: ${this.getAttribute("percentage")}%;
         }
       }

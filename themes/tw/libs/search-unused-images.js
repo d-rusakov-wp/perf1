@@ -10,13 +10,11 @@ function getExtension(fileName) {
 }
 
 function findMissingImages(folderPath) {
-  const files = fs
-    .readdirSync(folderPath)
-    .filter((file) => !EXCLUDED_FORMATS.includes(getExtension(file)));
+  const files = fs.readdirSync(folderPath).filter(file => !EXCLUDED_FORMATS.includes(getExtension(file)));
   const missingImages = [];
   const indexHtmlContent = fs.readFileSync(INDEX_HTML_PATH, "utf8");
 
-  files.forEach((file) => {
+  files.forEach(file => {
     const filePath = path.join(folderPath, file);
 
     if (fs.lstatSync(filePath).isDirectory()) {
